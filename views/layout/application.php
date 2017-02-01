@@ -175,30 +175,10 @@
     </div>
   </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="container">
+  <?php include('views/'.$resource.'/'. $action .'.php');
+        ?>
+</div>
 
 <footer>
   <div id="footer">
@@ -227,10 +207,9 @@
 
   <!-- END fh5co-page -->
 
-</div>
-  <!-- END fh5co-wrapper -->
+
   
-       <?php
+      <?php
           include('views/'.$resource.'/'. $action .'.php');
       ?>
 </div>
@@ -249,6 +228,8 @@
     <!-- Superfish -->
     <script src="../webroot/assets/js/hoverIntent.js"></script>
     <script src="../webroot/assets/js/superfish.js"></script>
+</div>
+  <!-- END fh5co-wrapper -->
 
     <!-- Main JS (Do not remove) -->
   <script src="js/main.js"></script>

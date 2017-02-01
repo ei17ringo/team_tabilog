@@ -1,0 +1,405 @@
+/*google map*/
+#mapField {
+  width: 350px;
+  height: 350px;
+}
+
+/*carousel*/
+/* The controlsy */
+.carousel-control {
+	left: -12px;
+    height: 40px;
+	width: 40px;
+    background: none repeat scroll 0 0 #222222;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    margin-top: 90px;
+}
+
+
+.small{
+	margin-top: 40px;
+}
+
+/*.edit{
+	margin-top: 20px;
+}*/
+
+.carousel-control.right {
+	right: -12px;
+}
+
+.carousel-control-small.right {
+	right: -12px;
+}
+
+/* The indicators */
+.carousel-indicators {
+	right: 50%;
+	top: auto;
+	bottom: -10px;
+	margin-right: -19px;
+}
+/* The colour of the indicators */
+.carousel-indicators li {
+	background: #cecece;
+}
+.carousel-indicators .active {
+background: #428bca;
+}
+
+/*modal*/
+.modal-middle {     //モーダルウィンドウの縦表示位置を調整
+    margin: 5% auto;
+}
+
+.modal-img_footer { //表示予定のテキストとボタンを中央揃え
+    padding: .5em;
+    text-align: center;
+}
+
+button.own-hover:hover {
+	background-color: #D3D3D3 !important;
+}
+
+/*edit.htmlのcarousel*/
+/* The controlsy */
+/*.carousel-control {
+	 left: -35px;
+    height: 40px;
+	  width: 40px;
+    background: none repeat scroll 0 0 #222222;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    margin-top: 90px;
+}
+
+
+.small{
+	margin-top: 40px;
+}
+
+.carousel-control.right {
+	right: -35px;
+}*/
+
+/*edit/htmlのバツボタンの部分*/
+.relative {
+  position: relative;
+  z-index: 1;
+   }
+.absolute_modal {
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 138px;
+  width:30px;
+  height:30px;
+   }
+
+.absolute_back {
+  position: absolute;
+  z-index: 6;
+  top: 36px;
+  left: 440px;
+  width:30px;
+  height:30px;
+    }
+
+/*star_rating(星評価)*/
+.evaluation{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.evaluation input[type='radio']{
+  display: none;
+}
+.evaluation label{
+  position: relative;
+  padding: 10px 10px 0;
+  color: gray;
+  cursor: pointer;
+  font-size: 50px;
+}
+.evaluation label .text{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  color: gray;
+}
+.evaluation label:hover,
+.evaluation label:hover ~ label,
+.evaluation input[type='radio']:checked ~ label{
+  color: #ffcc00;
+}
+
+
+
+//レート評価 変数
+$starFull: 16px;//星1個の幅
+$starHalf: $starFull / 2;//星半分（0.5）の幅
+
+$rate1: $starFull;//星1
+$rate1-5: $starFull + $starHalf;//星1.5
+$rate2: $starFull * 2;//星2
+$rate2-5: ($starFull * 2) + $starHalf;//星2.5
+$rate3: $starFull * 3;//星3
+$rate3-5: ($starFull * 3) + $starHalf;//星3.5
+$rate4: $starFull * 4;//星4
+$rate4-5: ($starFull * 4) + $starHalf;//星4.5
+$rate5 :$starFull * 5;//星5
+
+.rate{
+  position: relative;
+  display: inline-block;
+  width: $starFull * 5;
+  height: $starFull;
+  font-size: $starFull;
+  &:before,&:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '★★★★★';
+    display: inline-block;
+    height: $starFull;
+    line-height: $starFull;
+  }
+  &:before{
+  color: #ddd;
+  }
+  &:after{
+  color: #ffa500;
+  overflow: hidden;
+  white-space: nowrap;//これがないと改行されて星の半分（0.5）が表現できなくなる
+  }
+}
+.rate0:after{//星0
+  width: 0;
+}
+.rate1:after{//星1
+  width: $rate1;
+}
+.rate1-5:after{//星1.5
+  width: $rate1-5;
+}
+.rate2:after{//星2
+  width: $rate2;
+}
+.rate2-5:after{//星2.5
+  width: $rate2-5;
+}
+.rate3:after{//星3
+  width: $rate3;
+}
+.rate3-5:after{//星3.5
+  width: $rate3-5;
+}
+.rate4:after{//星4
+  width: $rate4;
+}
+.rate4-5:after{//星4.5
+  width: $rate4-5;
+}
+.rate5:after{//星5
+  width: $rate5;
+}
+
+
+.wrap{
+  width: 80px;
+  margin: 0 auto;
+}
+
+
+
+/*mypage.html CSS開始*/
+.container {
+  margin-top: 25px;}
+
+.title{
+  text-align:center;
+}
+
+.sentense-box{
+  border:solid 1px;
+
+}
+
+.star{
+  text-align:right;
+}
+
+
+
+.evaluation{
+  text-align:center;
+}
+
+.show-on-hover:hover > ul.dropdown-menu {
+    display:block;    
+}
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: roboto;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+}
+
+.loginmodal-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #4d90fe;
+  padding: 17px 0px;
+  font-family: roboto;
+  font-size: 14px;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.loginmodal-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+} 
+
+.login-help{
+  font-size: 12px;
+}
+
+/*h1{
+  text-align:center;*/
+.navbar-brand-centered {
+    position: absolute;
+    left: 50%;
+    display: block;
+    text-align: center;
+    background-color: transparent;
+}
+.navbar-brand-centered h3{margin:0;margin-left: -30px;margin-top:-2px}
+    .navbar>.container .navbar-brand-centered,
+    .navbar>.container-fluid .navbar-brand-centered {
+        margin-left: -80px;
+}
+
+.dropdown-menu{
+  background-color:orange;
+}
+
+.Japanese{
+  color:white;
+}
+
+.English{
+  color:white;
+}
+
+.pagination{
+  text-align:center;
+  margin-right:100px;
+  margin-left:65px;
+}
+
+
+.edit{
+  color:blue;
+}
+
+.delete{
+  color:red;
+}
+
+
+/*<!-- Google mapを複数読み込むのに必要 -->*/
+
+#map_canvas_01,
+#map_canvas_02,
+#map_canvas_03,
+#map_canvas_04{
+  clear:both;
+}
+
+
+body{
+    padding:10px;
+}
+
+.footer-logo{
+  color:white;
+  text-align:right;
+}
+/*mypage.html CSS終了*/
+
+/*松岡担当　新規会員情報入力に必要*/

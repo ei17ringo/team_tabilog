@@ -9,8 +9,13 @@
     //アクション名によって、呼び出すメソッドを変える
     switch ($action) {
       case 'signup':
-        $controller->register();
+        $controller->signup();
         break;
+
+      case 'comfirm':
+        $controller->signup();
+        break;
+
       case 'check':
         $controller->check();
         break;
@@ -37,6 +42,13 @@
           $action = 'signup';
           require('views/layout/application.php');
       }
+
+      function signup() {
+          $resource = 'users';
+          $action = 'signup';
+          require('views/layout/application.php');
+      }
+
 
       function check() {
           $resource = 'users';

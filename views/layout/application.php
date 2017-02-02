@@ -209,9 +209,9 @@
 
 
   
-      <?php
-          include('views/'.$resource.'/'. $action .'.php');
-      ?>
+     <!--  <?php
+          // include('views/'.$resource.'/'. $action .'.php');
+      ?> -->
 </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

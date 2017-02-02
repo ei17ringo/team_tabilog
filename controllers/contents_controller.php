@@ -42,25 +42,25 @@
 
 	class ContentsController {
       function index() {
-          $resource = 'posts';
+          $resource = 'contents';
           $action = 'index';
           require('views/layout/application.php');
       }
 
       function mypage() {
-          $resource = 'posts';
+          $resource = 'contents';
           $action = 'mypage';
           require('views/layout/application.php');
       }
 
       function show($id) {
-          $resource = 'posts';
+          $resource = 'contents';
           $action = 'show';
           require('views/layout/application.php');
       }
 
       function add(){
-          $resource = 'posts';
+          $resource = 'contents';
           $action = 'add';
           require('views/layout/application.php');
       }
@@ -70,13 +70,13 @@
       }
 
       function edit($id){
-          $resource = 'posts';
+          $resource = 'contents';
      	    $action = 'edit';
           require('views/layout/application.php');
       }
 
       function check($id) {
-          $resource = 'posts';
+          $resource = 'contents';
           $action = 'check';
           require('views/layout/application.php');
       }

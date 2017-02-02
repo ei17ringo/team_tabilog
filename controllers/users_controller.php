@@ -9,7 +9,7 @@
     //アクション名によって、呼び出すメソッドを変える
     switch ($action) {
       case 'signup':
-        $controller->register();
+        $controller->signup();
         break;
       case 'check':
         $controller->check();

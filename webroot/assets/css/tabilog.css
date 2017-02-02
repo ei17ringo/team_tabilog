@@ -1,0 +1,63 @@
+/*google map*/
+#mapField {
+  width: 350px;
+  height: 350px;
+}
+
+/*carousel*/
+/* The controlsy */
+.carousel-control {
+	left: -12px;
+    height: 40px;
+	width: 40px;
+    background: none repeat scroll 0 0 #222222;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    margin-top: 90px;
+}
+
+
+.small{
+	margin-top: 40px;
+}
+
+/*.edit{
+	margin-top: 20px;
+}*/
+
+.carousel-control.right {
+	right: -12px;
+}
+
+.carousel-control-small.right {
+	right: -12px;
+}
+
+/* The indicators */
+.carousel-indicators {
+	right: 50%;
+	top: auto;
+	bottom: -10px;
+	margin-right: -19px;
+}
+/* The colour of the indicators */
+.carousel-indicators li {
+	background: #cecece;
+}
+.carousel-indicators .active {
+background: #428bca;
+}
+
+/*modal*/
+.modal-middle {     //モーダルウィンドウの縦表示位置を調整
+    margin: 5% auto;
+}
+ 
+.modal-img_footer { //表示予定のテキストとボタンを中央揃え
+    padding: .5em;
+    text-align: center;
+}
+
+button.own-hover:hover {
+	background-color: #D3D3D3 !important;
+}

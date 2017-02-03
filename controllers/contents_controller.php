@@ -9,7 +9,7 @@
    	//アクション名によって、呼び出すメソッドを変える
    	switch ($action) {
    		case 'index':
-   			$controller->index();
+   			$controller->index($_POST);
    			break;
    		case 'mypage':
    			$controller->mypage();
@@ -41,11 +41,18 @@
    	}
 
 	class ContentsController {
-      function index() {
+      function index($index_data) {
+          if (isset($index_data['search'])) {
           $content= new Content();
-          $index_place=$content->index_place();
-          $index_ci_co=$content->index_ci_co();
+          $index_place=$content->index_place($index_data);
 
+          if ($index_place==false) {
+             $index_ci_co=$content->index_ci_co($index_data);
+          }
+          if ($index_ci_co==false) {
+            $search_fail ="※キーワードを入力し直してください";
+          }
+      }
           $resource = 'contents';
           $action = 'index';
           require('views/layout/application.php');

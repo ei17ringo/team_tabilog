@@ -264,7 +264,11 @@
 		</div>
 		</form>
 		</p>
-		
+		<?php if (isset($search_fail)): ?>
+		<p class="text-danger h4 col-md-offset-1"><?php echo $search_fail; ?></p>
+		<?php endif ?>
+
+
 		<!-- 並び替え　ドロップダウンリスト -->
 		<div class="dropdown col-md-offset-1">
 		  <button class="btn btn-default dropdown-toggle own-hover" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">

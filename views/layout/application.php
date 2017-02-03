@@ -228,6 +228,7 @@
     <!-- Superfish -->
     <script src="../webroot/assets/js/hoverIntent.js"></script>
     <script src="../webroot/assets/js/superfish.js"></script>
+    <script src="../webroot/assets/js/star_2.js"></script>
 </div>
   <!-- END fh5co-wrapper -->
 

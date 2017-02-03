@@ -60,12 +60,18 @@
       }
 
       function add(){
-          $resource = 'posts';
+          $resource = 'contents';
           $action = 'add';
           require('views/layout/application.php');
       }
 
       function create($post_data){
+        //モデルを呼び出す
+        $content = new Content();
+        //モデルのcreateメソッドを実行する
+        $return = $content->create($post_data);
+        header('location:/team_tabilog/contents/check');
+        exit();
 
       }
 

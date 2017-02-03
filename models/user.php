@@ -20,41 +20,23 @@
 
 		function signup(){
 
+
+					
+
+
 		}
 
 
 		function confirm(){
-			$error = array();
+			
+			}
 
-					 if(isset($_POST) && !empty($_POST)){
+			function create(){
 
-					//ニックネームが未入力の場合
-					  if (empty($_POST['user_name'])){
-					    // $error_nick_name =  'ニックネームを入力してくだささい。';
-					    $error['user_name'] = 'blank';
-					    //blankは未入力
-					  }
-					  
+			}
 
-					//メールが未入力の場合
-					  if (empty($_POST['email'])) {
-					      // $error_email =  'メールアドレスを入力してくだささい。';
-					    $error['email'] = 'blank';
-					    }
-
-					//パスワードが未入力の場合
-					  if (empty($_POST['password'])){
-					      
-					      // $error_password =  'パスワードを入力してくだささい。';
-					    $error['password'] = 'blank';
-					  }elseif(strlen($_POST['password']) < 4){
-					    //パスワードが４文字より少ない
-					    $error['password'] = 'length';
-
-					  }
-
-
-					//重複アカウントのチェック
+			function check(){
+				//重複アカウントのチェック
 					  if(empty($error)){
 					    //入ったメールアドレスがデータべースに何件あるかカウントする
 					    $sql = sprintf('SELECT COUNT(*) AS cnt FROM users WHERE email="%s"',mysqli_real_escape_string($db, $_POST['email']) );
@@ -67,44 +49,37 @@
 					    }
 					  }
 					
-					//書き直し
-					if(isset($_REQUEST['action']) && $_REQUEST['action']== 'rewrite'){
-					  $_POST = $_SESSION['join'];
-					  //画像の再選択エラーメッセージを表示するために必要
-					  $error['rewrite'] = true;
-					}
-			}
 
-			function create(){
 
-			}
 
-			function check(){
-				if(!empty($_POST)){
+
+
+				
+				// if(!empty($_POST)){
  
 
-				  $sql = sprintf('INSERT INTO users SET user_name="%s",age="%d",sex="%d" email="%s", password="%s", created="%s"',
+				//   $sql = sprintf('INSERT INTO users SET user_name="%s",age="%d",sex="%d" email="%s", password="%s", created="%s"',
 				   
-				    mysqli_real_escape_string($db, $_SESSION['join']['user_name']),
-				    mysqli_real_escape_string($db, $_SESSION['join']['age']),
-				    mysqli_real_escape_string($db, $_SESSION['join']['sex']),
-				    mysqli_real_escape_string($db, $_SESSION['join']['email']),
+				//     mysqli_real_escape_string($db, $_SESSION ['join']['user_name']),
+				//     mysqli_real_escape_string($db, $_SESSION ['join']['age']),
+				//     mysqli_real_escape_string($db, $_SESSION ['join']['sex']),
+				//     mysqli_real_escape_string($db, $_SESSION ['join']['email']),
 
 
-				    mysqli_real_escape_string($db, sha1($_SESSION['join']['password'])),
-				    mysqli_real_escape_string($db, $_SESSION['join']['picture_path']),date('Y-m-d H:i:s')
-				    );
+				//     mysqli_real_escape_string($db, sha1($_SESSION ['join']['password'])),
+			
+				//     );
 
 				  
-				    mysqli_query($db, $sql) or die(mysqli_error($db));
+				//     mysqli_query($db, $sql) or die(mysqli_error($db));
 
-				    // unset ここから使わないから存在しないよと表す。指定された変数の割当を解除する。ここではセッション情報を破棄している。
-				    unset($_SESSION['join']);
+				//     // unset ここから使わないから存在しないよと表す。指定された変数の割当を解除する。ここではセッション情報を破棄している。
+				//     unset($_SESSION['join']);
 
-				    header('Location: thanks.php');
-				    exit();
+				//     header('Location: thanks.php');
+				//     exit();
 				    
-				}
+				// }
 			}
 
 

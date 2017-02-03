@@ -42,6 +42,10 @@
 
 	class ContentsController {
       function index() {
+          $content= new Content();
+          $index_place=$content->index_place();
+          $index_ci_co=$content->index_ci_co();
+
           $resource = 'contents';
           $action = 'index';
           require('views/layout/application.php');

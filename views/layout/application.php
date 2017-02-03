@@ -12,7 +12,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Render &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
+    <title>tabilog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
     <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -213,26 +213,36 @@
           // include('views/'.$resource.'/'. $action .'.php');
       ?> -->
 </div>
+</div>
+  <!-- END fh5co-wrapper -->
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="../<?php echo $adjust_string; ?>webroot/assets/js/bootstrap.min.js"></script>
+  <!-- jQuery -->
+  <script src="../webroot/assets/js/jquery.min.js"></script>
+  <script src="../webroot/assets/js/jquery-3.1.1.min.js"></script>
+  <!-- jQuery Easing -->
+  <script src="../webroot/assets/js/jquery.easing.1.3.js"></script>
+  <!-- Bootstrap -->
+  <script src="../webroot/assets/js/bootstrap.min.js"></script>
+  <script src="../webroot/assets/js/bootstrap-modal.js"></script>
+    <script src="../webroot/assets/js/bootstrap-modalmanager.js"></script>
+    <script src="../webroot/assets/js/bootstrap-lightbox.min.js"></script>
+  <!-- その他ライブラリ -->
+  <!-- Waypoints -->
+  <script src="../webroot/assets/js/jquery.waypoints.min.js"></script>
+  <!-- Superfish -->
+  <script src="../webroot/assets/js/hoverIntent.js"></script>
+  <script src="../webroot/assets/js/superfish.js"></script>
 
-    <script src="../webroot/assets/js/jquery.min.js"></script>
-    <!-- jQuery Easing -->
-    <script src="../webroot/assets/js/jquery.easing.1.3.js"></script>
-    <!-- Bootstrap -->
-    <script src="../webroot/assets/js/bootstrap.min.js"></script>
-    <!-- Waypoints -->
-    <script src="../webroot/assets/js/jquery.waypoints.min.js"></script>
-    <!-- Superfish -->
-    <script src="../webroot/assets/js/hoverIntent.js"></script>
-    <script src="../webroot/assets/js/superfish.js"></script>
-</div>
-  <!-- END fh5co-wrapper -->
+  <!-- Main JS (Do not remove) -->
+  <script src="../webroot/assets/js/main.js"></script>
+  <!-- 自分で作成したjs -->
+  <script src="../webroot/assets/js/tabilog.js"></script>
 
-    <!-- Main JS (Do not remove) -->
-  <script src="js/main.js"></script>
   </body>
 </html>
 

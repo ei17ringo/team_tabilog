@@ -15,45 +15,45 @@
 
 
 	function index_place(){
-		// 観光地情報から検索するためのSQLの記述
-		$sql = sprintf('SELECT * FROM `contents` WHERE　`delete_flag`=0 AND `place_name` = %s ORDER BY `created` DESC',
-			$place_name
-			);
+		// // 観光地情報から検索するためのSQLの記述
+		// $sql = sprintf('SELECT * FROM `contents` WHERE　`c_delete_flag`=0 AND `place_name` like %s ORDER BY `created` DESC',
+		// 	$place_name
+		// 	);
 
 			//SQLの実行
-			$results = mysqli_query($this->dbconnect, $sql) or die(my_sqli_error($this->dbconnect));
+			// $results = mysqli_query($this->dbconnect, $sql) or die(my_sqli_error($this->dbconnect));
 
 			 //実行結果を取得し、配列に格納
 			 // $blogs = mysqli_fetch_assoc($result);
 
-			 $rtn = array();
-			 while($result = mysqli_fetch_assoc($results)){
-			 	$rtn[]=$result;
-			 }
+			 // $rtn1 = array();
+			 // while($result = mysqli_fetch_assoc($results)){
+			 // 	$rtn1[]=$result;
+			 // }
 
 			//取得結果を残す
-			 return $rtn;
+			 // return $rtn1;
 	}
 
 	function index_ci_co(){
-		    $sql = sprintf('SELECT * FROM `contents` WHERE `country_name` = %s OR `city_name`=%s ORDER BY `created` DESC',
-			$country_name,
-			$city_name
-			);
+		 //    $sql = sprintf('SELECT * FROM `contents` WHERE `c_delete_flag`=0 AND (`country_name` like %s OR `city_name` like %s) ORDER BY `created` DESC',
+			// $country_name,
+			// $city_name
+			// );
 
-			//SQLの実行
-			$results = mysqli_query($this->dbconnect, $sql) or die(my_sqli_error($this->dbconnect));
+			// //SQLの実行
+			// $results = mysqli_query($this->dbconnect, $sql) or die(my_sqli_error($this->dbconnect));
 
-			 //実行結果を取得し、配列に格納
-			 // $blogs = mysqli_fetch_assoc($result);
+			//  //実行結果を取得し、配列に格納
+			//  // $blogs = mysqli_fetch_assoc($result);
 
-			 $rtn = array();
-			 while($result = mysqli_fetch_assoc($results)){
-			 	$rtn[]=$result;
-			 }
+			//  $rtn1 = array();
+			//  while($result = mysqli_fetch_assoc($results)){
+			//  	$rtn1[]=$result;
+			//  }
 
-			//取得結果を残す
-			 return $rtn;
+			// //取得結果を残す
+			//  return $rtn1;
 	}
 
 		}

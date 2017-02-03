@@ -228,7 +228,7 @@
 			<img src="images/1.jpeg" alt="baby-1151351_1920" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4" data-toggle="modal" data-target="#image_Modal" style="cursor:pointer" /> 
 			<!-- //レスポンシブ対応・サムネイルに変更・画像上にポインターを置くと矢印から指になる
 			 --> 
-			<div class="modal fade" id="image_Modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+			<div class="modal fade" id="image_Modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="z-index: 1500">
 			<div class="modal-dialog modal-lg modal-middle"> 
 			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
 			 --><div class="modal-content">

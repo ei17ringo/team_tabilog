@@ -255,12 +255,14 @@
 
 		<!-- 検索ボタン -->
 		<p>
+		<form method="post" action="/tabilog/contents/index" class="form-horizontal" role="form">
 		<div class="input-group col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1">
-	  <input type="text" class="form-control" placeholder="観光地を入力してください">
+	  <input type="text" class="form-control" name="search" placeholder="観光地を入力してください" value="<?php if (isset($_POST['search'])): ?><?php echo $_POST['search']; ?><?php endif ?>">
 	  <span class="input-group-btn">
 	    <button class="btn btn-default own-hover" type="submit">検索</button>
 	  </span>
 		</div>
+		</form>
 		</p>
 		
 		<!-- 並び替え　ドロップダウンリスト -->

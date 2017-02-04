@@ -1,3 +1,11 @@
+        <!-- 必須のため、消さない -->
+        <!-- 観光地情報が入っていたら、最初の配列を取り出す -->
+        <?php if (isset($place)&&$place=='sightseen'): ?>
+        <?php $firstcontent=array_shift($indexplaceviews); ?> 
+        <?php endif ?>     
+
+
+
 <!-- 		<?php var_dump($indexplaceviews);  ?> -->
 <!-- 		<?php foreach ($indexviews as $indexview): ?>
 			<?php echo $indexview['content_id'] ?>
@@ -7,11 +15,7 @@
         <?php echo $index_data['search'] ?>
         <?php echo $place; ?> -->
 
-        <!-- 必須のため、消さない -->
-        <!-- 観光地情報が入っていたら、最初の配列を取り出す -->
-        <?php if (isset($place)&&$place=='sightseen'): ?>
-        <?php $firstcontent=array_shift($indexplaceviews); ?> 
-        <?php endif ?>        
+   
 
 					<!-- modal表示 -->
 		                            <!-- 写真１ -->
@@ -475,7 +479,15 @@
                         <div class=" jumbotron">
                             <h2><a href="#"><?php echo $indexview['title'] ?></a></h2>
                             <figure>
-                                <h5 class="text-right">★★☆☆☆</h5>
+                                <h5 class="text-right">
+                                <!-- おすすめ度 -->
+                                <?php for ($i=0; $i < $indexview['rating'] ; $i++) { 
+                                    echo "★";
+                                } ?><?php for ($i=0 ; $i < 5-$indexview['rating'] ; $i++ ) { 
+                                    echo "☆";
+                                } ?>
+                                
+                                </h5>
                             </figure>
                             <h4>
                                 <p><?php echo $indexview['content'] ?></p>

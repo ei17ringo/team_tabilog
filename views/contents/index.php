@@ -1,9 +1,10 @@
-		<?php var_dump($indexviews);  ?>
+		<?php var_dump($indexplaceviews);  ?>
 <!-- 		<?php foreach ($indexviews as $indexview): ?>
 			<?php echo $indexview['content_id'] ?>
 		<?php endforeach ?> -->
         <br>
         <br>
+        <?php echo $index_data['search'] ?>
         <?php $firstcontent=array_shift($indexviews); ?> 
         
 
@@ -277,7 +278,7 @@
 		<p class="text-danger h4 col-md-offset-1"><?php echo $search_fail; ?></p>
 		<?php endif ?>
 
-
+<style>/*
 		<!-- 並び替え　ドロップダウンリスト -->
 		<div class="dropdown col-md-offset-1">
 		  <button class="btn btn-default dropdown-toggle own-hover" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -295,10 +296,16 @@
 		  </ul>
 
 		</div>
-
+*/</style>
 
 
 		<!-- 本文 -->
+        <!-- 検索ワードがあるときはコメントアウト -->
+        <?php if (isset($index_data['search'])): ?>
+            <?php echo '<style>/*' ?>
+        <?php endif ?>  
+
+
         <div id="fh5co-content-section">
             <div class="container">
                 <div class="row">
@@ -440,6 +447,7 @@
 
 
 				<!-- 本文 -->
+                <!-- 検索キーワードが入力されていないとき -->
         <div id="fh5co-content-section">
             <div class="container">
             <?php foreach ($indexviews as $indexview): ?>
@@ -559,10 +567,150 @@
 
                         </div>
                     </div>
-
-
-
                     <?php endforeach ?>
+
+                    <!-- 検索キーワードが入力されたときコメントアウト -->
+                    <?php if (isset($index_data['search'])): ?>
+                        <?php echo '*/</style>' ?>
+                    <?php endif ?> 
+
+
+
+
+                <!-- 本文 -->
+                <!-- 検索キーワードが入力されたときに本文表示 -->
+
+                <!-- 検索キーワードが入力されていないときコメントアウト -->
+                 <?php if (!isset($index_data['search'])): ?>
+                        <?php echo '/*<style>' ?>
+                 <?php endif ?>
+        <div id="fh5co-content-section">
+            <div class="container">
+            <!-- 検索キーワードが入力されたとき -->
+            <?php foreach ($indexplaceviews as $indexplaceview): ?>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="fh5co-testimonial text-center animate-box">
+                        <div class=" jumbotron">
+                            <h2><a href="#"><?php echo $indexplaceview['title'] ?></a></h2>
+                            <figure>
+                                <h5 class="text-right">★★☆☆☆</h5>
+                            </figure>
+                            <h4>
+                                <p><?php echo $indexplaceview['content'] ?></p>
+
+<!--                                 <p>続きを読むには   
+                                <a href="#">会員登録</a>が必要です。
+                                </p> -->
+                            </h4>
+                            </div>
+                            
+    <!-- 画像の表示 モーダル -->
+
+    <div class="row">
+    <div class="col-md-12">
+        
+                <div id="Carousel" class="carousel slide">
+                 
+                <ol class="carousel-indicators">
+                    <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#Carousel" data-slide-to="1"></li>
+                    <li data-target="#Carousel" data-slide-to="2"></li>
+                </ol>
+                 
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    
+                <div class="item active">
+                    <div class="row">
+
+
+                      <div class="col-md-3">
+                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal1" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      </div>
+
+
+                      <div class="col-md-3">
+                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal2" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      </div>
+
+                      <div class="col-md-3">
+                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      </div>
+
+                      <div class="col-md-3">
+                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      </div>
+
+                    </div><!--.row-->
+                </div><!--.item-->
+                 
+                <div class="item">
+                    <div class="row">
+                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal5" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+
+
+                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal6" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+
+                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal7" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+
+                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal8" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+
+
+
+                    </div><!--.row-->
+                </div><!--.item-->
+                 
+
+                <div class="item">
+                    <div class="row">
+                       <div class="col-md-3"><img src="images/1.jpeg" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal9" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425" width="250" height="250"></a></div>
+
+
+                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal10" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+
+                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal11" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+
+                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal12" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+
+                    </div><!--.row-->
+                </div><!--.item-->
+                 
+                </div><!--.carousel-inner-->
+                  <a data-slide="prev" href="#Carousel" class="left carousel-control small">‹</a>
+                  <a data-slide="next" href="#Carousel" class="right carousel-control small">›</a>
+                </div><!--.Carousel-->
+
+
+                 <!-- ユーザー投稿内容の下線 -->
+                    <hr size="1" color="black" >
+                 </div>
+                     <!-- 参考になったーはい/いいえボタン -->
+                   <div class="row">
+                    　
+                        <div class="col-md-6">
+                       <span class="love-text">この記事は参考になりましたか？</span>
+                       </div>
+
+                       <div class="col-md-6"><button type="button" class="btn btn-sm btn-default">はい</button>10人<button type="button" class="btn btn-sm btn-default">いいえ</button>10人
+                     </div>
+                   </div>   
+    </div>
+
+
+
+
+
+
+                        </div>
+                    </div>
+                    <?php endforeach ?>
+                    <!-- 検索キーワードが入力されていないときコメントアウト -->
+                    <?php if (!isset($index_data['search'])): ?>
+                        <?php echo '*/</style>' ?>
+                    <?php endif ?> 
+
+
 
 
 
@@ -683,6 +831,7 @@
 
                         </div>
                     </div>
+
 
 
 

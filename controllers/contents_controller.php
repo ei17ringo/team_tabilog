@@ -43,9 +43,17 @@
 	class ContentsController {
       function index($index_data) {
 
+        // 出し分け
+        // 検索ワードが入っていた場合
+          if (isset($index_data['search'])) {
+          $content= new Content();
+          $indexplaceviews=$content->index_place($index_data);
+          }
+          else{
+          // 初期表示
           $content = new Content();
           $indexviews=$content->index();
-
+          }
 
         // 出し分け
         // 検索ワードが入っていた場合

@@ -35,7 +35,7 @@
 
 	function index_place($index_data){
 		// // 観光地情報から検索するためのSQLの記述
-		$sql = sprintf('SELECT * FROM `contents` WHERE `c_delete_flag`=0 AND `place_name` like "%s" ORDER BY `created` DESC',
+		$sql = sprintf('SELECT * FROM `contents` WHERE `c_delete_flag`=0 AND `place_name` like "%%%s%%" ORDER BY `created` DESC',
 			$index_data['search']
 			);
 

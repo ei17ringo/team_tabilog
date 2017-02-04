@@ -888,7 +888,7 @@
                         <div class=" jumbotron">
 
                         		
-                            <h2><a href="#"><?php echo $firstcontent['title'] ?></a></h2>
+                            <h2><a href="show/<?php echo $firstcontent['content_id'] ?>"><?php echo $firstcontent['title'] ?></a></h2>
                             <figure>
                                 <h5 class="text-right">
                                 <!-- おすすめ度 -->
@@ -1049,7 +1049,7 @@
                     <div class="col-md-6 col-sm-6">
                         <div class="fh5co-testimonial text-center animate-box">
                         <div class=" jumbotron">
-                            <h2><a href="#"><?php echo $indexview['title'] ?></a></h2>
+                            <h2><a href="show/<?php echo $indexview['content_id'] ?>"><?php echo $indexview['title'] ?></a></h2>
                             <figure>
                                 <h5 class="text-right">
                                 <!-- おすすめ度 -->

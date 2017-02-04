@@ -104,6 +104,9 @@
       }
 
       function show($id) {
+          $content = new Content();
+          $showviews = $content->show($id);
+
           $resource = 'contents';
           $action = 'show';
           require('views/layout/application.php');

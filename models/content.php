@@ -77,6 +77,28 @@
 			 return $rtn1;
 	}
 
+	function show($id){
+			$sql = sprintf('SELECT * FROM `contents` INNER JOIN `users` ON `contents`.`user_id` = `users`.`user_id` WHERE `c_delete_flag`=0 AND `content_id` = %d',
+			$id
+			);
+
+			//SQLの実行
+			$results = mysqli_query($this->dbconnect, $sql) or die(mysqli_error($this->dbconnect));
+
+			 //実行結果を取得し、配列に格納
+			 // $blogs = mysqli_fetch_assoc($result);
+
+			 $userviews = array();
+			 while($result = mysqli_fetch_assoc($results)){
+			 	$userviews[]=$result;
+			 }
+
+
+			//取得結果を残す
+			 return $userviews;
+
+	}
+
 		}
 
 ?>

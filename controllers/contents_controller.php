@@ -43,12 +43,32 @@
 	class ContentsController {
       function index($index_data) {
 
+        // 初期値
+        // 観光地情報にヒットすると$placeがsightseenになる
+        $place='0';
+
         // 出し分け
         // 検索ワードが入っていた場合
           if (isset($index_data['search'])) {
+          // 検索キーワードから観光地情報をデータベースから検索
           $content= new Content();
           $indexplaceviews=$content->index_place($index_data);
+
+          // 検索キーワードが観光地情報データベースにヒットしなかった場合
+          if (empty($indexplaceviews)) {
+                      $indexplaceviews=$content->index_ci_co($index_data);
+
+            if ($indexplaceviews==false) {
+              $search_fail ="※キーワードを入力し直してください";
+          }          
+
+          // 検索キーワードが観光地情報データベースにヒットした場合
+          }elseif (isset($indexplaceviews)) {
+            $place='sightseen';
           }
+          }
+
+          // その他、検索情報が入っていない場合など(初期状態)
           else{
           // 初期表示
           $content = new Content();

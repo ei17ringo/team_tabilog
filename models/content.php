@@ -50,6 +50,7 @@
 			 	$rtn1[]=$result;
 			 }
 
+
 			//取得結果を残す
 			 return $rtn1;
 	}
@@ -70,6 +71,7 @@
 			 while($result = mysqli_fetch_assoc($results)){
 			 	$rtn1[]=$result;
 			 }
+
 
 			//取得結果を残す
 			 return $rtn1;

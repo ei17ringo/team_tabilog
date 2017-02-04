@@ -1,12 +1,17 @@
-		<?php var_dump($indexplaceviews);  ?>
+<!-- 		<?php var_dump($indexplaceviews);  ?> -->
 <!-- 		<?php foreach ($indexviews as $indexview): ?>
 			<?php echo $indexview['content_id'] ?>
 		<?php endforeach ?> -->
-        <br>
+<!--         <br>
         <br>
         <?php echo $index_data['search'] ?>
-        <?php $firstcontent=array_shift($indexviews); ?> 
-        
+        <?php echo $place; ?> -->
+
+        <!-- 必須のため、消さない -->
+        <!-- 観光地情報が入っていたら、最初の配列を取り出す -->
+        <?php if (isset($place)&&$place=='sightseen'): ?>
+        <?php $firstcontent=array_shift($indexplaceviews); ?> 
+        <?php endif ?>        
 
 					<!-- modal表示 -->
 		                            <!-- 写真１ -->
@@ -274,6 +279,8 @@
 		</div>
 		</form>
 		</p>
+
+        <!-- 検索キーワードがなかった場合 -->
 		<?php if (isset($search_fail)): ?>
 		<p class="text-danger h4 col-md-offset-1"><?php echo $search_fail; ?></p>
 		<?php endif ?>
@@ -300,8 +307,8 @@
 
 
 		<!-- 本文 -->
-        <!-- 検索ワードがあるときはコメントアウト -->
-        <?php if (isset($index_data['search'])): ?>
+        <!-- 検索ワードが観光地に設定されていないときはコメントアウト -->
+        <?php if (isset($place)&&$place !='sightseen'): ?>
             <?php echo '<style>/*' ?>
         <?php endif ?>  
 
@@ -445,9 +452,20 @@
 			</div>
 		</div>
 
+        <!-- 検索ワードが観光地に設定されていないときは非表示 -->
+        <?php if (isset($place)&&$place!='sightseen'): ?>
+            <?php echo '*/</style>' ?>
+        <?php endif ?>
+
 
 				<!-- 本文 -->
                 <!-- 検索キーワードが入力されていないとき -->
+
+
+                <!-- 検索ワードが設定されているときは非表示 -->
+                <?php if (isset($index_data['search'])): ?>
+                    <?php echo '<style>/*' ?>
+                <?php endif ?>
         <div id="fh5co-content-section">
             <div class="container">
             <?php foreach ($indexviews as $indexview): ?>
@@ -569,10 +587,10 @@
                     </div>
                     <?php endforeach ?>
 
-                    <!-- 検索キーワードが入力されたときコメントアウト -->
-                    <?php if (isset($index_data['search'])): ?>
-                        <?php echo '*/</style>' ?>
-                    <?php endif ?> 
+                 <!-- 検索ワードが設定されているときは非表示 -->
+                <?php if (isset($index_data['search'])): ?>
+                    <?php echo '*/</style>' ?>
+                <?php endif ?>
 
 
 
@@ -712,8 +730,7 @@
 
 
 
-
-
+                    <style>/*
 
                     		<!-- 本文 -->
                 <div class="row">
@@ -1077,9 +1094,11 @@
 
 
 
+                           */</style>  
 
 
                         </div>
+
                     </div>
 
 
@@ -1087,6 +1106,7 @@
 </div>
 </div>
 </div>
+
 </div>
 </div>
 </div>

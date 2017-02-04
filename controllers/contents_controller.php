@@ -42,17 +42,28 @@
 
 	class ContentsController {
       function index($index_data) {
-          if (isset($index_data['search'])) {
-          $content= new Content();
-          $index_place=$content->index_place($index_data);
 
-          if ($index_place==false) {
-             $index_ci_co=$content->index_ci_co($index_data);
-          }
-          if ($index_ci_co==false) {
-            $search_fail ="※キーワードを入力し直してください";
-          }
-      }
+          $content = new Content();
+          $indexviews=$content->index();
+
+
+        // 出し分け
+        // 検索ワードが入っていた場合
+      //     if (isset($index_data['search'])) {
+      //     $content= new Content();
+      //     $index_place=$content->index_place($index_data);
+
+      //       if ($index_place==false) {
+      //          $index_ci_co=$content->index_ci_co($index_data);
+      //       }
+      //       if ($index_ci_co==false) {
+      //         $search_fail ="※キーワードを入力し直してください";
+      //     }
+      // }else{
+      //     $content= new Content();
+      //     $index=$content->index();
+      // }
+
           $resource = 'contents';
           $action = 'index';
           require('views/layout/application.php');

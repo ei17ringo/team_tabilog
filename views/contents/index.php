@@ -1,4 +1,13 @@
-		<!-- modal表示 -->
+		<?php var_dump($indexviews);  ?>
+<!-- 		<?php foreach ($indexviews as $indexview): ?>
+			<?php echo $indexview['content_id'] ?>
+		<?php endforeach ?> -->
+        <br>
+        <br>
+        <?php $firstcontent=array_shift($indexviews); ?> 
+        
+
+					<!-- modal表示 -->
 		                            <!-- 写真１ -->
                           <!-- //レスポンシブ対応・サムネイルに変更・画像上にポインターを置くと矢印から指になる--> 
                         <div class="modal fade" id="image_Modal1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="z-index: 1500">
@@ -296,16 +305,19 @@
                     <div class="col-md-6 col-sm-6">
                         <div class="fh5co-testimonial text-center animate-box">
                         <div class=" jumbotron">
-                            <h2><a href="#">カルボンマーケットについて</a></h2>
+
+                        		
+                            <h2><a href="#"><?php echo $firstcontent['title'] ?></a></h2>
                             <figure>
                                 <h5 class="text-right">★★☆☆☆</h5>
                             </figure>
                             <h4>
-                                <p>Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn’t really do it, they just saw something. It seemed obvious to them after a while.</p>
-
+                                <!-- 本文 -->
+                                <p><?php echo $firstcontent['content'] ?></p>
+<!-- 
                                 <p>続きを読むには   
                                 <a href="#">会員登録</a>が必要です。
-                                </p>
+                                </p> -->
                             </h4>
                             </div>
                             
@@ -407,8 +419,7 @@
 
                         </div>
                     </div>
-
-                    
+         
 
 
 	<!-- Google Map -->
@@ -431,20 +442,21 @@
 				<!-- 本文 -->
         <div id="fh5co-content-section">
             <div class="container">
+            <?php foreach ($indexviews as $indexview): ?>
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="fh5co-testimonial text-center animate-box">
                         <div class=" jumbotron">
-                            <h2><a href="#">カルボンマーケットについて</a></h2>
+                            <h2><a href="#"><?php echo $indexview['title'] ?></a></h2>
                             <figure>
                                 <h5 class="text-right">★★☆☆☆</h5>
                             </figure>
                             <h4>
-                                <p>Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn’t really do it, they just saw something. It seemed obvious to them after a while.</p>
+                                <p><?php echo $indexview['content'] ?></p>
 
-                                <p>続きを読むには   
+<!--                                 <p>続きを読むには   
                                 <a href="#">会員登録</a>が必要です。
-                                </p>
+                                </p> -->
                             </h4>
                             </div>
                             
@@ -550,8 +562,7 @@
 
 
 
-
-
+                    <?php endforeach ?>
 
 
 
@@ -678,13 +689,14 @@
 
 
 				<!-- 本文 -->
+
         <div id="fh5co-content-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="fh5co-testimonial text-center animate-box">
                         <div class=" jumbotron">
-                            <h2><a href="#">カルボンマーケットについて</a></h2>
+                            <h2><a href="#">aaaaa</a></h2>
                             <figure>
                                 <h5 class="text-right">★★☆☆☆</h5>
                             </figure>
@@ -795,8 +807,7 @@
 
 
                         </div>
-                    </div>
-
+                    </div>                        
 
 
 

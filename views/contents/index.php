@@ -4,6 +4,11 @@
         <?php $firstcontent=array_shift($indexplaceviews); ?> 
         <?php endif ?>
 
+        <!-- パンくずリスト用 -->
+        <?php if (isset($index_data['search'])): ?>
+        <?php $breadplace=current($indexplaceviews) ?>
+<!--         <?php var_dump($breadplace) ?> -->
+        <?php endif ?>
 
 
 <!-- 		<?php var_dump($indexplaceviews);  ?> -->
@@ -808,28 +813,27 @@
 
 
 
-  		<!-- パンくずリスト 検索情報が入力された場合 -->
+  		<!-- パンくずリスト 検索情報が入力されている場合のみ -->
 
-                <?php if (!isset($index_data['search'])): ?>
+<!--                 <?php if (!isset($index_data['search'])): ?>
                 <?php echo '<style>/*' ?>
                 <?php endif ?>
-
         <ol class="breadcrumb">場所：
-    <li><a href="http://bootstrap3.cyberlab.info">フィリピン</a></li>
-    <li><a href="http://bootstrap3.cyberlab.info/components/">セブ</a></li>
-    <li class="active">カルボンマーケット</li>
+    <li><a href="http://bootstrap3.cyberlab.info"><?php echo $breadplace['country_name']; ?></a></li>
+    <li><a href="http://bootstrap3.cyberlab.info/components/"><?php echo $breadplace['city_name']; ?></a></li> -->
+    <!-- 本来はマスタから取得したデータを出力しなくてはならない -->
+<!--     <li class="active"><?php echo $breadplace['place_name']; ?></li>
         </ol>
                 <?php if (!isset($index_data['search'])): ?>
                 <?php echo '*/</style>' ?>
-                <?php endif ?>
+                <?php endif ?> -->
 
-
-
-<!--   		<ol class="breadcrumb">場所：
-	<li><a href="http://bootstrap3.cyberlab.info">フィリピン</a></li>
-	<li><a href="http://bootstrap3.cyberlab.info/components/">セブ</a></li>
-	<li class="active">カルボンマーケット</li>
-		</ol> -->
+            <!-- バックアップ用のパンくずリスト -->
+            <!--   		<ol class="breadcrumb">場所：
+            	<li><a href="http://bootstrap3.cyberlab.info">フィリピン</a></li>
+            	<li><a href="http://bootstrap3.cyberlab.info/components/">セブ</a></li>
+            	<li class="active">カルボンマーケット</li>
+            		</ol> -->
 
 		<!-- 検索ボタン -->
 		<p>

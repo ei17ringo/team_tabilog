@@ -9,7 +9,7 @@
                                                         <div  class="col-md-2">
                                                         </div>
                                                         <div  class="col-md-8" style align="left">
-                                                        <form class="" method="post" action="/tabilog/users/thanks">
+                                                        <form class="" method="post" action="/tabilog/users/create">
                                                             <h2>お名前：<?php echo htmlspecialchars($_SESSION['join']['user_name'],ENT_QUOTES,'UTF-8');?>　様</h2>
                                                             <h2>年齢：<?php echo htmlspecialchars($_SESSION ['join']['age'],ENT_QUOTES,'UTF-8');?>歳</h2>
                                                             <h2>性別：<?php 

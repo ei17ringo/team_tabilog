@@ -24,9 +24,9 @@
 <!--                                                                         <input type="text" class="form-control" name="user_name" id="name"  placeholder="例：山田太郎"/>
 -->    
                                                                             <?php if(isset($_POST['nick_name'])){ ?>
-                                                                              <input type="text" name="user_name" class="form-control" placeholder="例： Seed kun " value="<?php echo $_POST['user_name']; ?>">
+                                                                              <input type="text" name="user_name" class="form-control" placeholder="例： 山田太郎 " value="<?php echo $_POST['user_name']; ?>">
                                                                               <?php }else{?>
-                                                                              <input type="text" name="user_name" class="form-control" placeholder="例： Seed kun" >
+                                                                              <input type="text" name="user_name" class="form-control" placeholder="例： 山田太郎" >
                                                                               <?php } ?>
                                                                               <?php if(isset($error['user_name']) && $error['user_name'] == 'blank'): ?>
                                                                               <p class="error"> ※ニックネームを入力してください。</p>

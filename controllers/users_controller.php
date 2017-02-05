@@ -41,6 +41,7 @@ session_start();
       function signup($user_data) {
 
 
+
          $error = array();
 
 
@@ -78,19 +79,16 @@ session_start();
               // $error_nick_name =  'ニックネームを入力してくだささい。';
               $error['e_comfirm'] = 'blank';
               //blankは未入力
-            }elseif($user_data['e_comfirm'] == $user_data['e_comfirm']){
-              //パスワードが４文字より少ない
-              $error['e_comfirm'] = 'blank';
-
             }
 
-          //パスワードが未入力の場合
+
+                   //パスワードが未入力の場合
             if (empty($user_data['password'])){
                 
                 // $error_password =  'パスワードを入力してくだささい。';
               $error['password'] = 'blank';
 
-            }elseif(strlen($user_data['password']) < 8){
+            }elseif(strlen($user_data['password']) < 4){
               //パスワードが４文字より少ない
               $error['password'] = 'length';
 
@@ -103,12 +101,11 @@ session_start();
                 // $error_password =  'パスワードを入力してくだささい。';
               $error['p_comfirm'] = 'blank';
 
-            }elseif(strlen($user_data['password']) < 8){
+            }elseif(strlen($user_data['password']) < 4){
               //パスワードが４文字より少ない
               $error['p_comfirm'] = 'length';
 
             }
-
 
             
           //エラーがない場合に便利　
@@ -124,6 +121,7 @@ session_start();
               header('Location:/tabilog/users/check');
               exit();
             }
+
 
           //書き直し
           if(isset($_REQUEST['action']) && $_REQUEST['action']== 'rewrite'){
@@ -149,12 +147,12 @@ session_start();
 
       function check() {
 
-        $user = new User();
+      //   $user = new User();
       
-      //モデルのcreateメソッドを実行する（モデルのcreateメソッドは、insert文を実行してブログを保存する）
-      $return = $user->create($user_data);
+      // //モデルのcreateメソッドを実行する（モデルのcreateメソッドは、insert文を実行してブログを保存する）
+      // $return = $user->create($user_data);
 
-      header('Location:/tabilog/users/thanks');
+      // header('Location:/tabilog/users/thanks');
 
 
        

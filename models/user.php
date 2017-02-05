@@ -36,24 +36,44 @@
 				// if(!empty($user_data)){
   
   
-					  $sql = sprintf('INSERT INTO users SET user_name="%s", age="%d", sex="%d" email="%s", password="%s", u_created="now()"',
+					//   $sql = sprintf('INSERT INTO users SET user_name="%s", age="%d", sex="%d" email="%s", password="%s", u_created="now()"',
 					   
-					    mysqli_real_escape_string($db, $_SESSION['join']['user_name']),
-					    mysqli_real_escape_string($db, $_SESSION['join']['age']),
-					    mysqli_real_escape_string($db, $_SESSION['join']['sex']),
-					    mysqli_real_escape_string($db, $_SESSION['join']['email']),
+					//     mysqli_real_escape_string($db, $_SESSION['join']['user_name']),
+					//     mysqli_real_escape_string($db, $_SESSION['join']['age']),
+					//     mysqli_real_escape_string($db, $_SESSION['join']['sex']),
+					//     mysqli_real_escape_string($db, $_SESSION['join']['email']),
 
-					    // sha1(シャーワン)暗号化する関数　16進数の４０byteの文字列を取得する
-					    mysqli_real_escape_string($db, sha1($_SESSION['join']['password']))
-					);
+					//     // sha1(シャーワン)暗号化する関数　16進数の４０byteの文字列を取得する
+					//     mysqli_real_escape_string($db, sha1($_SESSION['join']['password']))
+					// );
 
 					   // $sql = sprintf("INSERT INTO `users`(`user_id`, `user_name`, `email`, `password`, `sex`, `age`, `u_created`, `u_modified`, `u_delete_flag`) 
 					   // 	VALUES (NULL,'%s','%s',sha1('%s'),'%d','%d',now(),CURRENT_TIMESTAMP,0);"
 					   // 	,$user_data['user_name'],$user_data['email'],$user_data['password'],$user_data['sex'],$user_data['age']
 					   // 	);
 
-					   // 	INSERT INTO `users`(`id`, `user_name`, `email`, `delete_flag`, `created`, `modified`) 
-								// VALUES (NULL,'%s','%s',0,'%d','%d',now(),CURRENT_TIMESTAMP,0);",$blog_data['title'],$blog_data['body']'
+
+
+					   // $sql = sprintf("INSERT INTO `users`(`user_id`, `user_name`, `email`, `password`, `sex`, `age`, `u_created`, `u_modified`, `u_delete_flag`) 
+					   // 	VALUES (NULL,'%s','%s',sha1('%s'),'%d','%d',now(),CURRENT_TIMESTAMP,0);",
+					   // 	mysqli_real_escape_string($db, $_SESSION['join']['user_name']),
+					   // 	mysqli_real_escape_string($db, $_SESSION['join']['email']),
+					   // 	mysqli_real_escape_string($db, sha1($_SESSION['join']['password'])),
+					   // 	mysqli_real_escape_string($db, $_SESSION['join']['sex']),
+					   // 	mysqli_real_escape_string($db, $_SESSION['join']['age'])
+
+					   // 	
+
+				 $sql = sprintf("INSERT INTO `users`(`user_id`, `user_name`, `email`, `password`, `sex`, `age`, `u_created`, `u_modified`, `u_delete_flag`) 
+					   	VALUES (NULL,'%s','%s',sha1('%s'),'%d','%d',now(),CURRENT_TIMESTAMP,0);",
+					   	$_SESSION['join']['user_name'],
+					    $_SESSION['join']['email'],
+					   	sha1($_SESSION['join']['password']),
+					  	$_SESSION['join']['sex'],
+					   	$_SESSION['join']['age']
+
+					   	);
+
 					  
 
 					  //mysqli_query()SQL文実行

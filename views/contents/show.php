@@ -1,15 +1,130 @@
-<?php var_dump($showviews) ?>
+<!-- <?php var_dump($showviews) ?> -->
 
         <?php foreach ($showviews as $showview): ?>
 
         <!-- モーダル表示 -->
-        	<div class="modal fade" id="image_Modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"  style="z-index: 1500">
+        <!-- 写真1 -->
+        	<div class="modal fade" id="<?php echo 'picture1'.$showview['content_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"  style="z-index: 1500">
 			<div class="modal-dialog modal-lg modal-middle"> 
 			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
 			 --><div class="modal-content">
 			 
 			<div class="modal-body">
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path1'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425" />
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path1'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" />
+			</div>
+			<div class="modal-img_footer">
+			<p>モーダル商品</p> <!-- //テキスト表示 -->
+			<button type="button" class="btn btn-success" data-dismiss="modal">Close</button> 
+			<!-- //ボタンを取り付け -->
+			</div>
+			 
+			</div>
+			</div>
+			</div>
+
+			        <!-- 写真2 -->
+        	<div class="modal fade" id="<?php echo 'picture2'.$showview['content_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"  style="z-index: 1500">
+			<div class="modal-dialog modal-lg modal-middle"> 
+			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
+			 --><div class="modal-content">
+			 
+			<div class="modal-body">
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path2'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" />
+			</div>
+			<div class="modal-img_footer">
+			<p>モーダル商品</p> <!-- //テキスト表示 -->
+			<button type="button" class="btn btn-success" data-dismiss="modal">Close</button> 
+			<!-- //ボタンを取り付け -->
+			</div>
+			 
+			</div>
+			</div>
+			</div>
+
+			        <!-- 写真3 -->
+        	<div class="modal fade" id="<?php echo 'picture3'.$showview['content_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"  style="z-index: 1500">
+			<div class="modal-dialog modal-lg modal-middle"> 
+			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
+			 --><div class="modal-content">
+			 
+			<div class="modal-body">
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path3'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" />
+			</div>
+			<div class="modal-img_footer">
+			<p>モーダル商品</p> <!-- //テキスト表示 -->
+			<button type="button" class="btn btn-success" data-dismiss="modal">Close</button> 
+			<!-- //ボタンを取り付け -->
+			</div>
+			 
+			</div>
+			</div>
+			</div>
+
+			        <!-- 写真4 -->
+        	<div class="modal fade" id="<?php echo 'picture4'.$showview['content_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"  style="z-index: 1500">
+			<div class="modal-dialog modal-lg modal-middle"> 
+			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
+			 --><div class="modal-content">
+			 
+			<div class="modal-body">
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path4'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" />
+			</div>
+			<div class="modal-img_footer">
+			<p>モーダル商品</p> <!-- //テキスト表示 -->
+			<button type="button" class="btn btn-success" data-dismiss="modal">Close</button> 
+			<!-- //ボタンを取り付け -->
+			</div>
+			 
+			</div>
+			</div>
+			</div>
+
+			        <!-- 写真5 -->
+        	<div class="modal fade" id="<?php echo 'picture5'.$showview['content_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"  style="z-index: 1500">
+			<div class="modal-dialog modal-lg modal-middle"> 
+			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
+			 --><div class="modal-content">
+			 
+			<div class="modal-body">
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path5'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" />
+			</div>
+			<div class="modal-img_footer">
+			<p>モーダル商品</p> <!-- //テキスト表示 -->
+			<button type="button" class="btn btn-success" data-dismiss="modal">Close</button> 
+			<!-- //ボタンを取り付け -->
+			</div>
+			 
+			</div>
+			</div>
+			</div>		
+
+			        <!-- 写真6 -->
+        	<div class="modal fade" id="<?php echo 'picture6'.$showview['content_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"  style="z-index: 1500">
+			<div class="modal-dialog modal-lg modal-middle"> 
+			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
+			 --><div class="modal-content">
+			 
+			<div class="modal-body">
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path6'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" />
+			</div>
+			<div class="modal-img_footer">
+			<p>モーダル商品</p> <!-- //テキスト表示 -->
+			<button type="button" class="btn btn-success" data-dismiss="modal">Close</button> 
+			<!-- //ボタンを取り付け -->
+			</div>
+			 
+			</div>
+			</div>
+			</div>		
+
+			        <!-- 写真7 -->
+        	<div class="modal fade" id="<?php echo 'picture7'.$showview['content_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"  style="z-index: 1500">
+			<div class="modal-dialog modal-lg modal-middle"> 
+			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
+			 --><div class="modal-content">
+			 
+			<div class="modal-body">
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path7'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" />
 			</div>
 			<div class="modal-img_footer">
 			<p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -21,12 +136,49 @@
 			</div>
 			</div>	
 
+			        <!-- 写真8 -->
+        	<div class="modal fade" id="<?php echo 'picture8'.$showview['content_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"  style="z-index: 1500">
+			<div class="modal-dialog modal-lg modal-middle"> 
+			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
+			 --><div class="modal-content">
+			 
+			<div class="modal-body">
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path8'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" />
+			</div>
+			<div class="modal-img_footer">
+			<p>モーダル商品</p> <!-- //テキスト表示 -->
+			<button type="button" class="btn btn-success" data-dismiss="modal">Close</button> 
+			<!-- //ボタンを取り付け -->
+			</div>
+			 
+			</div>
+			</div>
+			</div>
+
+			        <!-- 写真9 -->
+        	<div class="modal fade" id="<?php echo 'picture9'.$showview['content_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"  style="z-index: 1500">
+			<div class="modal-dialog modal-lg modal-middle"> 
+			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
+			 --><div class="modal-content">
+			 
+			<div class="modal-body">
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path9'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" />
+			</div>
+			<div class="modal-img_footer">
+			<p>モーダル商品</p> <!-- //テキスト表示 -->
+			<button type="button" class="btn btn-success" data-dismiss="modal">Close</button> 
+			<!-- //ボタンを取り付け -->
+			</div>
+			 
+			</div>
+			</div>
+			</div>
 
 				  		<!-- パンくずリスト -->
   		<ol class="breadcrumb">場所：
-	<li><a href="http://bootstrap3.cyberlab.info"><?php echo $showview['country_name'] ?></a></li>
-	<li><a href="http://bootstrap3.cyberlab.info/components/"><?php echo $showview['city_name'] ?></a></li>
-	<li><a href="http://bootstrap3.cyberlab.info/components/"><?php echo $showview['place_name'] ?></a></li>
+	<li><?php echo $showview['country_name'] ?></li>
+	<li><?php echo $showview['city_name'] ?></li>
+	<li><?php echo $showview['place_name'] ?></li>
 	<li class="active">投稿者：
 	<?php echo $showview['user_name'] ?>
 	</li>
@@ -80,190 +232,51 @@
 
             <!-- モーダル -->
 			   <!-- 写真１ -->
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path1'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4 " data-toggle="modal" data-target="#image_Modal" style="cursor:pointer" /> 
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path1'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4 " data-toggle="modal" data-target="<?php echo '#picture1'.$showview['content_id'] ?>" style="cursor:pointer" /> 
 			<!-- //レスポンシブ対応・サムネイルに変更・画像上にポインターを置くと矢印から指になる
 			 --> 
-			<div class="modal fade" id="image_Modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-			<div class="modal-dialog modal-lg modal-middle"> 
-			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
-			 --><div class="modal-content">
-			 
-			<div class="modal-body">
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path1'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="<?php echo $showview['picture_path1'] ?>" />
-			</div>
-			<div class="modal-img_footer">
-			<p class="text-center">モーダル商品</p> <!-- //テキスト表示 -->
-			<button type="button" class="btn btn-success center-block" data-dismiss="modal">Close</button> 
-			<!-- //ボタンを取り付け -->
-			</div>
-			 
-			</div>
-			</div>
-			</div>
 
 
 			   <!-- 写真2 -->
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path2'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4" data-toggle="modal" data-target="#image_Modal" style="cursor:pointer" /> 
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path2'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4" data-toggle="modal" data-target="<?php echo '#picture2'.$showview['content_id'] ?>" style="cursor:pointer" /> 
 			<!-- //レスポンシブ対応・サムネイルに変更・画像上にポインターを置くと矢印から指になる
 			 --> 
 
 			   <!-- 写真3 -->
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path3'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4" data-toggle="modal" data-target="#image_Modal" style="cursor:pointer" /> 
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path3'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4" data-toggle="modal" data-target="<?php echo '#picture3'.$showview['content_id'] ?>" style="cursor:pointer" /> 
 			<!-- //レスポンシブ対応・サムネイルに変更・画像上にポインターを置くと矢印から指になる
 			 --> 
-			<div class="modal fade" id="image_Modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-			<div class="modal-dialog modal-lg modal-middle"> 
-			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
-			 --><div class="modal-content">
-			 
-			<div class="modal-body">
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path3'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425" alt="<?php echo $showview['picture_path3'] ?>" />
-			</div>
-			<div class="modal-img_footer">
-			<p>モーダル商品</p> <!-- //テキスト表示 -->
-			<button type="button" class="btn btn-success" data-dismiss="modal">Close</button> 
-			<!-- //ボタンを取り付け -->
-			</div>
-			 
-			</div>
-			</div>
-			</div>
-
 
 			   <!-- 写真4 -->
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path4'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4" data-toggle="modal" data-target="#image_Modal" style="cursor:pointer" /> 
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path4'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4" data-toggle="modal" data-target="<?php echo '#picture4'.$showview['content_id'] ?>" style="cursor:pointer" /> 
 			<!-- //レスポンシブ対応・サムネイルに変更・画像上にポインターを置くと矢印から指になる
 			 --> 
-			<div class="modal fade" id="image_Modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-			<div class="modal-dialog modal-lg modal-middle"> 
-			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
-			 --><div class="modal-content">
-			 
-			<div class="modal-body">
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path4'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425" alt="<?php echo $showview['picture_path4'] ?>" />
-			</div>
-			<div class="modal-img_footer">
-			<p>モーダル商品</p> <!-- //テキスト表示 -->
-			<button type="button" class="btn btn-success" data-dismiss="modal">Close</button> 
-			<!-- //ボタンを取り付け -->
-			</div>
-			 
-			</div>
-			</div>
-			</div>
-
 
 						   <!-- 写真5 -->
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path5'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4 " data-toggle="modal" data-target="#image_Modal" style="cursor:pointer" /> 
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path5'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4 " data-toggle="modal" data-target="<?php echo '#picture5'.$showview['content_id'] ?>" style="cursor:pointer" /> 
 			<!-- //レスポンシブ対応・サムネイルに変更・画像上にポインターを置くと矢印から指になる
 			 --> 
-			<div class="modal fade" id="image_Modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-			<div class="modal-dialog modal-lg modal-middle"> 
-			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
-			 --><div class="modal-content">
-			 
-			<div class="modal-body">
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path5'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="<?php echo $showview['picture_path5'] ?>" />
-			</div>
-			<div class="modal-img_footer">
-			<p class="text-center">モーダル商品</p> <!-- //テキスト表示 -->
-			<button type="button" class="btn btn-success center-block" data-dismiss="modal">Close</button> 
-			<!-- //ボタンを取り付け -->
-			</div>
-			 
-			</div>
-			</div>
-			</div>
-
 
 			   <!-- 写真6 -->
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path6'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4" data-toggle="modal" data-target="#image_Modal" style="cursor:pointer" /> 
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path6'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4" data-toggle="modal" data-target="<?php echo '#picture6'.$showview['content_id'] ?>" style="cursor:pointer" /> 
 			<!-- //レスポンシブ対応・サムネイルに変更・画像上にポインターを置くと矢印から指になる
 			 --> 
-			<div class="modal fade" id="image_Modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-			<div class="modal-dialog modal-lg modal-middle"> 
-			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
-			 --><div class="modal-content">
-			 
-			<div class="modal-body">
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path6'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425" alt="<?php echo $showview['picture_path6'] ?>" />
-			</div>
-			<div class="modal-img_footer">
-			<p>モーダル商品</p> <!-- //テキスト表示 -->
-			<button type="button" class="btn btn-success" data-dismiss="modal">Close</button> 
-			<!-- //ボタンを取り付け -->
-			</div>
-			 
-			</div>
-			</div>
-			</div>	
 
 			   <!-- 写真7 -->
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path7'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4" data-toggle="modal" data-target="#image_Modal" style="cursor:pointer" /> 
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path7'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4" data-toggle="modal" data-target="<?php echo '#picture7'.$showview['content_id'] ?>" style="cursor:pointer" /> 
 			<!-- //レスポンシブ対応・サムネイルに変更・画像上にポインターを置くと矢印から指になる
 			 --> 
-			<div class="modal fade" id="image_Modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-			<div class="modal-dialog modal-lg modal-middle"> 
-			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
-			 --><div class="modal-content">
-			 
-			<div class="modal-body">
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path7'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425" alt="<?php echo $showview['picture_path7'] ?>" />
-			</div>
-			<div class="modal-img_footer">
-			<p>モーダル商品</p> <!-- //テキスト表示 -->
-			<button type="button" class="btn btn-success" data-dismiss="modal">Close</button> 
-			<!-- //ボタンを取り付け -->
-			</div>
-			 
-			</div>
-			</div>
-			</div>
-
 
 			   <!-- 写真8 -->
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path8'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4" data-toggle="modal" data-target="#image_Modal" style="cursor:pointer" /> 
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path8'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4" data-toggle="modal" data-target="<?php echo '#picture8'.$showview['content_id'] ?>" style="cursor:pointer" /> 
 			<!-- //レスポンシブ対応・サムネイルに変更・画像上にポインターを置くと矢印から指になる
 			 --> 
-			<div class="modal fade" id="image_Modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-			<div class="modal-dialog modal-lg modal-middle"> 
-			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
-			 --><div class="modal-content">
-			 
-			<div class="modal-body">
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path8'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425" alt="<?php echo $showview['picture_path8'] ?>" />
-			</div>
-			<div class="modal-img_footer">
-			<p>モーダル商品</p> <!-- //テキスト表示 -->
-			<button type="button" class="btn btn-success" data-dismiss="modal">Close</button> 
-			<!-- //ボタンを取り付け -->
-			</div>
-			 
-			</div>
-			</div>
-			</div>	
+
 
 			   <!-- 写真9 -->
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path9'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4" data-toggle="modal" data-target="#image_Modal" style="cursor:pointer" /> 
+			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path9'] ?>" width="1920" height="1440" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425 col-md-4" data-toggle="modal" data-target="<?php echo '#picture9'.$showview['content_id'] ?>" style="cursor:pointer" /> 
 			<!-- //レスポンシブ対応・サムネイルに変更・画像上にポインターを置くと矢印から指になる
 			 --> 
-			<div class="modal fade" id="image_Modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="z-index: 1500">
-			<div class="modal-dialog modal-lg modal-middle"> 
-			<!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
-			 --><div class="modal-content">
-			 
-			<div class="modal-body">
-			<img src="images/1.jpeg" alt="<?php echo $showview['picture_path9'] ?>" width="720" height="540" class="aligncenter size-full wp-image-425" alt="<?php echo $showview['picture_path9'] ?>" />
-			</div>
-			<div class="modal-img_footer">
-			<p>モーダル商品</p> <!-- //テキスト表示 -->
-			<button type="button" class="btn btn-success" data-dismiss="modal">Close</button> 
-			<!-- //ボタンを取り付け -->
-			</div>
-			 
-			</div>
-			</div>
-			</div>
 
         <?php endforeach ?>
 

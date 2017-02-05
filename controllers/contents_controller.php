@@ -104,6 +104,9 @@
       }
 
       function show($id) {
+          if (empty(($id))) {
+            header('Location:/tabilog/contents/index');
+          }
           $content = new Content();
           $showviews = $content->show($id);
 

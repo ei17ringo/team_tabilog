@@ -1,4 +1,5 @@
 <?php
+  session_start();
 
 	//モデルの呼び出し
 	require('models/content.php');
@@ -18,10 +19,10 @@
    			$controller->show($id);
    			break;
    		case 'add':
-   			$controller->add();
+   			$controller->add($_POST);
    			break;
       case 'create':
-        $controller->create($_POST);
+        $controller->create();
         break;
       case 'edit':
         $controller->edit($id);
@@ -59,7 +60,59 @@
           require('views/layout/application.php');
       }
 
-      function add(){
+      function add($post_data){
+
+        $error = arroy();
+
+        if(isset($post_data) && !empty($post_data)){
+
+          //タイトルが未入力の場合
+          if(empty($post_data['title'])){
+          // $error_nickname = 'タイトルを入力してください。';
+          $error['title'] = 'blank';
+          }
+          //国が未入力の場合
+          if(empty($post_data['country_place'])){
+          // $error_email = '国名を選択してください。';
+          $error['country_place'] = 'blank';
+          }
+          //都市が未入力の場合
+          if(empty($post_data['city_name'])){
+          // $error_email = '都市名を選択してください。';
+          $error['city_name'] = 'blank';
+          }
+          //観光地が未入力の場合
+          if(empty($post_data['place_name'])){
+          // $error_email = '観光地を選択してください。';
+          $error['place_name'] = 'blank';
+          }
+          //星評価が未入力の場合
+          if(empty($post_data['rating'])){
+          // $error_email = '評価を入力してください。';
+          $error['rating'] = 'blank';
+          }
+          //内容が未入力の場合
+          if(empty($post_data['content'])){
+          // $error_email = '内容を入力してください。';
+          $error['content'] = 'blank';
+          }
+        }
+
+        //エラーがない場合に便利　
+             if(empty($error)){
+
+               //セッションに値を保存
+              $_SESSION['join'] = $post_data;
+              // $_SESSION['join']['picture_path'] = $picture_path;
+
+              // var_dump($_SESSION);
+              //check.phpにへ遷移
+
+              header('Location:/Tabilog/users/check');
+              exit();
+            }
+
+
           $resource = 'contents';
           $action = 'add';
           require('views/layout/application.php');

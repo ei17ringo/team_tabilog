@@ -100,9 +100,7 @@
           // $error_email = '内容を入力してください。';
           $error['content'] = 'blank';
           }
-        }
-
-        //エラーがない場合に便利　
+//エラーがない場合に便利
              if(empty($error)){
 
                //セッションに値を保存
@@ -112,7 +110,7 @@
               // var_dump($_SESSION);
               //check.phpにへ遷移
 
-              // header('Location:/team_tabilog/contents/check');
+              header('Location:/team_tabilog/contents/check');
               exit();
             }
 
@@ -122,6 +120,8 @@
              //画像の再選択エラーメッセージを表示するために必要
              $error['rewrite'] = true;
            }
+
+        }
 
             $resource = 'contents';
             $action = 'add';

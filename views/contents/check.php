@@ -7,13 +7,13 @@
                      <h3 style align="center">この内容で投稿してよろしいでしょうか？</h3>
                      <label style align="left">タイトル</label>
                     <div class="form-group">
-                        <input type="text" class="form-control" disabled="disabled" id="name" name="name" placeholder="タイトル：" value="<?php echo htmlspecialchars($_SESSION['join']['title'],ENT_QUOTES,'UTF-8');?>" required>
+                        <input type="text" class="form-control" disabled="disabled" id="name" name="title" placeholder="タイトル：" value="<?php echo htmlspecialchars($_SESSION['join']['title'],ENT_QUOTES,'UTF-8');?>" required>
                     </div>
                      <label style align="left">場所</label>
                     <div class="form-group">
                      <div class="row">
                       <div class="col-md-12">
-     　　　　　　　　　　<!-- 　<div class="form-inline"> -->
+                      <!-- <div class="form-inline"> -->
 
                         <!-- セレクトボックス -->
                           <!-- <select name="list" class="form-control" disabled="disabled">
@@ -34,7 +34,6 @@
 
                       <!--  </div> -->
                       </div>
-     　　　　　　　　　　　
                        <!-- <input type="text" class="form-control" id="mobile" name="mobile" placeholder="国：" required> -->
                      </div>
                      <!-- <div class="col-md-4">
@@ -59,7 +58,7 @@
 
                     <label style align="left">内容</label>
                 <div class="form-group">
-                 <textarea class="form-control" disabled="disabled"　id="mobile" name="mobile"  rows="15" placeholder="内容：" value="<?php echo htmlspecialchars($_SESSION['join']['content'],ENT_QUOTES,'UTF-8');?>" required></textarea>
+                 <textarea class="form-control" disabled="disabled" id="mobile" name="content"  rows="15" placeholder="内容：" value="<?php echo htmlspecialchars($_SESSION['join']['content'],ENT_QUOTES,'UTF-8');?>" required></textarea>
 
                 </div>
              <!--  </form> -->
@@ -403,7 +402,7 @@
 
                <!-- 確定ボタン（データベースに追加、会員投稿一覧に遷移 -->
                     <div  class="col-md-4">
-                      <a href="thanks.html" target="_blank" type="button" id="button" class="btn btn-warning btn-lg btn-block login-button " style="color:#FFFFFF !important;">確定</a>　
+                      <a href="thanks.html" target="_blank" type="button" id="button" class="btn btn-warning btn-lg btn-block login-button " style="color:#FFFFFF !important;">確定</a>
                     </div>
               </from>
           </div>

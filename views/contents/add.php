@@ -43,7 +43,9 @@
                         <!-- <span id="stars" class="starrr">オススメ度：</span>
                        <span id="count" >0</span> star(s) -->
                        <span id="stars" class="starrr">オススメ度：</span>
-                       <input type="" name="rating" id="count" >0</span> star(s)
+
+                       <span type="hidden" name="rating" id="count" >0 </span> star(s)
+                      
                     	<!-- </div> -->
                     </div>
 
@@ -54,7 +56,14 @@
 
        <div class="form-group">
         <label for="InputFile">写真</label>
-        <input type="file" id="InputFile">
+        <!-- <input type="file" id="InputFile"> -->
+         <input type="file" name="picture_path1" class="form-control">
+              <?php if(isset($error['picture_path1']) && $error['picture_path1']=='type'){ ?>
+              <p class="error">* 写真などは「,gif」「.jpg」「.png」の画像を指定して下さい。</p>
+              <?php } ?>
+              <?php if (!empty($error)): ?>
+               <p class="error">* 恐れ入りますが、画像を改めてして下さい。</p>
+              <?php endif; ?>
          <h6>*最大９枚までアップロードができます</h6>
         <p class="help-block"></p>
        </div>

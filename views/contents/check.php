@@ -1,3 +1,4 @@
+<?php var_dump($_SESSION['join']); ?>
 <div class="container">
 <div class="col-md-offset-2 col-md-8">
  <div class="form-area">
@@ -30,7 +31,7 @@
                            <option value="item3">ベトナム</option>
                            <option value="item3">フィリピン</option>
                           </select> -->
-                            <input type="text" class="form-control" disabled="disabled" id="mobile" name="mobile" placeholder="国名： &nbsp; &nbsp; &nbsp; &nbsp;地域： &nbsp; &nbsp; &nbsp; &nbsp;都市：" required>
+                            <input type="text" class="form-control" disabled="disabled" id="mobile" name="mobile" placeholder="国名： &nbsp; &nbsp; &nbsp; &nbsp;地域： &nbsp; &nbsp; &nbsp; &nbsp;都市：" value="<?php echo htmlspecialchars($_SESSION['join']['country_name'],ENT_QUOTES,'UTF-8');?>&nbsp; &nbsp;/&nbsp; &nbsp;<?php echo htmlspecialchars($_SESSION['join']['city_name'],ENT_QUOTES,'UTF-8');?>&nbsp; &nbsp;/&nbsp; &nbsp;<?php echo htmlspecialchars($_SESSION['join']['place_name'],ENT_QUOTES,'UTF-8');?>"required>
 
                       <!--  </div> -->
                       </div>
@@ -47,7 +48,7 @@
                      <label style align="left">オススメ度</label>
                     <div class="form-group">
                       <div class="form-inline">
-                       <input type="text" class="form-control" disabled="disabled" id="mobile" name="mobile" placeholder="★★★★★" value="<?php echo htmlspecialchars($_SESSION['join']['rating'],ENT_QUOTES,'UTF-8');?>" required>
+                       <input type="text" class="form-control" disabled="disabled" id="mobile" name="mobile" placeholder="" value="<?php echo htmlspecialchars($_SESSION['join']['rating'],ENT_QUOTES,'UTF-8');?>" required>
 
                         <!-- <div class="row lead"> -->
                         <!-- <span id="stars" class="starrr"></span>
@@ -56,16 +57,15 @@
                      </div>
                     </div>
 
-                    <label style align="left">内容</label>
+              <label style align="left">内容</label>
                 <div class="form-group">
-                 <textarea class="form-control" disabled="disabled" id="mobile" name="content"  rows="15" placeholder="内容：" value="<?php echo htmlspecialchars($_SESSION['join']['content'],ENT_QUOTES,'UTF-8');?>" required></textarea>
-
+                 <textarea class="form-control" disabled="disabled" id="mobile" name="content"  rows="15" placeholder="内容：" required><?php echo htmlspecialchars($_SESSION['join']['content'],ENT_QUOTES,'UTF-8');?></textarea>
                 </div>
              <!--  </form> -->
 
                <div class="form-group">
              <label for="InputFile">写真</label>
-              <!-- <input disabled="disabled"　type="file" id="InputFile">
+              <!-- <input disabled="disabled" type="file" id="InputFile">
               <h6>*最大９枚までアップロードができます</h6> -->
               <p class="help-block"></p>
             </div>
@@ -90,10 +90,13 @@
                     <div class="row">
 
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal1" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                     
+
+                  <!--     <div class="col-md-3"><img src="../images/<?php echo htmlspecialchars($_SESSION['join']['picture_path1'], ENT_QUOTES,'UTF-8'); ?>" style="max-width:100%;"
+                      style="max-height:100%;"  ><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal1" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail aligncenter size-full wp-image-425"></a></div> -->
 
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal2" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../images/<?php echo htmlspecialchars($_SESSION['join']['picture_path1'], ENT_QUOTES,'UTF-8'); ?>/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal2" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail aligncenter size-full wp-image-425"></a></div>
 
                       <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 

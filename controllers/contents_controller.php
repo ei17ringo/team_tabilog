@@ -100,7 +100,20 @@
           // $error_email = '内容を入力してください。';
           $error['content'] = 'blank';
           }
-//エラーがない場合に便利
+
+
+
+          $fileName = $_FILES['picture_path1']['name'];
+           if (!empty($fileName)) {
+            $ext = substr($fileName, -4);
+           if ($ext != '.jpg' && $ext != 'jpeg' && $ext != '.png') {
+            $error['picture_path1'] = 'type';
+            }
+           }
+
+
+
+            //エラーがない場合に便利
              if(empty($error)){
 
                //セッションに値を保存

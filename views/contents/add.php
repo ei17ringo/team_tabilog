@@ -2,7 +2,7 @@
 <!-- <div class="container"> -->
  <div class="col-md-offset-2 col-md-8">
     <div class="form-area">
-        <form role="form">
+        <form role="form" method="post" action="">
         <br style="clear:both">
            <h3 style="margin-bottom: 25px; text-align: center;">新規投稿</h3>
            <div class="form-group">
@@ -41,7 +41,7 @@
                     <div class="form-group">
                         <!-- <div class="row lead"> -->
                         <span id="stars" class="starrr">オススメ度：</span>
-                       <span id="count">0</span> star(s)
+                       <span id="count" >0</span> star(s)
                     	<!-- </div> -->
                     </div>
 
@@ -49,18 +49,20 @@
        <div class="form-group">
          <textarea class="form-control" id="mobile" name="mobile"  rows="15" placeholder="内容：" required></textarea>
         </div>
-        </form>
 
-       <div class="form-group">
-		    <label for="InputFile">写真</label>
-		    <input type="file" id="InputFile">
-		     <h6>*最大９枚までアップロードができます</h6>
-		    <p class="help-block"></p>
-	     </div>
-	     <br>
-	      <div class="row">
-	      	<div class="col-md-4 col-md-offset-4">
-	      	 <a href="check.html"><button type="submit" class="btn btn-default">投稿内容を確認する</button></a>
+　　　　<div class="form-group">
+        <label for="InputFile">写真</label>
+        <input type="file" id="InputFile">
+         <h6>*最大９枚までアップロードができます</h6>
+        <p class="help-block"></p>
+       </div>
+       <br>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+           <a href="check.html"><button type="submit" class="btn btn-default">投稿内容を確認する</button></a>
         　</div>
         </div>
-<!-- </div>
+　　　</div>
+
+
+ </form>

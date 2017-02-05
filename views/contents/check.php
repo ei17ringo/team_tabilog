@@ -1,7 +1,7 @@
 <div class="container">
 <div class="col-md-offset-2 col-md-8">
  <div class="form-area">
-        <form role="form" method="post" action="/Tabilog/content/thanks">
+        <form role="form" method="post" action="/Tabilog/content/create">
         <br style="clear:both">
                     <h3 style="margin-bottom: 25px; text-align: center;">投稿確認</h3>
                      <h3 style align="center">この内容で投稿してよろしいでしょうか？</h3>

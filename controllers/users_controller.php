@@ -78,6 +78,10 @@ session_start();
               // $error_nick_name =  'ニックネームを入力してくだささい。';
               $error['e_comfirm'] = 'blank';
               //blankは未入力
+            }elseif($user_data['e_comfirm'] == $user_data['e_comfirm']){
+              //パスワードが４文字より少ない
+              $error['e_comfirm'] = 'blank';
+
             }
 
           //パスワードが未入力の場合
@@ -86,7 +90,7 @@ session_start();
                 // $error_password =  'パスワードを入力してくだささい。';
               $error['password'] = 'blank';
 
-            }elseif(strlen($user_data['password']) < 4){
+            }elseif(strlen($user_data['password']) < 8){
               //パスワードが４文字より少ない
               $error['password'] = 'length';
 
@@ -99,11 +103,12 @@ session_start();
                 // $error_password =  'パスワードを入力してくだささい。';
               $error['p_comfirm'] = 'blank';
 
-            }elseif(strlen($user_data['password']) < 4){
+            }elseif(strlen($user_data['password']) < 8){
               //パスワードが４文字より少ない
               $error['p_comfirm'] = 'length';
 
             }
+
 
             
           //エラーがない場合に便利　
@@ -116,7 +121,7 @@ session_start();
               // var_dump($_SESSION);
               //check.phpにへ遷移
 
-              header('Location:/Tabilog/users/check');
+              header('Location:/tabilog/users/check');
               exit();
             }
 
@@ -144,6 +149,14 @@ session_start();
 
       function check() {
 
+        $user = new User();
+      
+      //モデルのcreateメソッドを実行する（モデルのcreateメソッドは、insert文を実行してブログを保存する）
+      $return = $user->create($user_data);
+
+      header('Location:/tabilog/users/thanks');
+
+
        
 
           $resource = 'users';
@@ -156,7 +169,20 @@ session_start();
       }
 
 
-      function create($post_data){
+      function create($user_data){
+
+        // if(empty($_SESSION['join'])){
+        //   header('Location:/Tabilog/users/signup');
+        //   exit();
+        // }
+
+       //モ デルを呼び出す
+      $user = new User();
+      
+      //モデルのcreateメソッドを実行する（モデルのcreateメソッドは、insert文を実行してブログを保存する）
+      $return = $user->create($user_data);
+
+      header('Location:/tabilog/users/thanks');
 
       }
 

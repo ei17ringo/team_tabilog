@@ -9,7 +9,7 @@
                                                         <div  class="col-md-2">
                                                         </div>
                                                         <div  class="col-md-8" style align="left">
-                                                        <form class="" method="post" action="/Tabilog/users/thanks">
+                                                        <form class="" method="post" action="/tabilog/users/thanks">
                                                             <h2>お名前：<?php echo htmlspecialchars($_SESSION['join']['user_name'],ENT_QUOTES,'UTF-8');?>　様</h2>
                                                             <h2>年齢：<?php echo htmlspecialchars($_SESSION ['join']['age'],ENT_QUOTES,'UTF-8');?>歳</h2>
                                                             <h2>性別：<?php 
@@ -38,7 +38,7 @@
                                                          </div>
                                                          <div  class="col-md-3">
                                                          
-                                                           <a href="/Tabilog/users/signup? action = rewrite" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">変更</a>
+                                                           <a href="/tabilog/users/signup? action = rewrite" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">変更</a>
                                                             <br><br> <br><br>
                                                         </div>
                                                         <div  class="col-md-3">

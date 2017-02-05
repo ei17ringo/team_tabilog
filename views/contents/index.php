@@ -1,7 +1,25 @@
         <!-- 必須のため、消さない -->
+        <!-- 観光地情報が入っていたら最初におすすめ度の平均を計算する -->
+        <?php if (isset($place)&&$place=='sightseen'): ?>
+            <?php $total_rating=0;
+                  $comentNUM=0;
+                  foreach ($indexplaceviews as $indexplaceview) {
+                    $total_rating=$total_rating+$indexplaceview['rating'];
+                    $comentNUM++;
+                  }
+                  $ave_rating=$total_rating/$comentNUM;
+                  // echo round($ave_rating,2);
+                   ?>
+        <?php endif ?>
+
         <!-- 観光地情報が入っていたら、最初の配列を取り出す -->
         <?php if (isset($place)&&$place=='sightseen'): ?>
-        <?php $firstcontent=array_shift($indexplaceviews); ?> 
+        <?php $firstcontent=array_shift($indexplaceviews); ?>
+                <!-- Google map用 -->
+        <?php 
+        $googlemap=current($indexplaceviews);
+        // echo $_POST['latitude'];
+         ?>
         <?php endif ?>
 
         <!-- パンくずリスト用 -->
@@ -9,6 +27,7 @@
         <?php $breadplace=current($indexplaceviews) ?>
 <!--         <?php var_dump($breadplace) ?> -->
         <?php endif ?>
+
 
 
 <!-- 		<?php var_dump($indexplaceviews);  ?> -->
@@ -873,13 +892,20 @@
 */</style>
 
 
+
 		<!-- 観光地入力時の本文 -->
         <!-- 検索ワードが観光地に設定されていないときはコメントアウト -->
         <?php if (isset($place)&&$place !=='sightseen'): ?>
             <?php echo '<style>/*' ?>
         <?php endif ?>  
 
-
+        <!-- 総合評価 -->
+        <span class="h3 col-sm-offset-1">おすすめ度：<?php for ($i=0; $i < round($ave_rating) ; $i++) { 
+            echo "★";
+        } ?><?php for ($i=0; $i < 5-round($ave_rating) ; $i++) { 
+            echo "☆";
+        } ?><?php echo "    ".round($ave_rating,2)."　　　　"; ?></span>
+        <span class="glyphicon glyphicon-user"><?php echo $comentNUM ?></span>
         <div id="fh5co-content-section">
             <div class="container">
                 <div class="row">
@@ -1014,7 +1040,45 @@
 
 	<!-- Google Map -->
     <div id="map" class="" style="width:500px; height:600px"></div>
-    <script type="text/javascript" src="../webroot/assets/js/tabilog.js">
+    <script type="text/javascript" >
+    function initMap() {
+
+
+  var opts = {
+    zoom: 15,
+    center: new google.maps.LatLng(<?php echo $googlemap['latitude'] ?>, <?php echo $googlemap['longtitude'] ?>)
+  };
+  var map = new google.maps.Map(document.getElementById("map"), opts);
+
+
+
+             // 情報ウィンドウ
+            // var infowindow1 = new google.maps.InfoWindow({
+            //  position:map.getCenter(), 
+   //              map:map,
+            //   content: '場所：'+'メルボルン'+"<br />"+'おすすめ度：'+'★★★☆☆',
+            // });
+
+
+              // マーカー
+             var marker = new google.maps.Marker({ 
+                position:map.getCenter(), 
+                map:map,
+            }); 
+
+            　//マーカークリック時に動作する情報ウィンドウ 
+            google.maps.event.addListener(marker, "click", function() {
+            var infowindow = new google.maps.InfoWindow({
+            content: '場所：'+'<?php echo $googlemap['place_name_jp'] ?>'+"<br />"+'おすすめ度：'+'<?php for ($i=0; $i < round($ave_rating) ; $i++) { 
+            echo "★";
+        } ?><?php for ($i=0; $i < 5-round($ave_rating) ; $i++) { 
+            echo "☆";
+        } ?><?php echo "    ".round($ave_rating,2); ?>'
+            });
+            infowindow.open(map, marker);
+            });
+
+}
     </script>
         <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb7OPnnqxQiEZPG4T3ACsxXENeRfq5LMs&callback=initMap">
@@ -1196,7 +1260,7 @@
                     <div class="col-md-6 col-sm-6">
                         <div class="fh5co-testimonial text-center animate-box">
                         <div class=" jumbotron">
-                            <h2><a href="#"><?php echo $indexplaceview['title'] ?></a></h2>
+                            <h2><a href="show/<?php echo $indexplaceview['content_id'] ?>"><?php echo $indexplaceview['title'] ?></a></h2>
                             <figure>
                                 <h5 class="text-right">
                                 <!-- おすすめ度 -->

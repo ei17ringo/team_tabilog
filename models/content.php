@@ -35,14 +35,15 @@
 
 	function index_place($index_data){
 		// // 観光地情報から検索するためのSQLの記述
-		$sql = sprintf('SELECT * FROM `contents` WHERE `c_delete_flag`=0 AND `place_name` like "%%%s%%" ORDER BY `created` DESC',
-			$index_data['search']
-			);
-
-		// 本来の検索SQL　データが未整備のため、コメントアウト
-		// $sql = sprintf('SELECT * FROM `contents` INNER JOIN `places` ON `contents`.`place_id` = `places`.`place_id` WHERE `c_delete_flag`=0  AND `places`.`place_name` like "%%%s%%" ORDER BY `created` DESC',
+		// $sql = sprintf('SELECT * FROM `contents` WHERE `c_delete_flag`=0 AND `place_name` like "%%%s%%" ORDER BY `created` DESC',
 		// 	$index_data['search']
 		// 	);
+
+		// 本来の検索SQL　データが未整備のため、コメントアウト
+		$sql = sprintf('SELECT * FROM `contents` INNER JOIN `places` ON `contents`.`place_id` = `places`.`place_id` WHERE `c_delete_flag`=0 AND (`places`.`place_name_jp` like "%%%s%%" or `places`.`place_name_en` like "%%%s%%") ORDER BY `created` DESC',
+			$index_data['search'],
+			$index_data['search']
+			);
 
 			//SQLの実行
 			$results = mysqli_query($this->dbconnect, $sql) or die(mysqli_error($this->dbconnect));

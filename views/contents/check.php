@@ -92,29 +92,28 @@
 
                      
 
-                  <!--     <div class="col-md-3"><img src="../images/<?php echo htmlspecialchars($_SESSION['join']['picture_path1'], ENT_QUOTES,'UTF-8'); ?>" style="max-width:100%;"
-                      style="max-height:100%;"  ><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal1" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail aligncenter size-full wp-image-425"></a></div> -->
+                      <div class="col-md-3"><img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path1'], ENT_QUOTES,'UTF-8'); ?>" alt="Image" style="max-width:100% max-height:100%;" data-toggle="modal" data-target="#image_Modal1" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail aligncenter size-full wp-image-425"></a></div>
 
 
-                      <div class="col-md-3"><img src="../images/<?php echo htmlspecialchars($_SESSION['join']['picture_path1'], ENT_QUOTES,'UTF-8'); ?>/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal2" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path2'], ENT_QUOTES,'UTF-8'); ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal2" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail aligncenter size-full wp-image-425"></a></div>
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path3'], ENT_QUOTES,'UTF-8'); ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path4'], ENT_QUOTES,'UTF-8'); ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
                     </div><!--.row-->
                 </div><!--.item-->
 
                 <div class="item">
                     <div class="row">
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal5" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path5'], ENT_QUOTES,'UTF-8'); ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal5" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal6" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path6'], ENT_QUOTES,'UTF-8'); ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal6" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal7" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path7'], ENT_QUOTES,'UTF-8'); ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal7" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal8" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path8'], ENT_QUOTES,'UTF-8'); ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal8" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
 
 
@@ -151,7 +150,7 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path1'], ENT_QUOTES,'UTF-8'); ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -172,7 +171,7 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path2'], ENT_QUOTES,'UTF-8'); ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -193,7 +192,7 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path3'], ENT_QUOTES,'UTF-8'); ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -214,7 +213,7 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path4'], ENT_QUOTES,'UTF-8'); ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -236,7 +235,7 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path5'], ENT_QUOTES,'UTF-8'); ?>" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -257,7 +256,7 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path6'], ENT_QUOTES,'UTF-8'); ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -278,7 +277,7 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path7'], ENT_QUOTES,'UTF-8'); ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -299,7 +298,7 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path8'], ENT_QUOTES,'UTF-8'); ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -320,7 +319,7 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
-                        <img src="images/1.jpeg" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path9'], ENT_QUOTES,'UTF-8'); ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->

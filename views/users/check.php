@@ -38,7 +38,7 @@
                                                          </div>
                                                          <div  class="col-md-3">
                                                          
-                                                           <a href="/tabilog/users/signup? action = rewrite" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">変更</a>
+                                                           <a href="/tabilog/users/signup?action=rewrite" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">変更</a>
                                                             <br><br> <br><br>
                                                         </div>
                                                         <div  class="col-md-3">

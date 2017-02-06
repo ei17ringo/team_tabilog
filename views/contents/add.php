@@ -2,7 +2,7 @@
 <!-- <div class="container"> -->
  <div class="col-md-offset-2 col-md-8">
     <div class="form-area">
-        <form role="form" method="post" action="">
+        <form role="form" method="post" action="" enctype="multipart/form-data">
         <br style="clear:both">
            <h3 style="margin-bottom: 25px; text-align: center;">新規投稿</h3>
            <div class="form-group">
@@ -45,14 +45,15 @@
                        <span id="stars" class="starrr">オススメ度：</span>
 
                        <span type="hidden" name="rating" id="count" >0 </span> star(s)
-                      
+
                     	<!-- </div> -->
                     </div>
+    <!-- </form> -->
 
-
-       <div class="form-group">
+    <!-- <form method="post" action="" enctype="multipart/form-data"> -->
+      <div class="form-group">
          <textarea class="form-control" id="mobile" name="content"  rows="15" placeholder="内容：" required></textarea>
-        </div>
+      </div>
 
        <div class="form-group">
         <label for="InputFile">写真</label>
@@ -74,4 +75,5 @@
          </div>
         </div>
       </div>
-      </form>
+
+    </form>

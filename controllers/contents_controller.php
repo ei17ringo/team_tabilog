@@ -1,6 +1,8 @@
 <?php
   session_start();
 
+  date_default_timezone_set('Asia/Manila');
+
 	//モデルの呼び出し
 	require('models/content.php');
 
@@ -102,24 +104,24 @@
           }
 
 
-
+          // 画像のアップロード
           $fileName = $_FILES['picture_path1']['name'];
            if (!empty($fileName)) {
-            $ext = substr($fileName, -4);
-           if ($ext != '.jpg' && $ext != 'jpeg' && $ext != '.png') {
+            $ext = substr($fileName, -3);
+           if ($ext != 'jpg' && $ext != 'gif' && $ext != 'png') {
             $error['picture_path1'] = 'type';
             }
            }
 
-
-
             //エラーがない場合に便利
              if(empty($error)){
+              $picture_path1 = date('YmdHis').$_FILES['picture_path1']['name'];
+              var_dump($_FILES['picture_path1']['tmp_name']);
+              move_uploaded_file($_FILES['picture_path1']['tmp_name'], '../webroot/images/'.$picture_path1);
 
                //セッションに値を保存
               $_SESSION['join'] = $post_data;
-              // $_SESSION['join']['picture_path'] = $picture_path;
-
+              $_SESSION['join']['picture_path1'] = $picture_path1;
               // var_dump($_SESSION);
               //check.phpにへ遷移
 

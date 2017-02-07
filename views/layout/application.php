@@ -1,4 +1,4 @@
-<?php 
+<?php
     $adjust_string = '';
 
     if (($action == 'profilechg') || ($action == 'gourmet') || ($action == 'spot') || ($action == 'edit') || ($action == 'delete')){
@@ -26,7 +26,7 @@
 
 
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
-    
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="../webroot/assets/css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -102,7 +102,7 @@
                 </div>
           <input type="submit" name="login" class="login loginmodal-submit" value="Login">
         </form>
-          
+
         <div class="login-help">
           <a href="#">Register</a> - <a href="#">Forgot Password</a>
         </div>
@@ -132,7 +132,7 @@
             <span> <a href="tel://+12345678910"><!-- <i class="icon-mobile3"></i> --><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></span>
             <a href="#">/Logout</a>
             <!-- </div>
-          </div> -->  
+          </div> -->
             <span> <!-- <a href="tel://+12345678910"><i class="icon-mobile3"></i> --><a href="newmember.html" data-target="#login-modal">新規登録</a></span>
 
         </div>
@@ -208,7 +208,6 @@
   <!-- END fh5co-page -->
 
 
-  
      <!--  <?php
           // include('views/'.$resource.'/'. $action .'.php');
       ?> -->

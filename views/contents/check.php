@@ -122,7 +122,7 @@
 
                 <div class="item">
                     <div class="row">
-                       <div class="col-md-3"><img src="images/1.jpeg" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal9" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425" width="250" height="250"></a></div>
+                       <div class="col-md-3"><img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path9'], ENT_QUOTES,'UTF-8'); ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal9" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425" width="250" height="250"></a></div>
 
 
                       <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal10" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>

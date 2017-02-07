@@ -21,6 +21,17 @@
 		// 	$error= arroy();
 		function add($post_data){
 
+			$sql = 'SELECT * FROM `countries` WHERE 1';
+			//sqlの実行
+			$results = mysqli_query($this->dbconnect, $sql) or die(mysqli_error($this->dbconnect));
+ 			//実行結果を取得し、配列に格納
+ 			$rtn = array();
+ 			while ($result = mysqli_fetch_assoc($results)) {
+ 				$rtn[] = $result;
+ 			}
+ 			//取得結果を返す
+ 			return $rtn;
+
 		}
 
 		function check(){

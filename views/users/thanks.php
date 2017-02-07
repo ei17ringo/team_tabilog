@@ -2,7 +2,7 @@
                                             <div class="col-md-12">
                                                 <div class="main-login main-center" style align="center">
                                                     <br><br> <br><br>  <br><br> <br><br> 
-                                                    <h1><?php echo htmlspecialchars($_SESSION['join']['user_name'],ENT_QUOTES,'UTF-8');?>　　様</h1>
+                                                    <h1><?php echo htmlspecialchars($_SESSION['join']['user_name'],ENT_QUOTES,'UTF-8');?>　様</h1>
                                                     <h1>ご登録完了いたしました。</h1>
                                                 </div>
                                             </div>

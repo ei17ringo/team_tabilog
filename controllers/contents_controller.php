@@ -55,9 +55,9 @@
 
 
     //コンストラクタ
-    function __construct($test){
+    function __construct($logininfo){
         // モーダルログイン
-        if (isset($test['email'])&&isset($test['password'])) {
+        if (isset($logininfo['email'])&&isset($logininfo['password'])) {
         $this->login($_POST);
         }
 

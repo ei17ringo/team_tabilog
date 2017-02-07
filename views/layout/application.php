@@ -152,8 +152,8 @@
             <!-- ログインしていないときの表示 -->
             <?php if (!isset($_SESSION['id'])): ?>
             <span> <a href="tel://+12345678910"><!-- <i class="icon-mobile3"></i> --><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></span>
-            <a href="<?php echo $adjust_string; ?>logout">/Logout</a>              
-            <?php endif ?>
+<!--             <a href="<?php echo $adjust_string; ?>logout">/Logout</a>              
+ -->            <?php endif ?>
 
             <!-- ログインしているときの表示 -->
             <?php if (isset($_SESSION['id'])): ?>
@@ -180,7 +180,7 @@
       <nav id="fh5co-menu-wrap" role="navigation">
         <ul class="sf-menu" id="fh5co-primary-menu">
           <li class="active">
-            <a href="index">Home</a>
+            <a href="<?php echo $adjust_string ?>index">Home</a>
           </li>
           <li>
             <!-- ログインしていないときの表示 -->

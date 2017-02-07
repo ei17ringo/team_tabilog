@@ -57,7 +57,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $firstcontent['picture_path1'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -78,7 +78,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $firstcontent['picture_path2'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -99,7 +99,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $firstcontent['picture_path3'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -120,7 +120,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $firstcontent['picture_path4'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -142,7 +142,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $firstcontent['picture_path5'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -163,7 +163,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $firstcontent['picture_path6'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -184,7 +184,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $firstcontent['picture_path7'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -205,7 +205,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $firstcontent['picture_path8'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -226,7 +226,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="images/1.jpeg" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $firstcontent['picture_path9'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -321,12 +321,12 @@
                           <?php foreach ($indexviews as $indexview): ?>
                           <!-- //レスポンシブ対応・サムネイルに変更・画像上にポインターを置くと矢印から指になる--> 
                         <div class="modal fade" id="<?php echo 'picture1'.$indexview['content_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="z-index: 1500">
-
+                        <div class="modal-dialog modal-lg modal-middle"> 
                         <!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $indexview['picture_path1'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -347,7 +347,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $indexview['picture_path2'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -368,7 +368,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $indexview['picture_path3'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -389,7 +389,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $indexview['picture_path4'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -411,7 +411,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $indexview['picture_path5'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -432,7 +432,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $indexview['picture_path6'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -453,7 +453,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $indexview['picture_path7'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -474,7 +474,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $indexview['picture_path8'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -495,7 +495,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="images/1.jpeg" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $indexview['picture_path8'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -580,12 +580,12 @@
                           <?php foreach ($indexplaceviews as $indexplaceview): ?>
                           <!-- //レスポンシブ対応・サムネイルに変更・画像上にポインターを置くと矢印から指になる--> 
                         <div class="modal fade" id="<?php echo 'picture1'.$indexplaceview['content_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="z-index: 1500">
-
+                        <div class="modal-dialog modal-lg modal-middle"> 
                         <!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $$indexplaceview['picture_path1'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -605,7 +605,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $$indexplaceview['picture_path2'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -626,7 +626,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $$indexplaceview['picture_path3'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -647,7 +647,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $$indexplaceview['picture_path4'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -669,7 +669,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $$indexplaceview['picture_path5'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -690,7 +690,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $$indexplaceview['picture_path6'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -711,7 +711,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $$indexplaceview['picture_path7'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -732,7 +732,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="http://placehold.it/250x250" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $$indexplaceview['picture_path8'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -753,7 +753,7 @@
                          --><div class="modal-content">
                          
                         <div class="modal-body">
-                        <img src="images/1.jpeg" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+                        <img src="../webroot/images/<?php echo $$indexplaceview['picture_path9'] ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -927,11 +927,24 @@
                             </figure>
                             <h4>
                                 <!-- 本文 -->
+                                <!-- ログインしているユーザーに表示 -->
+                                 <?php if (isset($_SESSION['id'])): ?>                               
                                 <p><?php echo $firstcontent['content'] ?></p>
-<!-- 
-                                <p>続きを読むには   
-                                <a href="#">会員登録</a>が必要です。
-                                </p> -->
+                                <?php endif ?>
+
+                                <!-- ログインしていないユーザーに表示 -->
+                                 <?php if (!isset($_SESSION['id'])): ?>                               
+                                <p><?php echo $str = mb_strimwidth($firstcontent['content'], 0, 10, '…', 'UTF-8'); ?></p>
+                                <?php endif ?>
+                                
+
+                                <!-- ログインしていないユーザーに表示 -->
+                                <?php if (!isset($_SESSION['id'])): ?>
+                                <p>続きを読むには
+                                <a href="../users/signup">会員登録</a>が必要です。
+                                </p>
+                                <?php endif ?>
+
                             </h4>
                             </div>
                             
@@ -1017,6 +1030,8 @@
                     <hr size="1" color="black" >
                  </div>
                      <!-- 参考になったーはい/いいえボタン -->
+                     <!-- ログインしているユーザーに表示 -->
+                                <?php if (isset($_SESSION['id'])): ?>
                    <div class="row">
                     　
                         <div class="col-md-6">
@@ -1026,7 +1041,9 @@
                        <div class="col-md-6"><button type="button" class="btn btn-sm btn-default">はい</button>10人<button type="button" class="btn btn-sm btn-default">いいえ</button>10人
                      </div>
                    </div>   
+                                    <?php endif ?>
     </div>
+
 
 
 
@@ -1101,7 +1118,6 @@
 				<!-- 本文 -->
                 <!-- 検索キーワードが入力されていないとき（初期表示） -->
 
-
                 <!-- 検索ワードが設定されているときは非表示 -->
                 <?php if (isset($index_data['search'])): ?>
                     <?php echo '<style>/*' ?>
@@ -1126,11 +1142,26 @@
                                 </h5>
                             </figure>
                             <h4>
+<!--                                 <p><?php echo $indexview['content'] ?></p> -->
+                                <!-- 本文 -->
+                                <!-- ログインしているユーザーに表示 -->
+                                 <?php if (isset($_SESSION['id'])): ?>                               
                                 <p><?php echo $indexview['content'] ?></p>
+                                <?php endif ?>
 
-<!--                                 <p>続きを読むには   
-                                <a href="#">会員登録</a>が必要です。
-                                </p> -->
+                                <!-- ログインしていないユーザーに表示 -->
+                                 <?php if (!isset($_SESSION['id'])): ?>                               
+                                <p><?php echo $str = mb_strimwidth($indexview['content'], 0, 10, '…', 'UTF-8'); ?></p>
+                                <?php endif ?>
+
+
+                               <!-- ログインしていないユーザーに表示 -->
+                                <?php if (!isset($_SESSION['id'])): ?>
+                                <p>続きを読むには
+                                <a href="../users/signup">会員登録</a>が必要です。
+                                </p>
+                                <?php endif ?>
+
                             </h4>
                             </div>
                             
@@ -1138,15 +1169,12 @@
 
     <div class="row">
   	<div class="col-md-12">
-        
-                <div id="Carousel" class="carousel slide">
-                 
+                <?php $cal_id = 0; ?>            
+                <div id="Carousel<?php echo $cal_id ?>" class="carousel slide">             
                 <ol class="carousel-indicators">
-                <?php $i = 0; ?>
-                    <li data-target="#Carousel" data-slide-to="<?php echo $i ?>" class="active"></li>
-                    <li data-target="#Carousel" data-slide-to="<?php echo $i+1 ?>"></li>
-                    <li data-target="#Carousel" data-slide-to="<?php echo $i+1; ?>"></li>
-                <?php $i++ ?>
+                    <li data-target="#Carousel<?php echo $cal_id ?>" data-slide-to="0" class="active"></li>
+                    <li data-target="#Carousel<?php echo $cal_id ?>" data-slide-to="1"></li>
+                    <li data-target="#Carousel<?php echo $cal_id ?>" data-slide-to="2"></li>
                 </ol>
                  
                 <!-- Carousel items -->
@@ -1157,20 +1185,20 @@
 
 
                       <div class="col-md-3">
-                  	<img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture1'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                  	<img src="../webroot/images/<?php echo $indexview['picture_path1'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture1'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
 
                       <div class="col-md-3">
-                      	<img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture2'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="../webroot/images/<?php echo $indexview['picture_path2'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture2'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                      	<img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture3'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="../webroot/images/<?php echo $indexview['picture_path3'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture3'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                      	<img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture4'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="../webroot/images/<?php echo $indexview['picture_path4'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture4'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                     </div><!--.row-->
@@ -1178,14 +1206,14 @@
                  
                 <div class="item">
                     <div class="row">
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture5'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexview['picture_path5'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture5'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture6'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexview['picture_path6'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture6'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture7'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexview['picture_path7'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture7'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture8'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexview['picture_path8'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture8'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
 
 
@@ -1195,7 +1223,7 @@
 
                 <div class="item">
                     <div class="row">
-                       <div class="col-md-3"><img src="images/1.jpeg" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture9'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425" width="250" height="250"></a></div>
+                       <div class="col-md-3"><img src="../webroot/images/<?php echo $indexview['picture_path9'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture9'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425" width="250" height="250"></a></div>
 
 
                       <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture10'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
@@ -1208,15 +1236,17 @@
                 </div><!--.item-->
                  
                 </div><!--.carousel-inner-->
-                  <a data-slide="prev" href="#Carousel" class="left carousel-control small">‹</a>
-                  <a data-slide="next" href="#Carousel" class="right carousel-control small">›</a>
+                  <a data-slide="prev" href="#Carousel<?php echo $cal_id; ?>" class="left carousel-control small">‹</a>
+                  <a data-slide="next" href="#Carousel<?php echo $cal_id; ?>" class="right carousel-control small">›</a>
                 </div><!--.Carousel-->
-
+                     <?php $cal_id++; ?>
 
                  <!-- ユーザー投稿内容の下線 -->
                     <hr size="1" color="black" >
                  </div>
                      <!-- 参考になったーはい/いいえボタン -->
+                    <!-- ログインしているユーザーに表示 -->
+                                <?php if (isset($_SESSION['id'])): ?>
                    <div class="row">
                     　
                         <div class="col-md-6">
@@ -1226,7 +1256,9 @@
                        <div class="col-md-6"><button type="button" class="btn btn-sm btn-default">はい</button>10人<button type="button" class="btn btn-sm btn-default">いいえ</button>10人
                      </div>
                    </div>   
+                                    <?php endif ?>
     </div>
+
 
 
 
@@ -1272,11 +1304,25 @@
                                 </h5>
                             </figure>
                             <h4>
+<!--                                 <p><?php echo $indexplaceview['content'] ?></p> -->
+                                 <!-- 本文 -->
+                                <!-- ログインしているユーザーに表示 -->
+                                 <?php if (isset($_SESSION['id'])): ?>                               
                                 <p><?php echo $indexplaceview['content'] ?></p>
+                                <?php endif ?>
 
-<!--                                 <p>続きを読むには   
-                                <a href="#">会員登録</a>が必要です。
-                                </p> -->
+                                <!-- ログインしていないユーザーに表示 -->
+                                 <?php if (!isset($_SESSION['id'])): ?>                               
+                                <p><?php echo $str = mb_strimwidth($indexplaceview['content'], 0, 10, '…', 'UTF-8'); ?></p>
+                                <?php endif ?>
+
+                               <!-- ログインしていないユーザーに表示 -->
+                                <?php if (!isset($_SESSION['id'])): ?>
+                                <p>続きを読むには
+                                <a href="../users/signup">会員登録</a>が必要です。
+                                </p>
+                                <?php endif ?>
+
                             </h4>
                             </div>
                             
@@ -1301,20 +1347,20 @@
 
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture1'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                        <img src="../webroot/images/<?php echo $indexview['picture_path1'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture1'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture2'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                        <img src="../webroot/images/<?php echo $indexview['picture_path2'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture2'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture3'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                        <img src="../webroot/images/<?php echo $indexview['picture_path3'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture3'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture4'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                        <img src="../webroot/images/<?php echo $indexview['picture_path4'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture4'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                     </div><!--.row-->
@@ -1322,14 +1368,14 @@
                  
                 <div class="item">
                     <div class="row">
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="<?php echo '#picture5'.$indexplaceview['content_id'] ?>" data-target="#image_Modal5" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexview['picture_path5'] ?>" alt="Image" style="max-width:100%;" data-toggle="<?php echo '#picture5'.$indexplaceview['content_id'] ?>" data-target="#image_Modal5" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="<?php echo '#picture6'.$indexplaceview['content_id'] ?>" data-target="#image_Modal6" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexview['picture_path6'] ?>" alt="Image" style="max-width:100%;" data-toggle="<?php echo '#picture6'.$indexplaceview['content_id'] ?>" data-target="#image_Modal6" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="<?php echo '#picture7'.$indexplaceview['content_id'] ?>" data-target="#image_Modal7" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexview['picture_path7'] ?>" alt="Image" style="max-width:100%;" data-toggle="<?php echo '#picture7'.$indexplaceview['content_id'] ?>" data-target="#image_Modal7" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture8'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexview['picture_path8'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture8'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
 
 
@@ -1339,10 +1385,10 @@
 
                 <div class="item">
                     <div class="row">
-                       <div class="col-md-3"><img src="images/1.jpeg" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture9'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425" width="250" height="250"></a></div>
+                       <div class="col-md-3"><img src="../../webroot/images/1.jpeg" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture9'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425" width="250" height="250"></a></div>
 
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture10'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexview['picture_path9'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture10'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
                       <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture11'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
@@ -1361,6 +1407,8 @@
                     <hr size="1" color="black" >
                  </div>
                      <!-- 参考になったーはい/いいえボタン -->
+                     <!-- ログインしているユーザーに表示 -->
+                                <?php if (isset($_SESSION['id'])): ?>
                    <div class="row">
                     　
                         <div class="col-md-6">
@@ -1369,8 +1417,11 @@
 
                        <div class="col-md-6"><button type="button" class="btn btn-sm btn-default">はい</button>10人<button type="button" class="btn btn-sm btn-default">いいえ</button>10人
                      </div>
-                   </div>   
+                   </div>
+                      <?php endif ?> 
     </div>
+
+
 
 
 

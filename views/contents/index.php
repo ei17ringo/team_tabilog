@@ -38,7 +38,8 @@
         <br>
         <?php echo $index_data['search'] ?>
         <?php echo $place; ?> -->
-
+<!--         <?php echo $_POST['eva'] ?>
+ -->        <!-- <?php var_dump($evadataviews) ?> -->
 
 
                                 <!-- modal表示 -->
@@ -1037,8 +1038,11 @@
                         <div class="col-md-6">
                        <span class="love-text">この記事は参考になりましたか？</span>
                        </div>
-
-                       <div class="col-md-6"><button type="button" class="btn btn-sm btn-default">はい</button>10人<button type="button" class="btn btn-sm btn-default">いいえ</button>10人
+                       <div class="col-md-6">
+                        <form method="post">
+                       <button type="submit" class="btn btn-sm btn-default">はい</button>10人
+                       <button type="submit" class="btn btn-sm btn-default">いいえ</button>10人
+                        </form>
                      </div>
                    </div>   
                                     <?php endif ?>
@@ -1252,12 +1256,77 @@
                         <div class="col-md-6">
                        <span class="love-text">この記事は参考になりましたか？</span>
                        </div>
+                            <!-- 評価人数をカウント -->
+                            <?php 
+                            $yes=0;
+                            $no=0;
+                            $other=0;
 
-                       <div class="col-md-6"><button type="button" class="btn btn-sm btn-default">はい</button>10人<button type="button" class="btn btn-sm btn-default">いいえ</button>10人
+                            // ログインした人がボタンを押下できなくする
+                            $evaset='default';
+
+                            foreach ($evadataviews as $evadataview) {
+
+                            if (($indexview['content_id']==$evadataview['content_id'])&&($evadataview['eva']==1)) {
+                                $yes++;
+                            }elseif (($indexview['content_id']==$evadataview['content_id'])&&($evadataview['eva']==2)) {
+                                $no++;
+                            }
+                            // else{
+                            //     $other++;
+                            // }
+
+                            // はいを押下した場合
+                            if (($_SESSION['id']==$evadataview['user_id'])&&($indexview['content_id']==$evadataview['content_id'])&&($evadataview['eva']==1)) {
+                                $evaset='yesset';
+                            }
+                            // いいえを押下した場合
+                            elseif (($_SESSION['id']==$evadataview['user_id'])&&($indexview['content_id']==$evadataview['content_id'])&&($evadataview['eva']==2)) {
+                                $evaset='noset';
+                            }
+
+                            }
+                             ?>
+
+                       <div class="col-md-6">
+
+                       <!-- 既に評価をしたユーザーには押下できるボタンを表示しない -->
+                       <?php if ($evaset=='default'): ?>
+                       <form method="post">
+                       <input type="hidden" name="content_id" value="<?php echo $indexview['content_id'] ?>">
+                                                           
+                       <button type="submit" name="eva" value="1" class="btn btn-sm btn-default">はい</button><?php echo $yes ?>人
+                       <button type="submit" name="eva" value="2" class="btn btn-sm btn-default">いいえ</button><?php echo $no ?>人
+                       </form>
+                        <?php endif ?>
+
+                        <!-- 既に評価を押下したユーザー向け -->
+                        <?php if ($evaset=='yesset'): ?>
+                       <form method="post">
+                       <input type="hidden" name="content_id" value="<?php echo $indexview['content_id'] ?>">
+                                                           
+                       <button type="submit" name="evadel" value="delete" class="btn btn-sm btn-primary">はい</button><?php echo $yes ?>人
+                       <button type="button" class="btn btn-sm btn-default">いいえ</button><?php echo $no ?>人
+                       </form>
+                        <?php endif ?>
+
+
+                       <!-- 既に評価を押下したユーザー向け -->
+                        <?php if ($evaset=='noset'): ?>
+                       <form method="post">
+                       <input type="hidden" name="content_id" value="<?php echo $indexview['content_id'] ?>">
+                                                           
+                       <button type="button" class="btn btn-sm btn-default">はい</button><?php echo $yes ?>人
+                       <button type="submit" name="evadel" value="delete" class="btn btn-sm btn-primary">いいえ</button><?php echo $no ?>人
+                       </form>
+                        <?php endif ?>
+
+                        <?php endif ?>
+                        <!-- ログインしているユーザーに評価を表示END -->
                      </div>
                    </div>   
-                                    <?php endif ?>
     </div>
+
 
 
 
@@ -1415,7 +1484,11 @@
                        <span class="love-text">この記事は参考になりましたか？</span>
                        </div>
 
-                       <div class="col-md-6"><button type="button" class="btn btn-sm btn-default">はい</button>10人<button type="button" class="btn btn-sm btn-default">いいえ</button>10人
+
+
+                       <div class="col-md-6">
+                       <button type="button" class="btn btn-sm btn-default">はい</button>10人
+                       <button type="button" class="btn btn-sm btn-default">いいえ</button>10人
                      </div>
                    </div>
                       <?php endif ?> 

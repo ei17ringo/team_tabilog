@@ -97,6 +97,22 @@
           $indexviews=$content->index();
           }
 
+          // はい　いいえが押下された場合
+          if (isset($_POST['eva'])) {
+            $this->eva($_POST);
+          }
+
+          // はい　いいね　取り消しが押されたとき
+          if (isset($_POST['evadel'])) {
+            $this->eva_delete($_POST);
+          }
+
+          // 評価情報をDBから取得
+          $content = new Content();
+          $evadataviews = $content->eva_show();
+
+
+
         // モーダルログイン
         // if (isset($_POST['email'])&&isset($_POST['password'])) {
         // $this->login($_POST);
@@ -247,6 +263,16 @@
 
   exit();
 
+    }
+
+    function eva($eva_data){
+          $contenteva = new Content();
+          $evaviews = $contenteva->eva($eva_data);
+    }
+
+    function eva_delete($eva_data){
+          $contenteva = new Content();
+          $evadeleteviews = $contenteva->eva_delete($eva_data);    
     }
 
    }

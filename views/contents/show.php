@@ -243,7 +243,84 @@
 
                              <!-- ログインユーザーに表示 -->
                                 <?php if (isset($_SESSION['id'])): ?>
-        					<div class="col-md-12 text-right">この記事が参考になった人　　　はい　◯◯人　|　いいえ　◯◯人</div>
+
+
+                            <!-- 評価人数をカウント -->
+                            <?php 
+                            $yes=0;
+                            $no=0;
+                            $other=0;
+
+                            // ログインした人がボタンを押下できなくする
+                            $evaset='default';
+
+                            foreach ($evadataviews as $evadataview) {
+
+                            if (($showview['content_id']==$evadataview['content_id'])&&($evadataview['eva']==1)) {
+                                $yes++;
+                            }elseif (($showview['content_id']==$evadataview['content_id'])&&($evadataview['eva']==2)) {
+                                $no++;
+                            }
+                            // else{
+                            //     $other++;
+                            // }
+
+                            // はいを押下した場合
+                            if (($_SESSION['id']==$evadataview['user_id'])&&($showview['content_id']==$evadataview['content_id'])&&($evadataview['eva']==1)) {
+                                $evaset='yesset';
+                            }
+                            // いいえを押下した場合
+                            elseif (($_SESSION['id']==$evadataview['user_id'])&&($showview['content_id']==$evadataview['content_id'])&&($evadataview['eva']==2)) {
+                                $evaset='noset';
+                            }
+
+                            }
+                             ?>
+
+                       <div class="col-md-12 text-right">
+
+                       <!-- 既に評価をしたユーザーには押下できるボタンを表示しない -->
+                       <?php if ($evaset=='default'): ?>
+                       <form method="post">
+                       <input type="hidden" name="content_id" value="<?php echo $showview['content_id'] ?>">
+                                                           
+                       <button type="submit" name="eva" value="1" class="btn btn-sm btn-default">はい</button><?php echo $yes ?>人
+                       <button type="submit" name="eva" value="2" class="btn btn-sm btn-default">いいえ</button><?php echo $no ?>人
+                       </form>
+                        <?php endif ?>
+
+                        <!-- 既に評価を押下したユーザー向け -->
+                        <?php if ($evaset=='yesset'): ?>
+                       <form method="post">
+                       <input type="hidden" name="content_id" value="<?php echo $showview['content_id'] ?>">
+                                                           
+                       <button type="submit" name="evadel" value="delete" class="btn btn-sm btn-primary">はい</button><?php echo $yes ?>人
+                       <button type="button" class="btn btn-sm btn-default">いいえ</button><?php echo $no ?>人
+                       </form>
+                        <?php endif ?>
+
+
+                       <!-- 既に評価を押下したユーザー向け -->
+                        <?php if ($evaset=='noset'): ?>
+                       <form method="post">
+                       <input type="hidden" name="content_id" value="<?php echo $showview['content_id'] ?>">
+                                                           
+                       <button type="button" class="btn btn-sm btn-default">はい</button><?php echo $yes ?>人
+                       <button type="submit" name="evadel" value="delete" class="btn btn-sm btn-primary">いいえ</button><?php echo $no ?>人
+                       </form>
+                        <?php endif ?>
+
+
+                     </div>
+
+
+
+
+
+
+
+
+<!--         					<div class="col-md-12 text-right">この記事が参考になった人　　　はい　◯◯人　|　いいえ　◯◯人</div> -->
         					<?php endif ?>
         					 <!-- ユーザー投稿内容の下線 -->
                     		<hr size="1" color="black" >

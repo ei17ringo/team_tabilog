@@ -1038,11 +1038,77 @@
                         <div class="col-md-6">
                        <span class="love-text">この記事は参考になりましたか？</span>
                        </div>
+
+                          <!-- 評価人数をカウント -->
+                            <?php 
+                            $yes=0;
+                            $no=0;
+                            $other=0;
+
+                            // ログインした人がボタンを押下できなくする
+                            $evaset='default';
+
+                            foreach ($evadataviews as $evadataview) {
+
+                            if (($firstcontent['content_id']==$evadataview['content_id'])&&($evadataview['eva']==1)) {
+                                $yes++;
+                            }elseif (($firstcontent['content_id']==$evadataview['content_id'])&&($evadataview['eva']==2)) {
+                                $no++;
+                            }
+                            // else{
+                            //     $other++;
+                            // }
+
+                            // はいを押下した場合
+                            if (($_SESSION['id']==$evadataview['user_id'])&&($firstcontent['content_id']==$evadataview['content_id'])&&($evadataview['eva']==1)) {
+                                $evaset='yesset';
+                            }
+                            // いいえを押下した場合
+                            elseif (($_SESSION['id']==$evadataview['user_id'])&&($firstcontent['content_id']==$evadataview['content_id'])&&($evadataview['eva']==2)) {
+                                $evaset='noset';
+                            }
+
+                            }
+                             ?>
+
                        <div class="col-md-6">
+
+                       <!-- 既に評価をしたユーザーには押下できるボタンを表示しない -->
+                       <?php if ($evaset=='default'): ?>
+                       <form method="post">
+                       <input type="hidden" name="content_id" value="<?php echo $firstcontent['content_id'] ?>">
+                                                           
+                       <button type="submit" name="eva" value="1" class="btn btn-sm btn-default">はい</button><?php echo $yes ?>人
+                       <button type="submit" name="eva" value="2" class="btn btn-sm btn-default">いいえ</button><?php echo $no ?>人
+                       </form>
+                        <?php endif ?>
+
+                        <!-- 既に評価を押下したユーザー向け -->
+                        <?php if ($evaset=='yesset'): ?>
+                       <form method="post">
+                       <input type="hidden" name="content_id" value="<?php echo $firstcontent['content_id'] ?>">
+                                                           
+                       <button type="submit" name="evadel" value="delete" class="btn btn-sm btn-primary">はい</button><?php echo $yes ?>人
+                       <button type="button" class="btn btn-sm btn-default">いいえ</button><?php echo $no ?>人
+                       </form>
+                        <?php endif ?>
+
+
+                       <!-- 既に評価を押下したユーザー向け -->
+                        <?php if ($evaset=='noset'): ?>
+                       <form method="post">
+                       <input type="hidden" name="content_id" value="<?php echo $firstcontent['content_id'] ?>">
+                                                           
+                       <button type="button" class="btn btn-sm btn-default">はい</button><?php echo $yes ?>人
+                       <button type="submit" name="evadel" value="delete" class="btn btn-sm btn-primary">いいえ</button><?php echo $no ?>人
+                       </form>
+                        <?php endif ?>
+
+<!--                        <div class="col-md-6">
                         <form method="post">
                        <button type="submit" class="btn btn-sm btn-default">はい</button>10人
                        <button type="submit" class="btn btn-sm btn-default">いいえ</button>10人
-                        </form>
+                        </form> -->
                      </div>
                    </div>   
                                     <?php endif ?>
@@ -1416,20 +1482,20 @@
 
 
                       <div class="col-md-3">
-                        <img src="../webroot/images/<?php echo $indexview['picture_path1'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture1'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                        <img src="../webroot/images/<?php echo $indexplaceview['picture_path1'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture1'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
 
                       <div class="col-md-3">
-                        <img src="../webroot/images/<?php echo $indexview['picture_path2'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture2'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                        <img src="../webroot/images/<?php echo $indexplaceview['picture_path2'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture2'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                        <img src="../webroot/images/<?php echo $indexview['picture_path3'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture3'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                        <img src="../webroot/images/<?php echo $indexplaceview['picture_path3'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture3'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                        <img src="../webroot/images/<?php echo $indexview['picture_path4'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture4'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                        <img src="../webroot/images/<?php echo $indexplaceview['picture_path4'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture4'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                     </div><!--.row-->
@@ -1437,14 +1503,14 @@
                  
                 <div class="item">
                     <div class="row">
-                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexview['picture_path5'] ?>" alt="Image" style="max-width:100%;" data-toggle="<?php echo '#picture5'.$indexplaceview['content_id'] ?>" data-target="#image_Modal5" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexplaceview['picture_path5'] ?>" alt="Image" style="max-width:100%;" data-toggle="<?php echo '#picture5'.$indexplaceview['content_id'] ?>" data-target="#image_Modal5" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
 
-                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexview['picture_path6'] ?>" alt="Image" style="max-width:100%;" data-toggle="<?php echo '#picture6'.$indexplaceview['content_id'] ?>" data-target="#image_Modal6" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexplaceview['picture_path6'] ?>" alt="Image" style="max-width:100%;" data-toggle="<?php echo '#picture6'.$indexplaceview['content_id'] ?>" data-target="#image_Modal6" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
-                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexview['picture_path7'] ?>" alt="Image" style="max-width:100%;" data-toggle="<?php echo '#picture7'.$indexplaceview['content_id'] ?>" data-target="#image_Modal7" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexplaceview['picture_path7'] ?>" alt="Image" style="max-width:100%;" data-toggle="<?php echo '#picture7'.$indexplaceview['content_id'] ?>" data-target="#image_Modal7" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
-                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexview['picture_path8'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture8'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexplaceview['picture_path8'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture8'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
 
 
@@ -1457,7 +1523,7 @@
                        <div class="col-md-3"><img src="../../webroot/images/1.jpeg" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture9'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425" width="250" height="250"></a></div>
 
 
-                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexview['picture_path9'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture10'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $indexplaceview['picture_path9'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture10'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
                       <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture11'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
@@ -1484,11 +1550,76 @@
                        <span class="love-text">この記事は参考になりましたか？</span>
                        </div>
 
+                            <!-- 評価人数をカウント -->
+                            <?php 
+                            $yes=0;
+                            $no=0;
+                            $other=0;
 
+                            // ログインした人がボタンを押下できなくする
+                            $evaset='default';
+
+                            foreach ($evadataviews as $evadataview) {
+
+                            if (($indexplaceview['content_id']==$evadataview['content_id'])&&($evadataview['eva']==1)) {
+                                $yes++;
+                            }elseif (($indexplaceview['content_id']==$evadataview['content_id'])&&($evadataview['eva']==2)) {
+                                $no++;
+                            }
+                            // else{
+                            //     $other++;
+                            // }
+
+                            // はいを押下した場合
+                            if (($_SESSION['id']==$evadataview['user_id'])&&($indexplaceview['content_id']==$evadataview['content_id'])&&($evadataview['eva']==1)) {
+                                $evaset='yesset';
+                            }
+                            // いいえを押下した場合
+                            elseif (($_SESSION['id']==$evadataview['user_id'])&&($indexplaceview['content_id']==$evadataview['content_id'])&&($evadataview['eva']==2)) {
+                                $evaset='noset';
+                            }
+
+                            }
+                             ?>
 
                        <div class="col-md-6">
+
+                       <!-- 既に評価をしたユーザーには押下できるボタンを表示しない -->
+                       <?php if ($evaset=='default'): ?>
+                       <form method="post">
+                       <input type="hidden" name="content_id" value="<?php echo $indexplaceview['content_id'] ?>">
+                                                           
+                       <button type="submit" name="eva" value="1" class="btn btn-sm btn-default">はい</button><?php echo $yes ?>人
+                       <button type="submit" name="eva" value="2" class="btn btn-sm btn-default">いいえ</button><?php echo $no ?>人
+                       </form>
+                        <?php endif ?>
+
+                        <!-- 既に評価を押下したユーザー向け -->
+                        <?php if ($evaset=='yesset'): ?>
+                       <form method="post">
+                       <input type="hidden" name="content_id" value="<?php echo $indexplaceview['content_id'] ?>">
+                                                           
+                       <button type="submit" name="evadel" value="delete" class="btn btn-sm btn-primary">はい</button><?php echo $yes ?>人
+                       <button type="button" class="btn btn-sm btn-default">いいえ</button><?php echo $no ?>人
+                       </form>
+                        <?php endif ?>
+
+
+                       <!-- 既に評価を押下したユーザー向け -->
+                        <?php if ($evaset=='noset'): ?>
+                       <form method="post">
+                       <input type="hidden" name="content_id" value="<?php echo $indexplaceview['content_id'] ?>">
+                                                           
+                       <button type="button" class="btn btn-sm btn-default">はい</button><?php echo $yes ?>人
+                       <button type="submit" name="evadel" value="delete" class="btn btn-sm btn-primary">いいえ</button><?php echo $no ?>人
+                       </form>
+                        <?php endif ?>
+
+
+<!--                        <div class="col-md-6">
                        <button type="button" class="btn btn-sm btn-default">はい</button>10人
-                       <button type="button" class="btn btn-sm btn-default">いいえ</button>10人
+                       <button type="button" class="btn btn-sm btn-default">いいえ</button>10人 -->
+
                      </div>
                    </div>
                       <?php endif ?> 

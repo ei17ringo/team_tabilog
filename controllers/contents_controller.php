@@ -153,6 +153,20 @@
           $content = new Content();
           $showviews = $content->show($id);
 
+          // はい　いいえが押下された場合
+          if (isset($_POST['eva'])) {
+            $this->eva($_POST);
+          }
+
+          // はい　いいね　取り消しが押されたとき
+          if (isset($_POST['evadel'])) {
+            $this->eva_delete($_POST);
+          }
+
+          // 評価情報をDBから取得
+          $content = new Content();
+          $evadataviews = $content->eva_show();
+
           $resource = 'contents';
           $action = 'show';
           require('views/layout/application.php');

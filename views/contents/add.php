@@ -140,8 +140,13 @@
         <div class="row">
           <div class="col-md-4 col-md-offset-4">
           <input type="submit" class="btn btn-default" value="投稿内容を確認する">
+          <br>
+          <br>
+          <br>
+          <br>
          </div>
         </div>
       </div>
-
+     </div>
     </form>
+  </div>

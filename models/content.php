@@ -67,9 +67,42 @@
 
      function create($post_data){
 
-     }
+     	$sql = sprintf("INSERT INTO `contents`
+     		(`content_id`, `title`, `content`, `rating`, `country_name`, `city_name`, `place_name`, `picture_path1`, `picture_path2`, `picture_path3`, `picture_path4`, `picture_path5`, `picture_path6`, `picture_path7`, `picture_path8`, `picture_path9`, `created`, `modified`, `c_delete_flag`, `user_id`, `place_id`)VALUES(NULL,'%s','%s','%d','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s',now(),CURRENT_TIMESTAMP,0,'%d',NULL);",
+					   	$_SESSION['join']['title'],
+					    $_SESSION['join']['content'],
+						$_SESSION['join']['rating'],
+					  	$_SESSION['join']['country_name'],
+					   	$_SESSION['join']['city_name'],
+					   	$_SESSION['join']['place_name'],
+					   	$_SESSION['join']['picture_path1'],
+					   	$_SESSION['join']['picture_path2'],
+					   	$_SESSION['join']['picture_path3'],
+					   	$_SESSION['join']['picture_path4'],
+					   	$_SESSION['join']['picture_path5'],
+					   	$_SESSION['join']['picture_path6'],
+					   	$_SESSION['join']['picture_path7'],
+					   	$_SESSION['join']['picture_path8'],
+					   	$_SESSION['join']['picture_path9'],
+					   	$_SESSION['join']['user_id']
+					   	);
+					  //mysqli_query()SQL文実行
+					    // mysqli_query($db, $sql) or die(mysqli_error($db));
+					  //SQLの実行
+						$results = mysqli_query($this->dbconnect, $sql) or die(mysqli_error($this->dbconnect));
 
-		}
+					    // unset ここから使わないから存在しないよと表す。指定された変数の割当を解除する。ここではセッション情報を破棄している。
+					    // unset($_SESSION['join']);
+					    // header('Location:/Tabilog/users/thanks');
+					    // exit();
+
+					// }
+					//取得結果を返す
+						return $results;
+
+					}
+
+}
 
 
 

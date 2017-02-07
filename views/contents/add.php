@@ -18,7 +18,7 @@
                           <select name="country_name" class="form-control">
                            <option value="item1" selected>国名</option>
                             <?php foreach ($return as $cities){?>
-                             <option value="<?php echo $cities['country_id'];?>">
+                             <option value="<?php echo $cities['country_name_jp'];?>">
                               <?php echo $cities['country_name_jp']; ?>
                              </option>
                             <?php } ?>
@@ -28,7 +28,7 @@
                           <select name="city_name" class="form-control">
                            <option value="item1" selected>都市</option>
                            <?php foreach ($return as $countries){?>
-                             <option value="<?php echo $countries['city_id'];?>">
+                             <option class="<?php echo $cities['country_id'];?>" value="<?php echo $countries['city_id'];?>">
                               <?php echo $countries['city_name_jp']; ?>
                              </option>
                             <?php } ?>

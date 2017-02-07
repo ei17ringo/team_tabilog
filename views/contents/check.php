@@ -2,7 +2,7 @@
 <div class="container">
 <div class="col-md-offset-2 col-md-8">
  <div class="form-area">
-        <form role="form" method="post" action="/Tabilog/content/create">
+        <form role="form" method="post" action="/tabilog/contents/create">
         <br style="clear:both">
                     <h3 style="margin-bottom: 25px; text-align: center;">投稿確認</h3>
                      <h3 style align="center">この内容で投稿してよろしいでしょうか？</h3>
@@ -398,13 +398,13 @@
 
                     <!-- 戻る（新規投稿・編集画面に遷移）ボタン -->
                       <div  class="col-md-4">
-                        <a href="new.html" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">戻る</a>
+                        <a href="/tabilog/contents/add?action=rewrite" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">戻る</a>
                       <br><br> <br><br>
                      </div>
 
                <!-- 確定ボタン（データベースに追加、会員投稿一覧に遷移 -->
                     <div  class="col-md-4">
-                      <a href="thanks.html" target="_blank" type="button" id="button" class="btn btn-warning btn-lg btn-block login-button " style="color:#FFFFFF !important;">確定</a>
+                      <input target="_blank" type="submit" id="button" type="button" class="btn btn-warning btn-lg btn-block login-button " style="color:#FFFFFF !important;" value="確定">
                     </div>
               </from>
           </div>

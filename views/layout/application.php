@@ -59,8 +59,6 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css" rel="stylesheet" />
 
 
-    <title>B-Map</title>
-
     <!-- Bootstrap -->
     <!-- <link href="../<?php echo $adjust_string; ?>webroot/assets/css/bootstrap.css" rel="stylesheet">
     <link href="../<?php echo $adjust_string; ?>webroot/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -86,31 +84,53 @@
         <![endif]-->
   </head>
 <body>
-  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index: 1600" style="display: none;">
     <div class="modal-dialog">
       <div class="loginmodal-container">
         <button type="button" class="close" data-dismiss="modal">✕</button>
         <h1>Login to Your Account</h1><br>
-        <form>
+        <form  method="post" action="" class="form-horizontal" role="form">
           <!-- <input type="text" name="user" placeholder="Username"> -->
-          <input type="text" name="mail" placeholder="Mail">
-          <input type="password" name="pass" placeholder="Password">
+          <input type="email" name="email" placeholder="Mail">
+  
+
+          <input type="password" name="password" placeholder="Password">
           <div class="checkbox">
                 <label>
-                  <input type="checkbox">Remember me
+                  <input type="checkbox" name="save" value="on">Remember me
                 </label>
                 </div>
           <input type="submit" name="login" class="login loginmodal-submit" value="Login">
         </form>
           
         <div class="login-help">
-          <a href="#">Register</a> - <a href="#">Forgot Password</a>
+          <a href="signup">Register</a> - <a href="#">Forgot Password</a>
         </div>
       </div>
     </div>
   </div>
 
+<!-- <?php 
+  if (isset($_POST['email'])&&isset($_POST['password'])&&!isset($login_dataviews)) {
+    echo "<h2>ログインに失敗しました。正しくご記入ください。</h2>";
+  }
+ ?> -->
 
+ <!-- ログイン実行時のメッセージ -->
+ <!-- ログイン失敗 -->
+ <?php if (isset($_POST['email'])&&isset($_POST['password'])&&!isset($login_dataviews)): ?>
+   <h2 class="text-danger">※ログインに失敗しました。正しくご記入ください。</h2>
+ <?php endif ?>
+ <!-- ログイン成功時 -->
+  <?php if (isset($_SESSION['id'])): ?>
+   <h4 class="text-success">※ログインしています</h4>
+ <?php endif ?>
+
+<!-- <?php var_dump($login_dataviews) ?>
+<?php echo $_POST['email'] ?>
+<?php echo "<br>" ?>
+<?php echo $_POST['password'] ?>
+<?php echo $_POST['save'] ?> -->
   <!-- <div class="container" style="margin-top:50px"> -->
       <!-- ここに各アクション名に沿ったphpファイルを出力する -->
 <div id="fh5co-wrapper">
@@ -129,11 +149,21 @@
                     </ul>
                   </div>
             <!-- ログインにモーダル実装 -->
+            <!-- ログインしていないときの表示 -->
+            <?php if (!isset($_SESSION['id'])): ?>
             <span> <a href="tel://+12345678910"><!-- <i class="icon-mobile3"></i> --><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></span>
-            <a href="#">/Logout</a>
+            <a href="<?php echo $adjust_string; ?>logout">/Logout</a>              
+            <?php endif ?>
+
+            <!-- ログインしているときの表示 -->
+            <?php if (isset($_SESSION['id'])): ?>
+            <a href="<?php echo $adjust_string; ?>logout">Logout</a>              
+            <?php endif ?>
             <!-- </div>
-          </div> -->  
-            <span> <!-- <a href="tel://+12345678910"><i class="icon-mobile3"></i> --><a href="newmember.html" data-target="#login-modal">新規登録</a></span>
+          </div> -->
+            <?php if (!isset($_SESSION['id'])): ?>
+            <span> <!-- <a href="tel://+12345678910"><i class="icon-mobile3"></i> --><a href="../users/signup" data-target="#login-modal">新規登録</a></span>
+            <?php endif ?>
 
         </div>
       </div>
@@ -150,13 +180,27 @@
       <nav id="fh5co-menu-wrap" role="navigation">
         <ul class="sf-menu" id="fh5co-primary-menu">
           <li class="active">
-            <a href="index.html">Home</a>
+            <a href="index">Home</a>
           </li>
           <li>
-            <a href="newpage.html">新規作成</a>
+            <!-- ログインしていないときの表示 -->
+            <?php if (!isset($_SESSION['id'])): ?>
+              <a href="../users/signup">新規作成</a>
+            <?php endif ?>
+            <!-- ログインしているとき -->
+            <?php if (isset($_SESSION['id'])): ?>
+            <a href="add">新規作成</a>
+            <?php endif ?>
           </li>
           <li>
-            <a href="mypage.html">投稿一覧</a>
+            <!-- ログインしていないときの表示 -->
+            <?php if (!isset($_SESSION['id'])): ?>
+            <a href="../users/signup">投稿一覧</a>
+            <?php endif ?>     
+            <!-- ログインしているとき -->
+            <?php if (isset($_SESSION['id'])): ?>     
+            <a href="mypage">投稿一覧</a>
+            <?php endif ?>
           </li>
         </ul>
       </nav>

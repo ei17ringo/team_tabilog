@@ -12,6 +12,7 @@
 			// DB接続設定の値をプロパティに代入
 			$this->dbconnect = $db;
 		}
+		
 	function index(){
 		// 初期表示ですべて検索するためのSQLの記述
 		$sql = sprintf('SELECT * FROM `contents` WHERE `c_delete_flag`=0 ORDER BY `created` DESC'
@@ -102,6 +103,26 @@
 
 			//取得結果を残す
 			 return $userviews;
+
+	}
+	function login($login_data){
+		$sql=sprintf('SELECT * FROM `users` WHERE `email` = "%s" AND `password` = "%s"',
+			$login_data['email'],
+			$login_data['password']
+			);
+
+
+			//SQLの実行
+			$results = mysqli_query($this->dbconnect, $sql) or die(mysqli_error($this->dbconnect));
+
+			 //実行結果を取得し、配列に格納
+			 // $blogs = mysqli_fetch_assoc($result);
+
+			 $loginviews  = mysqli_fetch_assoc($results);
+
+
+			//取得結果を残す
+			 return $loginviews;
 
 	}
 

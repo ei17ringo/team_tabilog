@@ -52,7 +52,7 @@
                                     <!-- 写真１ -->
                           <!-- //レスポンシブ対応・サムネイルに変更・画像上にポインターを置くと矢印から指になる--> 
                         <div class="modal fade" id="<?php echo 'picture1'.$firstcontent['content_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="z-index: 1500">
-
+                        <div class="modal-dialog modal-lg modal-middle"> 
                         <!-- //モーダルウィンドウの縦表示位置を調整・画像を大きく見せる
                          --><div class="modal-content">
                          
@@ -67,7 +67,7 @@
                          
                         </div>
                         </div>
-                        </div>                            
+                        </div>                        
 
 
                           <!-- 写真2 -->

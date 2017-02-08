@@ -1,4 +1,6 @@
         <!-- 必須のため、消さない -->
+        <!-- 初期値 -->
+        <?php $cal_id = 0; ?>     
         <!-- 観光地情報が入っていたら最初におすすめ度の平均を計算する -->
         <?php if (isset($place)&&$place=='sightseen'): ?>
             <?php $total_rating=0;
@@ -28,7 +30,7 @@
 <!--         <?php var_dump($breadplace) ?> -->
         <?php endif ?>
 
-
+        <!-- 消さないここまで -->
 
 <!-- 		<?php var_dump($indexplaceviews);  ?> -->
 <!-- 		<?php foreach ($indexviews as $indexview): ?>
@@ -40,6 +42,7 @@
         <?php echo $place; ?> -->
 <!--         <?php echo $_POST['eva'] ?>
  -->        <!-- <?php var_dump($evadataviews) ?> -->
+<!--  <?php echo $place; ?> -->
 
 
                                 <!-- modal表示 -->
@@ -898,7 +901,7 @@
         <!-- 検索ワードが観光地に設定されていないときはコメントアウト -->
         <?php if (isset($place)&&$place !=='sightseen'): ?>
             <?php echo '<style>/*' ?>
-        <?php endif ?>  
+        <?php endif ?> 
 
         <!-- 総合評価 -->
         <span class="h3 col-sm-offset-1">おすすめ度：<?php for ($i=0; $i < round($ave_rating) ; $i++) { 
@@ -1239,7 +1242,7 @@
 
     <div class="row">
   	<div class="col-md-12">
-                <?php $cal_id = 0; ?>            
+       
                 <div id="Carousel<?php echo $cal_id ?>" class="carousel slide">             
                 <ol class="carousel-indicators">
                     <li data-target="#Carousel<?php echo $cal_id ?>" data-slide-to="0" class="active"></li>
@@ -1387,10 +1390,10 @@
                        </form>
                         <?php endif ?>
 
-                        <?php endif ?>
-                        <!-- ログインしているユーザーに評価を表示END -->
                      </div>
-                   </div>   
+                   </div>
+                                           <?php endif ?>
+                        <!-- ログインしているユーザーに評価を表示END -->  
     </div>
 
 
@@ -1416,7 +1419,7 @@
                 <!-- 検索キーワードが入力されたときに本文表示 -->
 
                 <!-- 検索キーワードが入力されていないときコメントアウト -->
-                 <?php if (!isset($index_data['search'])): ?>
+                 <?php if (!isset($index_data['search'])||(isset($place)&&$place=='none')): ?>
                         <?php echo '/*<style>' ?>
                  <?php endif ?>
         <div id="fh5co-content-section">
@@ -1636,7 +1639,7 @@
                     </div>
                     <?php endforeach ?>
                     <!-- 検索キーワードが入力されていないときコメントアウト -->
-                    <?php if (!isset($index_data['search'])): ?>
+                    <?php if (!isset($index_data['search'])||(isset($place)&&$place=='none')): ?>
                         <?php echo '*/</style>' ?>
                     <?php endif ?> 
 

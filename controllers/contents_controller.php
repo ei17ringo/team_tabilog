@@ -69,6 +69,7 @@
         // 観光地情報にヒットすると$placeがsightseenになる
         $place='0';
 
+
         // 出し分け
         // 検索ワードが入っていた場合
           if (isset($index_data['search'])) {
@@ -86,7 +87,18 @@
 
           // 検索キーワードが観光地情報データベースにヒットした場合
           }elseif (isset($indexplaceviews)) {
-            $place='sightseen';
+              $currentplaceview = current($indexplaceviews);
+          // 観光地情報 観光地IDが複数ヒットした場合
+            foreach ($indexplaceviews as $indexplaceview) {
+              if ($currentplaceview['place_id']!=$indexplaceview['place_id']) {
+              $search_fail ="※複数ヒットしました。観光地名をもっと入力してください";
+              $place='none';
+              }
+            // 観光地情報 観光地IDが一意の場合
+            elseif ($currentplaceview['place_id']==$indexplaceview['place_id']) {
+                          $place='sightseen';
+            }
+            }
           }
           }
 

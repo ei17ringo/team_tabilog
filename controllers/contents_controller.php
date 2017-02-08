@@ -12,7 +12,7 @@
    			$controller->index();
    			break;
    		case 'mypage':
-   			$controller->mypage();
+   			$controller->mypage($id);
    			break;
    		case 'show':
    			$controller->show($id);
@@ -42,25 +42,33 @@
 
 	class ContentsController {
       function index() {
-          $resource = 'posts';
+          $resource = 'contents';
           $action = 'index';
           require('views/layout/application.php');
       }
 
-      function mypage() {
-          $resource = 'posts';
+      function mypage($id) {
+
+          //モデルを呼び出す
+          $content = new Content();
+          //モデルのmypageメソッドを実行する（モデルのmypageメソッドは、select文を実行してidで指定したブログデータを取得する）
+          //モデルのmypageメソッドに$idを引数として渡す
+          //モデルのmypageメソッドから返ってきた取得結果を、変数に格納
+          $viewOptions = $content->mypage($id);
+          $resource = 'contents';
           $action = 'mypage';
+           // var_dump($viewOptions);
           require('views/layout/application.php');
       }
 
       function show($id) {
-          $resource = 'posts';
+          $resource = 'contents';
           $action = 'show';
           require('views/layout/application.php');
       }
 
       function add(){
-          $resource = 'posts';
+          $resource = 'contents';
           $action = 'add';
           require('views/layout/application.php');
       }
@@ -70,13 +78,13 @@
       }
 
       function edit($id){
-          $resource = 'posts';
+          $resource = 'contents';
      	    $action = 'edit';
           require('views/layout/application.php');
       }
 
       function check($id) {
-          $resource = 'posts';
+          $resource = 'contents';
           $action = 'check';
           require('views/layout/application.php');
       }
@@ -87,6 +95,10 @@
       }
 
       function delete($id){
+        $blog=new Blog();
+         // モデルのdeleteメソッドを実行する(モデルのdeleteメソッドはupdate文を実行してdelete_flagを1に更新する)
+        $return=$blog->delete($id);
+        header('Location: /tabilog/contents/mypage');
 
       }
    }

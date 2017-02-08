@@ -277,8 +277,7 @@
                             }
                              ?>
 
-                       <div class="col-md-12 text-right">
-
+                       <div class="col-md-12 text-right">この記事が参考になった人
                        <!-- 既に評価をしたユーザーには押下できるボタンを表示しない -->
                        <?php if ($evaset=='default'): ?>
                        <form method="post">

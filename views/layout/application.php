@@ -1,7 +1,7 @@
 <?php 
     $adjust_string = '';
 
-    if (($action == 'profilechg') || ($action == 'gourmet') || ($action == 'spot') || ($action == 'edit') || ($action == 'delete')){
+    if (isset($id)&&$id!=0){
       $adjust_string = '../';
     }
 ?>
@@ -28,19 +28,19 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
     
     <!-- Animate.css -->
-    <link rel="stylesheet" href="../webroot/assets/css/animate.css">
+    <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/animate.css">
     <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="../webroot/assets/css/icomoon.css">
+    <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/icomoon.css">
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="../webroot/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/bootstrap.css">
     <!-- Superfish -->
-    <link rel="stylesheet" href="../webroot/assets/css/superfish.css">
+    <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/superfish.css">
 
-    <link rel="stylesheet" href="../webroot/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/style.css">
       <!-- Bootstrap Core CSS -->
-    <link href="../webroot/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../webroot/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="../webroot/assets/css/mypage.css">
+    <link href="<?php echo $adjust_string; ?>../webroot/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/mypage.css">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -49,35 +49,35 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css" rel="stylesheet" />
 
       <!-- Modernizr JS -->
-    <script src="../webroot/assets/js/modernizr-2.6.2.min.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/modernizr-2.6.2.min.js"></script>
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
     <script src="js/respond.min.js"></script>
     <![endif]-->
     <!-- 旅ログ -->
-    <link href="../webroot/assets/css/tabilog.css" rel="stylesheet">
+    <link href="<?php echo $adjust_string; ?>../webroot/assets/css/tabilog.css" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css" rel="stylesheet" />
 
 
     <title>B-Map</title>
 
     <!-- Bootstrap -->
-    <!-- <link href="../<?php echo $adjust_string; ?>webroot/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="../<?php echo $adjust_string; ?>webroot/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="../<?php echo $adjust_string; ?>webroot/assets/css/form.css" rel="stylesheet">
-    <link href="../<?php echo $adjust_string; ?>webroot/assets/css/timeline.css" rel="stylesheet">
-    <link href="../<?php echo $adjust_string; ?>webroot/assets/css/main.css" rel="stylesheet"> -->
+    <!-- <link href="<?php echo $adjust_string; ?>../<?php echo $adjust_string; ?>webroot/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo $adjust_string; ?>../<?php echo $adjust_string; ?>webroot/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo $adjust_string; ?>../<?php echo $adjust_string; ?>webroot/assets/css/form.css" rel="stylesheet">
+    <link href="<?php echo $adjust_string; ?>../<?php echo $adjust_string; ?>webroot/assets/css/timeline.css" rel="stylesheet">
+    <link href="<?php echo $adjust_string; ?>../<?php echo $adjust_string; ?>webroot/assets/css/main.css" rel="stylesheet"> -->
 
 
     <!-- カルーセル読み込み -->
-    <script src="../webroot/assets/js/jquery-1.11.3.min.js"></script>
-    <script src="../webroot/assets/js/bootstrap.js"></script>
-    <script src="../webroot/assets/js/bootstrap-modal.js"></script>
-    <script src="../webroot/assets/js/bootstrap-modalmanager.js"></script>
-    <link rel="stylesheet" href="../webroot/assets/css/bootstrap-lightbox.css">
-    <script src="../webroot/assets/js/jquery-3.1.1.min.js"></script>
-    <script src="../webroot/assets/js/bootstrap.min.js"></script>
-    <script src="../webroot/assets/js/bootstrap-lightbox.min.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/jquery-1.11.3.min.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap-modal.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap-modalmanager.js"></script>
+    <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/bootstrap-lightbox.css">
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/jquery-3.1.1.min.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap-lightbox.min.js"></script>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -216,18 +216,18 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../<?php echo $adjust_string; ?>webroot/assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo $adjust_string; ?>../<?php echo $adjust_string; ?>webroot/assets/js/bootstrap.min.js"></script>
 
-    <script src="../webroot/assets/js/jquery.min.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/jquery.min.js"></script>
     <!-- jQuery Easing -->
-    <script src="../webroot/assets/js/jquery.easing.1.3.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/jquery.easing.1.3.js"></script>
     <!-- Bootstrap -->
-    <script src="../webroot/assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap.min.js"></script>
     <!-- Waypoints -->
-    <script src="../webroot/assets/js/jquery.waypoints.min.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/jquery.waypoints.min.js"></script>
     <!-- Superfish -->
-    <script src="../webroot/assets/js/hoverIntent.js"></script>
-    <script src="../webroot/assets/js/superfish.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/hoverIntent.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/superfish.js"></script>
 </div>
   <!-- END fh5co-wrapper -->
 

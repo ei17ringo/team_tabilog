@@ -225,7 +225,11 @@ foreach ($_POST as $key => $value) {
       }
 
       function delete($id){
-
+          if (isset($_SESSION)) {
+           $content = new Content();
+           $deletes = $content->delete($id);
+          }
+           header('Location:/tabilog/contents/index');
       }
 
       function login($login_data){

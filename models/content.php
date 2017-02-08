@@ -196,7 +196,7 @@
 				// hiddenパラメータにて実施
 				// $eva_data['content_id'],
 				// $_SESSION['id']
-					
+
 				// hiddenパラメータにて実施
 				mysqli_real_escape_string($this->dbconnect, $eva_data['content_id']),
 				mysqli_real_escape_string($this->dbconnect, $_SESSION['id'])
@@ -221,6 +221,29 @@
 			// //取得結果を残す
 			//  return $userviews;
 			return $results;
+	}
+
+	function delete($id){
+			$sql = sprintf('UPDATE `contents` SET `c_delete_flag`=1 WHERE `content_id`=%d',
+				mysqli_real_escape_string($this->dbconnect, $id)
+				);
+
+
+			//SQLの実行
+			$results = mysqli_query($this->dbconnect, $sql) or die(mysqli_error($this->dbconnect));
+
+			//  //実行結果を取得し、配列に格納
+			//  // $blogs = mysqli_fetch_assoc($result);
+
+			//  $userviews = array();
+			//  while($result = mysqli_fetch_assoc($results)){
+			//  	$userviews[]=$result;
+			//  }
+
+
+			// //取得結果を残す
+			return $results;
+
 	}
 
 		}

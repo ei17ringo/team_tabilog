@@ -1,6 +1,17 @@
 <?php
 
   session_start();
+      // サニタイジング
+  if (isset($_POST)) {
+
+foreach ($_POST as $key => $value) {
+        $_POST[$key]=htmlspecialchars($value);
+}
+  }
+  if (isset($id)) {
+      $id=htmlspecialchars($id);
+  }
+
 
 	//モデルの呼び出し
 	require('models/content.php');
@@ -9,6 +20,8 @@
    	$controller = new ContentsController($_POST);
    	//$controller->index();
    	//アクション名によって、呼び出すメソッドを変える
+
+
    	switch ($action) {
    		case 'index':
    			$controller->index($_POST);

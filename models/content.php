@@ -40,10 +40,13 @@
 		// 	$index_data['search']
 		// 	);
 
-		// 本来の検索SQL　データが未整備のため、コメントアウト
+		// 観光地情報から検索するためのSQLの記述
 		$sql = sprintf('SELECT * FROM `contents` INNER JOIN `places` ON `contents`.`place_id` = `places`.`place_id` WHERE `c_delete_flag`=0 AND (`places`.`place_name_jp` like "%%%s%%" or `places`.`place_name_en` like "%%%s%%") ORDER BY `created` DESC',
-			$index_data['search'],
-			$index_data['search']
+			// $index_data['search'],
+			// $index_data['search']
+
+			mysqli_real_escape_string($this->dbconnect, $index_data['search']),
+			mysqli_real_escape_string($this->dbconnect, $index_data['search'])			
 			);
 
 			//SQLの実行
@@ -64,8 +67,11 @@
 
 	function index_ci_co($index_data){
 		    $sql = sprintf('SELECT * FROM `contents` WHERE `c_delete_flag`=0 AND (`country_name` like "%%%s%%" OR `city_name` like "%%%s%%") ORDER BY `created` DESC',
-			$index_data['search'],
-			$index_data['search']
+			// $index_data['search'],
+			// $index_data['search']
+
+			mysqli_real_escape_string($this->dbconnect, $index_data['search']),
+			mysqli_real_escape_string($this->dbconnect, $index_data['search'])	
 			);
 
 			//SQLの実行
@@ -86,7 +92,8 @@
 
 	function show($id){
 			$sql = sprintf('SELECT * FROM `contents` INNER JOIN `users` ON `contents`.`user_id` = `users`.`user_id` WHERE `c_delete_flag`=0 AND `content_id` = %d',
-			$id
+			// $id
+				mysqli_real_escape_string($this->dbconnect, $id)	
 			);
 
 			//SQLの実行
@@ -107,8 +114,11 @@
 	}
 	function login($login_data){
 		$sql=sprintf('SELECT * FROM `users` WHERE `u_delete_flag`=0 AND `email` = "%s" AND `password` = "%s"',
-			$login_data['email'],
-			$login_data['password']
+			// $login_data['email'],
+			// $login_data['password']
+
+			mysqli_real_escape_string($this->dbconnect, $login_data['email']),
+			mysqli_real_escape_string($this->dbconnect, $login_data['password'])	
 			);
 
 
@@ -130,10 +140,15 @@
 	function eva($eva_data){
 
 			$sql = sprintf('INSERT INTO `evaluations` (`eva_id`, `eva`, `e_modified`, `e_delete_flag`, `user_id`, `content_id`) VALUES (NULL, %d, CURRENT_TIMESTAMP, 0, %d, %d)',
-				$eva_data['eva'],
-				$_SESSION['id'],
+				// $eva_data['eva'],
+				// $_SESSION['id'],
+				// // hiddenパラメータにて実施
+				// $eva_data['content_id']
+
+				mysqli_real_escape_string($this->dbconnect, $eva_data['eva']),
+				mysqli_real_escape_string($this->dbconnect, $_SESSION['id']),
 				// hiddenパラメータにて実施
-				$eva_data['content_id']
+				mysqli_real_escape_string($this->dbconnect, $eva_data['content_id'])
 				);
 
 			// $sql = sprintf('SELECT * FROM `contents` INNER JOIN `users` ON `contents`.`user_id` = `users`.`user_id` WHERE `c_delete_flag`=0 AND `content_id` = %d',
@@ -179,9 +194,12 @@
 	function eva_delete($eva_data){
 				$sql = sprintf('UPDATE `evaluations` SET `e_delete_flag`=1 WHERE `content_id`=%d AND `user_id` = %d AND `e_delete_flag` = 0',
 				// hiddenパラメータにて実施
-				$eva_data['content_id'],
-				$_SESSION['id']
-
+				// $eva_data['content_id'],
+				// $_SESSION['id']
+					
+				// hiddenパラメータにて実施
+				mysqli_real_escape_string($this->dbconnect, $eva_data['content_id']),
+				mysqli_real_escape_string($this->dbconnect, $_SESSION['id'])
 				);
 
 			// $sql = sprintf('SELECT * FROM `contents` INNER JOIN `users` ON `contents`.`user_id` = `users`.`user_id` WHERE `c_delete_flag`=0 AND `content_id` = %d',

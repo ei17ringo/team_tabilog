@@ -167,10 +167,6 @@ function disp(){
 			  	<a href="edit.php"><span class="edit">編集</span></a>/<a href="#" data-toggle="modal" data-target="#myModal"><span class="delete"><span value="削除" onClick="disp()">削除</span></span></a>
 			  	<p class="star">★★★☆☆</p></span><!-- 
 			  	家族４人でセブに旅行に行きました。海もきれいで最高でした!とくにホテルは想像以上に... -->
-			  	<?php foreach($viewOptions as $content): ?>
-			  		<?php echo $content['content'];  ?>
-			  	<?php endforeach ?>
-
 
 			  	<p class="btn btn-default" href="#">More Info</p></td>
 			 	</tr>
@@ -202,9 +198,7 @@ function disp(){
 			  	<td height="70px" colspan="3">
 			  	<a href="edit.php"><span class="edit">編集</span></a>/<a href="#"><span class="delete"><span value="削除" onClick="disp()">削除</span></span></a>
 			  	<span><p class="star">★★★☆☆</p></span><!-- 家族４人でセブに旅行に行きました。海もきれいで最高でした!とくにホテルは想像以上に... -->
-			  	<?php foreach($viewOptions as $content): ?>
-			  		<?php echo $content['content'];  ?>
-			  	<?php endforeach ?>
+			  	
 
 			  	<p class="btn btn-default" href="#">More Info</p></td>
 			 	</tr>
@@ -239,10 +233,7 @@ function disp(){
 			  	<td height="70px" colspan="3">
 			  	<a href="edit.php"><span class="edit">編集</span></a>/<a href="#"><span class="delete"><span value="削除" onClick="disp()">削除</span></span></a>
 			  	<span><p class="star">★★★☆☆</p></span><!-- 家族４人でセブに旅行に行きました。海もきれいで最高でした!とくにホテルは想像以上に... -->
-			  	<?php foreach($viewOptions as $content): ?>
-			  		<?php echo $content['content'];  ?>
-			  	<?php endforeach ?>
-
+			  	
 			  	<p class="btn btn-default" href="#">More Info</p></td>
 			 	</tr>
 			 	<tr>
@@ -273,9 +264,7 @@ function disp(){
 			  	<td height="70px" colspan="3">
 			  	<a href="edit.php"><span class="edit">編集</span></a>/<a href="#"><span class="delete"><span value="削除" onClick="disp()">削除</span></span></a>
 			  	<span><p class="star">★★★☆☆</p></span><!-- 家族４人でセブに旅行に行きました。海もきれいで最高でした!とくにホテルは想像以上に... -->
-			  	<?php foreach($viewOptions as $content): ?>
-			  		<?php echo $content['content'];  ?>
-			  	<?php endforeach ?>
+			  	
 
 			  	<p class="btn btn-default" href="#">More Info</p></td>
 			 	</tr>

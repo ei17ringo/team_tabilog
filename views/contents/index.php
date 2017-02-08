@@ -841,18 +841,14 @@
 
   		<!-- パンくずリスト 検索情報が入力されている場合のみ -->
 
-<!--                 <?php if (!isset($index_data['search'])): ?>
-                <?php echo '<style>/*' ?>
-                <?php endif ?>
+               <?php if ((isset($place)&&$place =='sightseen')&&isset($firstcontent)): ?>
         <ol class="breadcrumb">場所：
-    <li><a href="http://bootstrap3.cyberlab.info"><?php echo $breadplace['country_name']; ?></a></li>
-    <li><a href="http://bootstrap3.cyberlab.info/components/"><?php echo $breadplace['city_name']; ?></a></li> -->
-    <!-- 本来はマスタから取得したデータを出力しなくてはならない -->
-<!--     <li class="active"><?php echo $breadplace['place_name']; ?></li>
+    <li><?php echo $firstcontent['country_name']; ?></li>
+    <li><?php echo $firstcontent['city_name']; ?></li>
+
+    <li><?php echo $firstcontent['place_name']; ?></li>
         </ol>
-                <?php if (!isset($index_data['search'])): ?>
-                <?php echo '*/</style>' ?>
-                <?php endif ?> -->
+                <?php endif ?>
 
             <!-- バックアップ用のパンくずリスト -->
             <!--   		<ol class="breadcrumb">場所：

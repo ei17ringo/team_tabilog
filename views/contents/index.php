@@ -1,6 +1,9 @@
         <!-- 必須のため、消さない -->
         <!-- 初期値 -->
-        <?php $cal_id = 0; ?>     
+        <?php $cal_id_init = 0;
+              $cal_first=0;
+              $cal_id_search=0;
+         ?>     
         <!-- 観光地情報が入っていたら最初におすすめ度の平均を計算する -->
         <?php if (isset($place)&&$place=='sightseen'): ?>
             <?php $total_rating=0;
@@ -957,12 +960,12 @@
     <div class="row">
     <div class="col-md-12">
         
-                <div id="Carousel" class="carousel slide">
+                <div id="Carousel<?php echo $cal_first; ?>" class="carousel slide">
                  
                 <ol class="carousel-indicators">
-                    <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#Carousel" data-slide-to="1"></li>
-                    <li data-target="#Carousel" data-slide-to="2"></li>
+                    <li data-target="#Carousel<?php echo $cal_first; ?>" data-slide-to="0" class="active"></li>
+                    <li data-target="#Carousel<?php echo $cal_first; ?>" data-slide-to="1"></li>
+                    <li data-target="#Carousel<?php echo $cal_first; ?>" data-slide-to="2"></li>
                 </ol>
                  
                 <!-- Carousel items -->
@@ -973,20 +976,20 @@
 
 
                       <div class="col-md-3">
-                    <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture1'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                    <img src="../webroot/images/$firstcontent['picture_path1']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture1'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture2'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                        <img src="../webroot/images/$firstcontent['picture_path2']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture2'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture3'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                        <img src="../webroot/images/$firstcontent['picture_path3']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture3'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture4'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                        <img src="../webroot/images/$firstcontent['picture_path4']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture4'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                     </div><!--.row-->
@@ -994,14 +997,14 @@
                  
                 <div class="item">
                     <div class="row">
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture5'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/$firstcontent['picture_path5']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture5'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture6'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/$firstcontent['picture_path6']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture6'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture7'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/$firstcontent['picture_path7']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture7'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
-                      <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture8'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/$firstcontent['picture_path8']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture8'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
 
 
@@ -1011,7 +1014,7 @@
 
                 <div class="item">
                     <div class="row">
-                       <div class="col-md-3"><img src="images/1.jpeg" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture9'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425" width="250" height="250"></a></div>
+                       <div class="col-md-3"><img src="../webroot/images/$firstcontent['picture_path9']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture9'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425" width="250" height="250"></a></div>
 
 
                       <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture10'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
@@ -1024,10 +1027,10 @@
                 </div><!--.item-->
                  
                 </div><!--.carousel-inner-->
-                  <a data-slide="prev" href="#Carousel" class="left carousel-control small">‹</a>
-                  <a data-slide="next" href="#Carousel" class="right carousel-control small">›</a>
+                  <a data-slide="prev" href="#Carousel<?php echo $cal_first; ?>" class="left carousel-control small">‹</a>
+                  <a data-slide="next" href="#Carousel<?php echo $cal_first; ?>" class="right carousel-control small">›</a>
                 </div><!--.Carousel-->
-
+                <?php $cal_first++; ?>
 
 
                  <!-- ユーザー投稿内容の下線 -->
@@ -1243,11 +1246,11 @@
     <div class="row">
   	<div class="col-md-12">
        
-                <div id="Carousel<?php echo $cal_id ?>" class="carousel slide">             
+                <div id="Carousel<?php echo $cal_id_init ?>" class="carousel slide">             
                 <ol class="carousel-indicators">
-                    <li data-target="#Carousel<?php echo $cal_id ?>" data-slide-to="0" class="active"></li>
-                    <li data-target="#Carousel<?php echo $cal_id ?>" data-slide-to="1"></li>
-                    <li data-target="#Carousel<?php echo $cal_id ?>" data-slide-to="2"></li>
+                    <li data-target="#Carousel<?php echo $cal_id_init ?>" data-slide-to="0" class="active"></li>
+                    <li data-target="#Carousel<?php echo $cal_id_init ?>" data-slide-to="1"></li>
+                    <li data-target="#Carousel<?php echo $cal_id_init ?>" data-slide-to="2"></li>
                 </ol>
                  
                 <!-- Carousel items -->
@@ -1271,7 +1274,7 @@
                       </div>
 
                       <div class="col-md-3">
-                      	<img src="../webroot/images/<?php echo $indexview['picture_path4'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture4'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="../webroot/images/<?php echo $indexview['picture_path4'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture4'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425" height="250"></a>
                       </div>
 
                     </div><!--.row-->
@@ -1309,10 +1312,10 @@
                 </div><!--.item-->
                  
                 </div><!--.carousel-inner-->
-                  <a data-slide="prev" href="#Carousel<?php echo $cal_id; ?>" class="left carousel-control small">‹</a>
-                  <a data-slide="next" href="#Carousel<?php echo $cal_id; ?>" class="right carousel-control small">›</a>
+                  <a data-slide="prev" href="#Carousel<?php echo $cal_id_init; ?>" class="left carousel-control small">‹</a>
+                  <a data-slide="next" href="#Carousel<?php echo $cal_id_init; ?>" class="right carousel-control small">›</a>
                 </div><!--.Carousel-->
-                     <?php $cal_id++; ?>
+                     <?php $cal_id_init++; ?>
 
                  <!-- ユーザー投稿内容の下線 -->
                     <hr size="1" color="black" >
@@ -1469,12 +1472,12 @@
     <div class="row">
     <div class="col-md-12">
         
-                <div id="Carousel" class="carousel slide">
+                <div id="Carousel<?php echo $cal_id_search; ?>" class="carousel slide">
                  
                 <ol class="carousel-indicators">
-                    <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#Carousel" data-slide-to="1"></li>
-                    <li data-target="#Carousel" data-slide-to="2"></li>
+                    <li data-target="#Carouse<?php echo $cal_id_search; ?>" data-slide-to="0" class="active"></li>
+                    <li data-target="#Carousel<?php echo $cal_id_search; ?>" data-slide-to="1"></li>
+                    <li data-target="#Carousel<?php echo $cal_id_search; ?>" data-slide-to="2"></li>
                 </ol>
                  
                 <!-- Carousel items -->
@@ -1485,7 +1488,7 @@
 
 
                       <div class="col-md-3">
-                        <img src="../webroot/images/<?php echo $indexplaceview['picture_path1'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture1'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                        <img src="../webroot/images/<?php echo $indexplaceview['picture_path1'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture1'.$indexplaceview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"  height="250"></a>
                       </div>
 
 
@@ -1536,9 +1539,10 @@
                 </div><!--.item-->
                  
                 </div><!--.carousel-inner-->
-                  <a data-slide="prev" href="#Carousel" class="left carousel-control small">‹</a>
-                  <a data-slide="next" href="#Carousel" class="right carousel-control small">›</a>
+                  <a data-slide="prev" href="#Carousel<?php echo $cal_id_search; ?>" class="left carousel-control small">‹</a>
+                  <a data-slide="next" href="#Carousel<?php echo $cal_id_search; ?>" class="right carousel-control small">›</a>
                 </div><!--.Carousel-->
+                    <?php $cal_id_search++; ?>
 
 
                  <!-- ユーザー投稿内容の下線 -->

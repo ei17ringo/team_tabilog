@@ -1,8 +1,12 @@
         <!-- 必須のため、消さない -->
         <!-- 初期値 -->
-        <?php $cal_id_init = 0;
+        <?php 
+                // カルーセル用
+              $cal_id_init = 0;
               $cal_first=0;
               $cal_id_search=0;
+                // 文字数制限
+              $stringlimit=100;
          ?>     
         <!-- 観光地情報が入っていたら最初におすすめ度の平均を計算する -->
         <?php if (isset($place)&&$place=='sightseen'): ?>
@@ -937,7 +941,7 @@
 
                                 <!-- ログインしていないユーザーに表示 -->
                                  <?php if (!isset($_SESSION['id'])): ?>                               
-                                <p><?php echo $str = mb_strimwidth($firstcontent['content'], 0, 10, '…', 'UTF-8'); ?></p>
+                                <p><?php echo $str = mb_strimwidth($firstcontent['content'], 0, $stringlimit, '…', 'UTF-8'); ?></p>
                                 <?php endif ?>
                                 
 
@@ -1223,7 +1227,7 @@
 
                                 <!-- ログインしていないユーザーに表示 -->
                                  <?php if (!isset($_SESSION['id'])): ?>                               
-                                <p><?php echo $str = mb_strimwidth($indexview['content'], 0, 10, '…', 'UTF-8'); ?></p>
+                                <p><?php echo $str = mb_strimwidth($indexview['content'], 0, $stringlimit, '…', 'UTF-8'); ?></p>
                                 <?php endif ?>
 
 
@@ -1450,7 +1454,7 @@
 
                                 <!-- ログインしていないユーザーに表示 -->
                                  <?php if (!isset($_SESSION['id'])): ?>                               
-                                <p><?php echo $str = mb_strimwidth($indexplaceview['content'], 0, 10, '…', 'UTF-8'); ?></p>
+                                <p><?php echo $str = mb_strimwidth($indexplaceview['content'], 0, $stringlimit, '…', 'UTF-8'); ?></p>
                                 <?php endif ?>
 
                                <!-- ログインしていないユーザーに表示 -->

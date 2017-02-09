@@ -1,4 +1,4 @@
-<?php 
+<?php
     $adjust_string = '';
 
     if (isset($id)&&$id!=0){
@@ -26,7 +26,7 @@
 
 
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
-    
+
     <!-- Animate.css -->
 
     <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/animate.css">
@@ -108,7 +108,7 @@
                 </div>
           <input type="submit" name="login" class="login loginmodal-submit" value="Login">
         </form>
-          
+
         <div class="login-help">
           <a href="signup">Register</a> - <a href="#">Forgot Password</a>
         </div>
@@ -263,7 +263,6 @@
   <!-- END fh5co-page -->
 
 
-  
      <!--  <?php
           // include('views/'.$resource.'/'. $action .'.php');
       ?> -->
@@ -275,6 +274,7 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 
   <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap.min.js"></script>
   <!-- jQuery -->
@@ -299,6 +299,9 @@
   <script src="<?php echo $adjust_string; ?>../webroot/assets/js/main.js"></script>
   <!-- 自分で作成したjs -->
   <script src="<?php echo $adjust_string; ?>../webroot/assets/js/tabilog.js"></script>
+
+  <script src="<?php echo $adjust_string; ?>../webroot/assets/js/star_2.js"></script>
+
   </body>
 </html>
 

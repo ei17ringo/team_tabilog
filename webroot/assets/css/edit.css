@@ -1,0 +1,194 @@
+/*バツボタンの部分*/
+.relative {
+  position: relative;
+  z-index: 1;
+   }
+.absolute_modal {
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 138px;
+  width:30px;
+  height:30px;
+   }
+
+.absolute_back {
+  position: absolute;
+  z-index: 6;
+  top: 36px;
+  left: 440px;
+  width:30px;
+  height:30px;
+    }
+
+/*google map*/
+#mapField {
+  width: 350px;
+  height: 350px;
+}
+
+/*carousel*/
+/* The controlsy */
+.carousel-control {
+	 left: -35px;
+    height: 40px;
+	  width: 40px;
+    background: none repeat scroll 0 0 #222222;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    margin-top: 90px;
+}
+
+
+.small{
+	margin-top: 40px;
+}
+
+/*.edit{
+	margin-top: 20px;
+}*/
+
+.carousel-control.right {
+	right: -35px;
+}
+
+.carousel-control-small.right {
+	right: -12px;
+}
+
+/* The indicators */
+.carousel-indicators {
+	right: 50%;
+	top: auto;
+	bottom: -10px;
+	margin-right: -19px;
+}
+/* The colour of the indicators */
+.carousel-indicators li {
+	background: #cecece;
+}
+.carousel-indicators .active {
+background: #428bca;
+}
+
+/*modal*/
+.modal-middle {     //モーダルウィンドウの縦表示位置を調整
+    margin: 5% auto;
+}
+
+.modal-img_footer { //表示予定のテキストとボタンを中央揃え
+    padding: .5em;
+    text-align: center;
+}
+
+button.own-hover:hover {
+	background-color: #D3D3D3 !important;
+}
+
+/*star_rating(星評価)*/
+.evaluation{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.evaluation input[type='radio']{
+  display: none;
+}
+.evaluation label{
+  position: relative;
+  padding: 10px 10px 0;
+  color: gray;
+  cursor: pointer;
+  font-size: 50px;
+}
+.evaluation label .text{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  color: gray;
+}
+.evaluation label:hover,
+.evaluation label:hover ~ label,
+.evaluation input[type='radio']:checked ~ label{
+  color: #ffcc00;
+}
+
+
+
+//レート評価 変数
+$starFull: 16px;//星1個の幅
+$starHalf: $starFull / 2;//星半分（0.5）の幅
+
+$rate1: $starFull;//星1
+$rate1-5: $starFull + $starHalf;//星1.5
+$rate2: $starFull * 2;//星2
+$rate2-5: ($starFull * 2) + $starHalf;//星2.5
+$rate3: $starFull * 3;//星3
+$rate3-5: ($starFull * 3) + $starHalf;//星3.5
+$rate4: $starFull * 4;//星4
+$rate4-5: ($starFull * 4) + $starHalf;//星4.5
+$rate5 :$starFull * 5;//星5
+
+.rate{
+  position: relative;
+  display: inline-block;
+  width: $starFull * 5;
+  height: $starFull;
+  font-size: $starFull;
+  &:before,&:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '★★★★★';
+    display: inline-block;
+    height: $starFull;
+    line-height: $starFull;
+  }
+  &:before{
+  color: #ddd;
+  }
+  &:after{
+  color: #ffa500;
+  overflow: hidden;
+  white-space: nowrap;//これがないと改行されて星の半分（0.5）が表現できなくなる
+  }
+}
+.rate0:after{//星0
+  width: 0;
+}
+.rate1:after{//星1
+  width: $rate1;
+}
+.rate1-5:after{//星1.5
+  width: $rate1-5;
+}
+.rate2:after{//星2
+  width: $rate2;
+}
+.rate2-5:after{//星2.5
+  width: $rate2-5;
+}
+.rate3:after{//星3
+  width: $rate3;
+}
+.rate3-5:after{//星3.5
+  width: $rate3-5;
+}
+.rate4:after{//星4
+  width: $rate4;
+}
+.rate4-5:after{//星4.5
+  width: $rate4-5;
+}
+.rate5:after{//星5
+  width: $rate5;
+}
+
+
+.wrap{
+  width: 80px;
+  margin: 0 auto;
+}

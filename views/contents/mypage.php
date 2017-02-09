@@ -45,7 +45,7 @@ function disp(){
       <!-- <button type="button" class="btn btn-default navbar-btn pull-left">
         <span class="glyphicon glyphicon-chevron-left"></span>
       </button> -->
-      <div class="navbar-text navbar-brand-centered"><h3>●●さんの投稿一覧</h3></div>
+      <div class="navbar-text navbar-brand-centered"><h3><?php echo $users['user_name']; ?>さんの投稿一覧</h3></div>
       <h4></h4>
     </div>
   </div>
@@ -87,13 +87,13 @@ function disp(){
 				  	</p></span>
 				  		
 				  	
-				  	<a class="btn btn-default" href="../edit/<?php echo $content['content_id']; ?>">More Info</a>
+				  	<a class="btn btn-default" href="../show/<?php echo $content['content_id']; ?>">More Info</a>
 				  	</td>
 				 	</tr>
 				 	<tr>
-				  	<td height="60px"><?php echo $content['picture_path1']; ?></td>
-				  	<td height="60px"><?php echo $content['picture_path2']; ?></td>
-				  	<td height="60px"><?php echo $content['picture_path3']; ?></td>
+				  	<td height="60px" width="85px"><img src="../../webroot/images/cebu1.jpg"></td>
+				  	<td height="60px" width="85px"><img src="../../webroot/images/<?php echo $content['picture_path2']; ?>"></td>
+				  	<td height="60px" width="85px"><img src="../../webroot/images/<?php echo $content['picture_path3']; ?>"></td>
 				  	</tr>
 				 	<tr>
 				  	<td colspan="3" height="80px" class="evaluation">この記事が参考になったと答えた人<br>はい●●人　いいえ●●人</td>

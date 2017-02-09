@@ -124,7 +124,8 @@ foreach ($_POST as $key => $value) {
           }
           // $id=1 参考ソートが指定されたとき
           elseif (isset($id)&&$id==1) {
-           $this->sort_eva($id);
+          $content = new Content();
+          $indexviews=$content->sort_eva();
           }
           else{
             header('Location:/tabilog/contents/index');
@@ -328,10 +329,10 @@ foreach ($_POST as $key => $value) {
           $evadeleteviews = $contenteva->eva_delete($eva_data);    
     }
 
-    function sort_eva($id){
-          $contenteva = new Content();
-          $sort_evaviews = $contenteva->sort_eva($id);  
-    }
+    // function sort_eva($id){
+    //       $contenteva = new Content();
+    //       $sort_evaviews = $contenteva->sort_eva($id);  
+    // }
 
    }
 ?>

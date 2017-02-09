@@ -50,8 +50,8 @@
 <!--         <?php echo $_POST['eva'] ?>
  -->        <!-- <?php var_dump($evadataviews) ?> -->
 <!--  <?php echo $place; ?> -->
-<?php var_dump($indexviews) ?>
-<?php var_dump($sort_evaviews) ?>
+<!-- <?php var_dump($indexviews) ?>
+<?php var_dump($sort_evaviews) ?> -->
 <!-- <?php echo $adjust_string ?> -->
 
                                 <!-- modal表示 -->

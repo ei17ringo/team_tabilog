@@ -878,25 +878,44 @@
 		<p class="text-danger h4 col-md-offset-1"><?php echo $search_fail; ?></p>
 		<?php endif ?>
 
-<style>/*
+
+        <!-- セッションに検索キーワードを入力 -->
+        <?php
+            if (isset($_POST['search'])) {
+            $_SESSION['search'] = $_POST['search'];
+            }
+
+          ?>
+
 		<!-- 並び替え　ドロップダウンリスト -->
-		<div class="dropdown col-md-offset-1">
-		  <button class="btn btn-default dropdown-toggle own-hover" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-		  <!-- own-hoverがhoverしたときに灰色表示 -->
-		    並び替え
-		    <span class="caret"></span>
-		  </button
-		  		<!-- 総合評価 -->
-				    <span class="h3 col-sm-offset-2"> ★★★☆☆　3.50</span>
+        <div class="dropdown col-md-offset-1">
+          <button class="btn btn-default dropdown-toggle own-hover" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <!-- own-hoverがhoverしたときに灰色表示 -->
+            並び替え
+            <span class="caret"></span>
+          </button>
 
-		  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-		    <li><a href="#">評価の高い順</a></li>
-		    <li><a href="#">コメント数の多い順</a></li>
-		    <li><a href="#">コメント数の少ない順</a></li>
-		  </ul>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="index/1">参考になった人の多い順</a></li>
+            <li><a href="index/2">新着順</a></li>
+<!--             <li><a href="index/3">コメント数の少ない順</a></li> -->
+          </ul>
+        </div>
 
-		</div>
-*/</style>
+
+<!-- javascript テスト -->
+<!--           <script type="text/javascript">
+                        alert('javascriptのアラート');
+
+              var array = [80,40,120];
+              array.sort(
+                function(a,b){
+                    return (a<b ? -1 : 1);
+                }
+                );
+              console.log(array);
+          </script> -->
+
 
 
 
@@ -976,20 +995,20 @@
 
 
                       <div class="col-md-3">
-                    <img src="../webroot/images/$firstcontent['picture_path1']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture1'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                    <img src="../webroot/images/<?php echo $firstcontent['picture_path1'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture1'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
 
                       <div class="col-md-3">
-                        <img src="../webroot/images/$firstcontent['picture_path2']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture2'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                    <img src="../webroot/images/<?php echo $firstcontent['picture_path2'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture1'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                        <img src="../webroot/images/$firstcontent['picture_path3']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture3'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                        <img src="../webroot/images/<?php echo $firstcontent['picture_path3'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture3'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                        <img src="../webroot/images/$firstcontent['picture_path4']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture4'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                        <img src="../webroot/images/<?php echo $firstcontent['picture_path4'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture4'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                     </div><!--.row-->
@@ -997,14 +1016,14 @@
                  
                 <div class="item">
                     <div class="row">
-                      <div class="col-md-3"><img src="../webroot/images/$firstcontent['picture_path5']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture5'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $firstcontent['picture_path5'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture5'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
 
-                      <div class="col-md-3"><img src="../webroot/images/$firstcontent['picture_path6']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture6'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $firstcontent['picture_path6'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture6'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
-                      <div class="col-md-3"><img src="../webroot/images/$firstcontent['picture_path7']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture7'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $firstcontent['picture_path7'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture7'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
-                      <div class="col-md-3"><img src="../webroot/images/$firstcontent['picture_path8']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture8'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
+                      <div class="col-md-3"><img src="../webroot/images/<?php echo $firstcontent['picture_path8'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture8'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>
 
 
 
@@ -1014,7 +1033,7 @@
 
                 <div class="item">
                     <div class="row">
-                       <div class="col-md-3"><img src="../webroot/images/$firstcontent['picture_path9']" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture9'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425" width="250" height="250"></a></div>
+                       <div class="col-md-3"><img src="../webroot/images/<?php echo $firstcontent['picture_path9'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture9'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425" width="250" height="250"></a></div>
 
 
                       <div class="col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture10'.$firstcontent['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a></div>

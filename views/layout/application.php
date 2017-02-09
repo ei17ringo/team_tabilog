@@ -1,7 +1,7 @@
 <?php 
     $adjust_string = '';
 
-    if ((isset($id))&&$action=='show'){
+    if (isset($id)){
       $adjust_string = '../';
     }
 ?>

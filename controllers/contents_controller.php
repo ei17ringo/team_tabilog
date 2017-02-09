@@ -24,7 +24,7 @@ foreach ($_POST as $key => $value) {
 
    	switch ($action) {
    		case 'index':
-   			$controller->index($_POST);
+   			$controller->index($_POST,$id);
    			break;
    		case 'mypage':
    			$controller->mypage();
@@ -76,7 +76,7 @@ foreach ($_POST as $key => $value) {
 
     }
 
-      function index($index_data) {
+      function index($index_data,$id) {
 
         // 初期値
         // 観光地情報にヒットすると$placeがsightseenになる
@@ -120,6 +120,11 @@ foreach ($_POST as $key => $value) {
           // 初期表示
           $content = new Content();
           $indexviews=$content->index();
+
+          if (isset($id)&&$id==1) {
+            $indexviews = $this->sort_eva($id);
+          }
+
           }
 
           // はい　いいえが押下された場合
@@ -316,6 +321,11 @@ foreach ($_POST as $key => $value) {
     function eva_delete($eva_data){
           $contenteva = new Content();
           $evadeleteviews = $contenteva->eva_delete($eva_data);    
+    }
+
+    function sort_eva($id){
+          $contenteva = new Content();
+          $evasorts = $contenteva->sort_eva($id);  
     }
 
    }

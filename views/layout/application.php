@@ -28,19 +28,21 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
     
     <!-- Animate.css -->
-    <link rel="stylesheet" href="<?php echo $adjust_string ?>../webroot/assets/css/animate.css">
-    <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="<?php echo $adjust_string ?>../webroot/assets/css/icomoon.css">
-    <!-- Bootstrap  -->
-    <link rel="stylesheet" href="<?php echo $adjust_string ?>../webroot/assets/css/bootstrap.css">
-    <!-- Superfish -->
-    <link rel="stylesheet" href="<?php echo $adjust_string ?>../webroot/assets/css/superfish.css">
 
-    <link rel="stylesheet" href="<?php echo $adjust_string ?>../webroot/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/superfish.css">
+
+    <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/style.css">
       <!-- Bootstrap Core CSS -->
-    <link href="<?php echo $adjust_string ?>../webroot/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo $adjust_string ?>../webroot/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="<?php echo $adjust_string ?>../webroot/assets/css/mypage.css">
+    <link href="<?php echo $adjust_string; ?>../webroot/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/mypage.css">
+
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -49,33 +51,37 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css" rel="stylesheet" />
 
       <!-- Modernizr JS -->
-    <script src="<?php echo $adjust_string ?>../webroot/assets/js/modernizr-2.6.2.min.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/modernizr-2.6.2.min.js"></script>
+
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
     <script src="js/respond.min.js"></script>
     <![endif]-->
     <!-- 旅ログ -->
-    <link href="<?php echo $adjust_string ?>../webroot/assets/css/tabilog.css" rel="stylesheet">
+
+    <link href="<?php echo $adjust_string; ?>../webroot/assets/css/tabilog.css" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css" rel="stylesheet" />
 
 
     <!-- Bootstrap -->
-    <!-- <link href="../<?php echo $adjust_string; ?>webroot/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="../<?php echo $adjust_string; ?>webroot/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="../<?php echo $adjust_string; ?>webroot/assets/css/form.css" rel="stylesheet">
-    <link href="../<?php echo $adjust_string; ?>webroot/assets/css/timeline.css" rel="stylesheet">
-    <link href="../<?php echo $adjust_string; ?>webroot/assets/css/main.css" rel="stylesheet"> -->
+    <!-- <link href="<?php echo $adjust_string; ?>../<?php echo $adjust_string; ?>webroot/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo $adjust_string; ?>../<?php echo $adjust_string; ?>webroot/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo $adjust_string; ?>../<?php echo $adjust_string; ?>webroot/assets/css/form.css" rel="stylesheet">
+    <link href="<?php echo $adjust_string; ?>../<?php echo $adjust_string; ?>webroot/assets/css/timeline.css" rel="stylesheet">
+    <link href="<?php echo $adjust_string; ?>../<?php echo $adjust_string; ?>webroot/assets/css/main.css" rel="stylesheet"> -->
 
 
     <!-- カルーセル読み込み -->
-    <script src="<?php echo $adjust_string ?>../webroot/assets/js/jquery-1.11.3.min.js"></script>
-    <script src="<?php echo $adjust_string ?>../webroot/assets/js/bootstrap.js"></script>
-    <script src="<?php echo $adjust_string ?>../webroot/assets/js/bootstrap-modal.js"></script>
-    <script src="<?php echo $adjust_string ?>../webroot/assets/js/bootstrap-modalmanager.js"></script>
-    <link rel="stylesheet" href="../webroot/assets/css/bootstrap-lightbox.css">
-    <script src="<?php echo $adjust_string ?>../webroot/assets/js/jquery-3.1.1.min.js"></script>
-    <script src="<?php echo $adjust_string ?>../webroot/assets/js/bootstrap.min.js"></script>
-    <script src="<?php echo $adjust_string ?>../webroot/assets/js/bootstrap-lightbox.min.js"></script>
+
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/jquery-1.11.3.min.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap-modal.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap-modalmanager.js"></script>
+    <link rel="stylesheet" href="<?php echo $adjust_string; ?>../webroot/assets/css/bootstrap-lightbox.css">
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/jquery-3.1.1.min.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap-lightbox.min.js"></script>
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -160,6 +166,7 @@
             <a href="<?php echo $adjust_string; ?>logout">Logout</a>              
             <?php endif ?>
             <!-- </div>
+
           </div> -->
             <?php if (!isset($_SESSION['id'])): ?>
             <span> <!-- <a href="tel://+12345678910"><i class="icon-mobile3"></i> --><a href="../users/signup" data-target="#login-modal">新規登録</a></span>
@@ -175,11 +182,14 @@
   <div class="container">
     <div class="nav-header">
       <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+
       <h1 id="fh5co-logo"><a href="/tabilog/contents/index">旅ログ</a></h1>
+
       <!-- START #fh5co-menu-wrap -->
       <nav id="fh5co-menu-wrap" role="navigation">
         <ul class="sf-menu" id="fh5co-primary-menu">
           <li class="active">
+
             <a href="<?php echo $adjust_string ?>index">Home</a>
           </li>
           <li>
@@ -201,6 +211,7 @@
             <?php if (isset($_SESSION['id'])): ?>     
             <a href="mypage">投稿一覧</a>
             <?php endif ?>
+
           </li>
         </ul>
       </nav>
@@ -229,13 +240,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <p>Copyright 2017 <!-- Free Html5 --> <a href="#">旅ログ</a>All Rights Reserved. <br>Made with by <a href="http://freehtml5.co/">Team Young</a> / Demo Images: <a href="https://unsplash.com/">Unsplash</a></p>
+          <p>Copyright 2017 <!-- Free Html5 --> <a href="index.php">旅ログ</a>All Rights Reserved. <br>Made with by <a href="http://freehtml5.co/">Team Young</a> / Demo Images: <a href="https://unsplash.com/">Unsplash</a></p>
         </div>
         <div class="col-md-6">
           <ul class="footer-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="newpage.html">新規作成</a></li>
-            <li><a href="mypage.html">投稿一覧</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="newpage.php">新規作成</a></li>
+            <li><a href="mypage.php">投稿一覧</a></li>
                 <!-- <li><a href="#">投稿一覧</a></li> -->
                 <!-- <li><a href="#">About</a></li>
                 <li><a href="#">Blog</a></li>
@@ -264,29 +275,30 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="<?php echo $adjust_string ?>../webroot/assets/js/bootstrap.min.js"></script>
+
+  <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap.min.js"></script>
   <!-- jQuery -->
-  <script src="<?php echo $adjust_string ?>../webroot/assets/js/jquery.min.js"></script>
-  <script src="<?php echo $adjust_string ?>../webroot/assets/js/jquery-3.1.1.min.js"></script>
+  <script src="<?php echo $adjust_string; ?>../webroot/assets/js/jquery.min.js"></script>
+  <script src="<?php echo $adjust_string; ?>../webroot/assets/js/jquery-3.1.1.min.js"></script>
   <!-- jQuery Easing -->
   <script src="<?php echo $adjust_string ?>../webroot/assets/js/jquery.easing.1.3.js"></script>
   <!-- Bootstrap -->
-  <script src="<?php echo $adjust_string ?>../webroot/assets/js/bootstrap.min.js"></script>
-  <script src="<?php echo $adjust_string ?>../webroot/assets/js/bootstrap-modal.js"></script>
-    <script src="<?php echo $adjust_string ?>../webroot/assets/js/bootstrap-modalmanager.js"></script>
-    <script src="<?php echo $adjust_string ?>../webroot/assets/js/bootstrap-lightbox.min.js"></script>
+  <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap.min.js"></script>
+  <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap-modal.js"></script>
+  <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap-modalmanager.js"></script>
+  <script src="<?php echo $adjust_string; ?>../webroot/assets/js/bootstrap-lightbox.min.js"></script>
+  
   <!-- その他ライブラリ -->
   <!-- Waypoints -->
-  <script src="<?php echo $adjust_string ?>../webroot/assets/js/jquery.waypoints.min.js"></script>
+  <script src="<?php echo $adjust_string; ?>../webroot/assets/js/jquery.waypoints.min.js"></script>
   <!-- Superfish -->
-  <script src="<?php echo $adjust_string ?>../webroot/assets/js/hoverIntent.js"></script>
-  <script src="<?php echo $adjust_string ?>../webroot/assets/js/superfish.js"></script>
-
+  <script src="<?php echo $adjust_string; ?>../webroot/assets/js/hoverIntent.js"></script>
+  <script src="<?php echo $adjust_string; ?>../webroot/assets/js/superfish.js"></script>
+　　　　
   <!-- Main JS (Do not remove) -->
-  <script src="<?php echo $adjust_string ?>../webroot/assets/js/main.js"></script>
+  <script src="<?php echo $adjust_string; ?>../webroot/assets/js/main.js"></script>
   <!-- 自分で作成したjs -->
-  <script src="<?php echo $adjust_string ?>../webroot/assets/js/tabilog.js"></script>
-
+  <script src="<?php echo $adjust_string; ?>../webroot/assets/js/tabilog.js"></script>
   </body>
 </html>
 

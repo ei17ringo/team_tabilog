@@ -13,6 +13,22 @@
 			$this->dbconnect = $db;
 		}
 
+		function mypage($id){
+			// SQLの記述(SELECT文)
+			$sql = sprintf('SELECT * FROM `contents` LEFT JOIN `places` ON `contents`.`place_id` = `places`.`place_id` WHERE `c_delete_flag` = 0 AND `user_id` = %d',$id);
+			
+			// SQLの実行
+			$results = mysqli_query($this->dbconnect, $sql) or die(mysqli_error($this->dbconnect));
+			// 実行結果を取得し、変数に格納
+			$content = array();
+			while ($result = mysqli_fetch_assoc($results)) {
+				$content[]=$result;
+			}
+			//　取得結果を返す
+			return $content;
+		}
+
+
 	function index(){
 		// 初期表示ですべて検索するためのSQLの記述
 		$sql = sprintf('SELECT * FROM `contents` WHERE `c_delete_flag`=0 ORDER BY `created` DESC'
@@ -221,6 +237,7 @@
 			// //取得結果を残す
 			//  return $userviews;
 			return $results;
+
 	}
 
 	function delete($id){

@@ -27,7 +27,7 @@ foreach ($_POST as $key => $value) {
    			$controller->index($_POST,$id);
    			break;
    		case 'mypage':
-   			$controller->mypage();
+   			$controller->mypage($id);
    			break;
    		case 'show':
    			$controller->show($id);
@@ -62,6 +62,7 @@ foreach ($_POST as $key => $value) {
    	}
 
 	class ContentsController {
+
 
     // すべてのページでログイン機能実現
     // 必要ならプロパティ
@@ -176,13 +177,24 @@ foreach ($_POST as $key => $value) {
           require('views/layout/application.php');
       }
 
-      function mypage() {
+
+      function mypage($id) {
+
+          //モデルを呼び出す
+          $content = new Content();
+          //モデルのmypageメソッドを実行する（モデルのmypageメソッドは、select文を実行してidで指定したブログデータを取得する）
+          //モデルのmypageメソッドに$idを引数として渡す
+          //モデルのmypageメソッドから返ってきた取得結果を、変数に格納
+          $viewOptions = $content->mypage($id);
+
           $resource = 'contents';
           $action = 'mypage';
+           // var_dump($viewOptions);
           require('views/layout/application.php');
       }
 
       function show($id) {
+
           if (empty(($id))) {
             header('Location:/tabilog/contents/index');
           }
@@ -222,6 +234,7 @@ foreach ($_POST as $key => $value) {
           $resource = 'contents';
      	    $action = 'edit';
           require('views/layout/application.php');
+          
       }
 
       function check($id) {
@@ -236,13 +249,20 @@ foreach ($_POST as $key => $value) {
       }
 
       function delete($id){
+
+        $blog=new Blog();
+         // モデルのdeleteメソッドを実行する(モデルのdeleteメソッドはupdate文を実行してdelete_flagを1に更新する)
+        $return=$blog->delete($id);
+        header('Location: /tabilog/contents/mypage');
+      }
+
+      function index_delete($id){
           if (isset($_SESSION)) {
            $content = new Content();
            $deletes = $content->delete($id);
           }
            header('Location:/tabilog/contents/index');
       }
-
       function login($login_data){
 
     // 自動ログインの実装
@@ -294,6 +314,7 @@ foreach ($_POST as $key => $value) {
         $error['login'] = 'blank';
       }
     }
+
 
       }
 

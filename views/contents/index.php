@@ -39,10 +39,10 @@
 
         <!-- 消さないここまで -->
 
-<!--        <?php var_dump($indexplaceviews);  ?> -->
-<!--        <?php foreach ($indexviews as $indexview): ?>
-            <?php echo $indexview['content_id'] ?>
-        <?php endforeach ?> -->
+<!-- 		<?php var_dump($indexplaceviews);  ?> -->
+<!-- 		<?php foreach ($indexviews as $indexview): ?>
+			<?php echo $indexview['content_id'] ?>
+		<?php endforeach ?> -->
 <!--         <br>
         <br>
         <?php echo $index_data['search'] ?>
@@ -845,7 +845,7 @@
 
 
 
-        <!-- パンくずリスト 検索情報が入力されている場合のみ -->
+  		<!-- パンくずリスト 検索情報が入力されている場合のみ -->
 
                <?php if ((isset($place)&&$place =='sightseen')&&isset($firstcontent)): ?>
         <ol class="breadcrumb">場所：
@@ -863,28 +863,28 @@
                 <?php endif ?>
 
             <!-- バックアップ用のパンくずリスト -->
-            <!--        <ol class="breadcrumb">場所：
-                <li><a href="http://bootstrap3.cyberlab.info">フィリピン</a></li>
-                <li><a href="http://bootstrap3.cyberlab.info/components/">セブ</a></li>
-                <li class="active">カルボンマーケット</li>
-                    </ol> -->
+            <!--   		<ol class="breadcrumb">場所：
+            	<li><a href="http://bootstrap3.cyberlab.info">フィリピン</a></li>
+            	<li><a href="http://bootstrap3.cyberlab.info/components/">セブ</a></li>
+            	<li class="active">カルボンマーケット</li>
+            		</ol> -->
 
-        <!-- 検索ボタン -->
-        <p>
-        <form method="post" action="/tabilog/contents/index" class="form-horizontal" role="form">
-        <div class="input-group col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1">
-      <input type="text" class="form-control" name="search" placeholder="観光地を入力してください" value="<?php if (isset($_POST['search'])): ?><?php echo $_POST['search']; ?><?php endif ?>">
-      <span class="input-group-btn">
-        <button class="btn btn-default own-hover" type="submit">検索</button>
-      </span>
-        </div>
-        </form>
-        </p>
+		<!-- 検索ボタン -->
+		<p>
+		<form method="post" action="/tabilog/contents/index" class="form-horizontal" role="form">
+		<div class="input-group col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1">
+	  <input type="text" class="form-control" name="search" placeholder="観光地を入力してください" value="<?php if (isset($_POST['search'])): ?><?php echo $_POST['search']; ?><?php endif ?>">
+	  <span class="input-group-btn">
+	    <button class="btn btn-default own-hover" type="submit">検索</button>
+	  </span>
+		</div>
+		</form>
+		</p>
 
         <!-- 検索キーワードがなかった場合 -->
-        <?php if (isset($search_fail)): ?>
-        <p class="text-danger h4 col-md-offset-1"><?php echo $search_fail; ?></p>
-        <?php endif ?>
+		<?php if (isset($search_fail)): ?>
+		<p class="text-danger h4 col-md-offset-1"><?php echo $search_fail; ?></p>
+		<?php endif ?>
 
 
         <!-- セッションに検索キーワードを入力 -->
@@ -895,7 +895,7 @@
 
           ?>
 
-        <!-- 並び替え　ドロップダウンリスト -->
+		<!-- 並び替え　ドロップダウンリスト -->
         <!-- トップ画面のときのみ表示 -->
         <?php if (isset($indexviews)): ?>
 
@@ -932,7 +932,7 @@
 
 
 
-        <!-- 観光地入力時の本文 -->
+		<!-- 観光地入力時の本文 -->
         <!-- 検索ワードが観光地に設定されていないときはコメントアウト -->
         <?php if (isset($place)&&$place !=='sightseen'): ?>
             <?php echo '<style>/*' ?>
@@ -952,7 +952,7 @@
                         <div class="fh5co-testimonial text-center animate-box">
                         <div class=" jumbotron">
 
-                                
+                        		
                             <h2><a href="show/<?php echo $firstcontent['content_id'] ?>"><?php echo $firstcontent['title'] ?></a></h2>
                             <figure>
                                 <h5 class="text-right">
@@ -1163,7 +1163,7 @@
          
 
 
-    <!-- Google Map -->
+	<!-- Google Map -->
     <div id="map" class="" style="width:500px; height:600px"></div>
     <script type="text/javascript" >
     function initMap() {
@@ -1211,11 +1211,11 @@
         </script>
     </div>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
         <!-- 検索ワードが観光地に設定されていないときは非表示 -->
         <?php if (isset($place)&&$place!=='sightseen'): ?>
@@ -1223,7 +1223,7 @@
         <?php endif ?>
 
 
-                <!-- 本文 -->
+				<!-- 本文 -->
                 <!-- 検索キーワードが入力されていないとき（初期表示） -->
 
                 <!-- 検索ワードが設定されているときは非表示 -->
@@ -1276,7 +1276,7 @@
     <!-- 画像の表示 モーダル -->
 
     <div class="row">
-    <div class="col-md-12">
+  	<div class="col-md-12">
        
                 <div id="Carousel<?php echo $cal_id_init ?>" class="carousel slide">             
                 <ol class="carousel-indicators">
@@ -1293,20 +1293,20 @@
 
 
                       <div class="col-md-3">
-                    <img src="../webroot/images/<?php echo $indexview['picture_path1'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture1'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                  	<img src="../webroot/images/<?php echo $indexview['picture_path1'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture1'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
 
                       <div class="col-md-3">
-                        <img src="../webroot/images/<?php echo $indexview['picture_path2'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture2'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="../webroot/images/<?php echo $indexview['picture_path2'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture2'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                        <img src="../webroot/images/<?php echo $indexview['picture_path3'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture3'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="../webroot/images/<?php echo $indexview['picture_path3'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture3'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                        <img src="../webroot/images/<?php echo $indexview['picture_path4'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture4'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425" height="250"></a>
+                      	<img src="../webroot/images/<?php echo $indexview['picture_path4'] ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="<?php echo '#picture4'.$indexview['content_id'] ?>" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425" height="250"></a>
                       </div>
 
                     </div><!--.row-->
@@ -1683,7 +1683,7 @@
 
                     <style>/*
 
-                            <!-- 本文 -->
+                    		<!-- 本文 -->
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="fh5co-testimonial text-center animate-box">
@@ -1704,7 +1704,7 @@
     <!-- 画像の表示 モーダル -->
 
     <div class="row">
-    <div class="col-md-12">
+  	<div class="col-md-12">
         
                 <div id="Carousel" class="carousel slide">
                  
@@ -1722,20 +1722,20 @@
 
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal1" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal1" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal2" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal2" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                     </div><!--.row-->
@@ -1805,7 +1805,7 @@
 
 
 
-                <!-- 本文 -->
+				<!-- 本文 -->
 
         <div id="fh5co-content-section">
             <div class="container">
@@ -1829,7 +1829,7 @@
     <!-- 画像の表示 モーダル -->
 
     <div class="row">
-    <div class="col-md-12">
+  	<div class="col-md-12">
         
                 <div id="Carousel" class="carousel slide">
                  
@@ -1847,20 +1847,20 @@
 
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal1" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal1" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal2" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal2" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                     </div><!--.row-->
@@ -1933,7 +1933,7 @@
 
 
 
-                            <!-- 本文 -->
+                    		<!-- 本文 -->
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="fh5co-testimonial text-center animate-box">
@@ -1954,7 +1954,7 @@
     <!-- 画像の表示 モーダル -->
 
     <div class="row">
-    <div class="col-md-12">
+  	<div class="col-md-12">
         
                 <div id="Carousel" class="carousel slide">
                  
@@ -1972,20 +1972,20 @@
 
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal1" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal1" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal2" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal2" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                       <div class="col-md-3">
-                        <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
+                      	<img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"></a>
                       </div>
 
                     </div><!--.row-->

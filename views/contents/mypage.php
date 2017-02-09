@@ -1,11 +1,7 @@
 
 
 
-<?php
- // var_dump($viewOptions);
 
-
-?>
 
 
 
@@ -91,9 +87,9 @@ function disp(){
 				  	</td>
 				 	</tr>
 				 	<tr>
-				  	<td height="60px" width="85px"><img src="../../webroot/images/cebu1.jpg"></td>
-				  	<td height="60px" width="85px"><img src="../../webroot/images/<?php echo $content['picture_path2']; ?>"></td>
-				  	<td height="60px" width="85px"><img src="../../webroot/images/<?php echo $content['picture_path3']; ?>"></td>
+				  	<td height="20px" width="25px"><img src="../../webroot/images/<?php echo $content['picture_path1']; ?>" height="75px" width="75px"></td>
+				  	<td height="20px" width="25px"><img src="../../webroot/images/<?php echo $content['picture_path2']; ?>" height="75px" width="75px"></td>
+				  	<td height="20px" width="25px"><img src="../../webroot/images/<?php echo $content['picture_path3']; ?>" height="75px" width="75px"></td>
 				  	</tr>
 				 	<tr>
 				  	<td colspan="3" height="80px" class="evaluation">この記事が参考になったと答えた人<br>はい●●人　いいえ●●人</td>

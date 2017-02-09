@@ -42,25 +42,25 @@
 
 	class ContentsController {
       function index() {
-          $resource = 'posts';
+          $resource = 'contents';
           $action = 'index';
           require('views/layout/application.php');
       }
 
       function mypage() {
-          $resource = 'posts';
+          $resource = 'contents';
           $action = 'mypage';
           require('views/layout/application.php');
       }
 
       function show($id) {
-          $resource = 'posts';
+          $resource = 'contents';
           $action = 'show';
           require('views/layout/application.php');
       }
 
       function add(){
-          $resource = 'posts';
+          $resource = 'contents';
           $action = 'add';
           require('views/layout/application.php');
       }
@@ -69,24 +69,46 @@
 
       }
 
+
+
+
+
+
       function edit($id){
-          $resource = 'posts';
+
+        $content = new Content();
+        $return = $content->edit($id);
+          $resource = 'contents';
      	    $action = 'edit';
           require('views/layout/application.php');
       }
 
+
+
       function check($id) {
-          $resource = 'posts';
+
+          $resource = 'contents';
           $action = 'check';
           require('views/layout/application.php');
       }
 
 
       function update($id,$post_data){
+         $content = new Content();
+        $return = $content->update($id,$post_data);
+        header('Location: /tabilog/contents/mypage');
 
       }
 
       function delete($id){
+
+       //モデルを呼び出す
+      $content = new Content();
+      
+      //モデルのdeleteメソッドを実行する（モデルのcreateメソッドは、delete文を実行してブログを保存する）
+      $return = $content->delete($id);
+
+      header('Location: /tabilog/contents/mypage');
 
       }
    }

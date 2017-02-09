@@ -50,7 +50,9 @@
 <!--         <?php echo $_POST['eva'] ?>
  -->        <!-- <?php var_dump($evadataviews) ?> -->
 <!--  <?php echo $place; ?> -->
-
+<?php var_dump($indexviews) ?>
+<?php var_dump($sort_evaviews) ?>
+<!-- <?php echo $adjust_string ?> -->
 
                                 <!-- modal表示 -->
                                 <!-- 観光地情報が入力されたとき -->
@@ -888,6 +890,9 @@
           ?>
 
 		<!-- 並び替え　ドロップダウンリスト -->
+        <!-- トップ画面のときのみ表示 -->
+        <?php if (isset($indexviews)): ?>
+
         <div class="dropdown col-md-offset-1">
           <button class="btn btn-default dropdown-toggle own-hover" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           <!-- own-hoverがhoverしたときに灰色表示 -->
@@ -896,11 +901,13 @@
           </button>
 
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="index/1">参考になった人の多い順</a></li>
-            <li><a href="index/2">新着順</a></li>
+            <li><a href="<?php echo $adjust_string ?>index/1">参考になった人の多い順</a></li>
+            <li><a href="<?php echo $adjust_string ?>index">新着順</a></li>
 <!--             <li><a href="index/3">コメント数の少ない順</a></li> -->
           </ul>
         </div>
+
+        <?php endif ?>
 
 
 <!-- javascript テスト -->

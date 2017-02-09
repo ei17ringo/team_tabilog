@@ -245,6 +245,7 @@
 			return $results;
 
 	}
+	
 		function sort_eva($id){
 		//　並び替え　はいの数でソートを実施
 		$sql = sprintf('SELECT `contents`.`content_id`, `contents`.`title`, `content`, `contents`.`rating`, `contents`.`country_name`, `contents`.`city_name`, `contents`.`place_name`, `contents`.`picture_path1`, `contents`.`picture_path2`, `contents`.`picture_path3`, `contents`.`picture_path4`, `contents`.`picture_path5`, `contents`.`picture_path6`, `contents`.`picture_path7`, `contents`.`picture_path8`, `contents`.`picture_path9`, `contents`.`created`, `contents`.`modified`, `contents`.`c_delete_flag`, `contents`.`user_id` FROM (SELECT `content_id`, count(*) as evaSUM FROM `evaluations` WHERE `e_delete_flag`=0 GROUP BY `evaluations`.`content_id`) ev RIGHT OUTER JOIN `contents` ON ev.`content_id` = `contents`.`content_id` WHERE `c_delete_flag`=0 ORDER BY ev.`evaSUM` DESC'
@@ -253,7 +254,6 @@
 		// デバッグ用
 		// $sql = sprintf('SELECT * FROM (SELECT `content_id`, count(*) as evaSUM FROM `evaluations` WHERE `e_delete_flag`=0 GROUP BY `evaluations`.`content_id`) ev RIGHT OUTER JOIN `contents` ON ev.`content_id` = `contents`.`content_id` WHERE `c_delete_flag`=0 ORDER BY ev.`evaSUM` DESC'
 		// 	);
-
 
 			//SQLの実行
 			$results = mysqli_query($this->dbconnect, $sql) or die(mysqli_error($this->dbconnect));

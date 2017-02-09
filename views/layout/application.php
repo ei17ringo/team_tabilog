@@ -1,7 +1,7 @@
 <?php 
     $adjust_string = '';
 
-    if (isset($id)){
+    if (isset($id)&&$id!=0){
       $adjust_string = '../';
     }
 ?>
@@ -264,7 +264,7 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="<?php echo $adjust_string ?>../<?php echo $adjust_string; ?>webroot/assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo $adjust_string ?>../webroot/assets/js/bootstrap.min.js"></script>
   <!-- jQuery -->
   <script src="<?php echo $adjust_string ?>../webroot/assets/js/jquery.min.js"></script>
   <script src="<?php echo $adjust_string ?>../webroot/assets/js/jquery-3.1.1.min.js"></script>

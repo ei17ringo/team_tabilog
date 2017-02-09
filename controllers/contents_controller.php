@@ -118,11 +118,16 @@ foreach ($_POST as $key => $value) {
           // その他、検索情報が入っていない場合など(初期状態)
           else{
           // 初期表示
+          if (isset($id)&&$id==0){
           $content = new Content();
           $indexviews=$content->index();
-
-          if (isset($id)&&$id==1) {
-            $indexviews = $this->sort_eva($id);
+          }
+          // $id=1 参考ソートが指定されたとき
+          elseif (isset($id)&&$id==1) {
+           $this->sort_eva($id);
+          }
+          else{
+            header('Location:/tabilog/contents/index');
           }
 
           }
@@ -325,7 +330,7 @@ foreach ($_POST as $key => $value) {
 
     function sort_eva($id){
           $contenteva = new Content();
-          $evasorts = $contenteva->sort_eva($id);  
+          $sort_evaviews = $contenteva->sort_eva($id);  
     }
 
    }

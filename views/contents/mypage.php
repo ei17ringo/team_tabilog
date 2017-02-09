@@ -1,11 +1,11 @@
 
 
 
-<!-- <?php
- var_dump($viewOptions);
+<?php
+ // var_dump($viewOptions);
 
 
-?> -->
+?>
 
 
 
@@ -76,17 +76,24 @@ function disp(){
 				 	</tr>
 				 	<tr>
 				  	<td height="70px" colspan="3">
-				  	<a href="edit.php"><span class="edit">編集</span></a>/<a href="#" data-toggle="modal" data-target="#myModal">
-				  	<a href="../delete/<?php echo $content['content_id'] ?>"><span class="delete"><span value="削除" onClick="disp()">削除</span></span></a></a>
+				  	<a href="../edit/<?php echo $content['content_id']; ?>"><span class="edit">編集</span></a>/<a href="#" data-toggle="modal" data-target="#myModal">
+				  	<a href="../delete/<?php echo $content['content_id']; ?>"><span class="delete"><span value="削除" onClick="disp()">削除</span></span></a></a>
 				  		<?php echo $str = mb_strimwidth($content['content'], 0, 30, '…', 'UTF-8'); ?>
-				  	<p class="star">★★★☆☆</p></span>
+				  	<p class="star"><?php for($i=0; $i<$content['rating']; $i++ ){
+				  		echo '★';
+				  		} ?><?php for($i=0; $i<5-$content['rating']; $i++){
+				  		echo '☆';
+				  		}?>
+				  	</p></span>
+				  		
 				  	
-				  	<p class="btn btn-default" href="#">More Info</p></td>
+				  	<a class="btn btn-default" href="../edit/<?php echo $content['content_id']; ?>">More Info</a>
+				  	</td>
 				 	</tr>
 				 	<tr>
-				  	<td height="60px">写真1</td>
-				  	<td height="60px">写真2</td>
-				  	<td height="60px">写真3</td>
+				  	<td height="60px"><?php echo $content['picture_path1']; ?></td>
+				  	<td height="60px"><?php echo $content['picture_path2']; ?></td>
+				  	<td height="60px"><?php echo $content['picture_path3']; ?></td>
 				  	</tr>
 				 	<tr>
 				  	<td colspan="3" height="80px" class="evaluation">この記事が参考になったと答えた人<br>はい●●人　いいえ●●人</td>

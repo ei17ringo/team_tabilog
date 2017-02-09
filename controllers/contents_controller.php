@@ -81,6 +81,7 @@
           $resource = 'contents';
      	    $action = 'edit';
           require('views/layout/application.php');
+          
       }
 
       function check($id) {

@@ -133,7 +133,7 @@
             <a href="#">/Logout</a>
             <!-- </div>
           </div> -->  
-            <span> <!-- <a href="tel://+12345678910"><i class="icon-mobile3"></i> --><a href="newmember.html" data-target="#login-modal">新規登録</a></span>
+            <span> <!-- <a href="tel://+12345678910"><i class="icon-mobile3"></i> --><a href="newmember.php" data-target="#login-modal">新規登録</a></span>
 
         </div>
       </div>
@@ -145,18 +145,18 @@
   <div class="container">
     <div class="nav-header">
       <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-      <h1 id="fh5co-logo"><a href="index.html">旅ログ</a></h1>
+      <h1 id="fh5co-logo"><a href="index.php">旅ログ</a></h1>
       <!-- START #fh5co-menu-wrap -->
       <nav id="fh5co-menu-wrap" role="navigation">
         <ul class="sf-menu" id="fh5co-primary-menu">
           <li class="active">
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
           </li>
           <li>
-            <a href="newpage.html">新規作成</a>
+            <a href="newpage.php">新規作成</a>
           </li>
           <li>
-            <a href="mypage.html">投稿一覧</a>
+            <a href="mypage.php">投稿一覧</a>
           </li>
         </ul>
       </nav>
@@ -185,13 +185,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <p>Copyright 2017 <!-- Free Html5 --> <a href="#">旅ログ</a>All Rights Reserved. <br>Made with by <a href="http://freehtml5.co/">Team Young</a> / Demo Images: <a href="https://unsplash.com/">Unsplash</a></p>
+          <p>Copyright 2017 <!-- Free Html5 --> <a href="index.php">旅ログ</a>All Rights Reserved. <br>Made with by <a href="http://freehtml5.co/">Team Young</a> / Demo Images: <a href="https://unsplash.com/">Unsplash</a></p>
         </div>
         <div class="col-md-6">
           <ul class="footer-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="newpage.html">新規作成</a></li>
-            <li><a href="mypage.html">投稿一覧</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="newpage.php">新規作成</a></li>
+            <li><a href="mypage.php">投稿一覧</a></li>
                 <!-- <li><a href="#">投稿一覧</a></li> -->
                 <!-- <li><a href="#">About</a></li>
                 <li><a href="#">Blog</a></li>

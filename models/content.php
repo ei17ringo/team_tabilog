@@ -15,7 +15,7 @@
 
 		function mypage($id){
 			// SQLの記述(SELECT文)
-			$sql = sprintf('SELECT * FROM `contents` INNER JOIN `places` ON `contents`.`place_id` = `places`.`place_id` WHERE `c_delete_flag` = 0 AND `user_id` = %d',$id);
+			$sql = sprintf('SELECT * FROM `contents` LEFT JOIN `places` ON `contents`.`place_id` = `places`.`place_id` WHERE `c_delete_flag` = 0 AND `user_id` = %d',$id);
 			
 			// SQLの実行
 			$results = mysqli_query($this->dbconnect, $sql) or die(mysqli_error($this->dbconnect));

@@ -852,7 +852,13 @@
     <li><?php echo $firstcontent['country_name']; ?></li>
     <li><?php echo $firstcontent['city_name']; ?></li>
 
+    <?php if (isset($googlemap['place_name_jp'])): ?>
+      <li><?php echo $googlemap['place_name_jp']; ?></li>  
+    <?php endif ?>
+
+    <?php if (!isset($googlemap['place_name_jp'])): ?>
     <li><?php echo $firstcontent['place_name']; ?></li>
+    <?php endif ?>
         </ol>
                 <?php endif ?>
 

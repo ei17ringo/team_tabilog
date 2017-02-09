@@ -1,4 +1,3 @@
-<?php var_dump($_SESSION['join']); ?>
 <div class="container">
 <div class="col-md-offset-2 col-md-8">
  <div class="form-area">
@@ -14,46 +13,33 @@
                     <div class="form-group">
                      <div class="row">
                       <div class="col-md-12">
-                      <!-- <div class="form-inline"> -->
-
-                        <!-- セレクトボックス -->
-                          <!-- <select name="list" class="form-control" disabled="disabled">
-                           <option value="item1">日本</option>
-                           <option value="item2" selected>国名</option>
-                           <option value="item3">ベトナム</option>
-                           <option value="item3">フィリピン</option>
-                          </select> -->
-
-                          <!-- セレクトボックス -->
-                         <!--  <select name="list" class="form-control" disabled="disabled">
-                           <option value="item1">日本</option>
-                           <option value="item2" selected>地域</option>
-                           <option value="item3">ベトナム</option>
-                           <option value="item3">フィリピン</option>
-                          </select> -->
                             <input type="text" class="form-control" disabled="disabled" id="mobile" name="mobile" placeholder="国名： &nbsp; &nbsp; &nbsp; &nbsp;地域： &nbsp; &nbsp; &nbsp; &nbsp;都市：" value="<?php echo htmlspecialchars($_SESSION['join']['country_name'],ENT_QUOTES,'UTF-8');?>&nbsp; &nbsp;/&nbsp; &nbsp;<?php echo htmlspecialchars($_SESSION['join']['city_name'],ENT_QUOTES,'UTF-8');?>&nbsp; &nbsp;/&nbsp; &nbsp;<?php echo htmlspecialchars($_SESSION['join']['place_name'],ENT_QUOTES,'UTF-8');?>"required>
 
                       <!--  </div> -->
                       </div>
-                       <!-- <input type="text" class="form-control" id="mobile" name="mobile" placeholder="国：" required> -->
                      </div>
-                     <!-- <div class="col-md-4">
-                       <input type="text" class="form-control" id="mobile" name="mobile" placeholder="地域：" required>
-                     </div> -->
-                     <!-- <div class="col-md-4">
-                       <input type="text" class="form-control" id="mobile" name="mobile" placeholder="都市：" required>
-                     </div> -->
                     </div>
                      </div>
                      <label style align="left">オススメ度</label>
                     <div class="form-group">
                       <div class="form-inline">
-                       <input type="text" class="form-control" disabled="disabled" id="mobile" name="mobile" placeholder="" value="<?php echo htmlspecialchars($_SESSION['join']['rating'],ENT_QUOTES,'UTF-8');?>" required>
 
-                        <!-- <div class="row lead"> -->
-                        <!-- <span id="stars" class="starrr"></span>
-                       <span id="count">0</span> star(s) -->
-                      <!-- </div> -->
+                      <?php if(isset($_SESSION['join']['rating']) && $_SESSION['join']['rating'] == 1){?>
+                       <input type="text" class="form-control" disabled="disabled" id="mobile" name="mobile" placeholder="" value="★" required>
+
+                       <?php } elseif (isset($_SESSION['join']['rating']) && $_SESSION['join']['rating'] == 2) {?>
+                         <input type="text" class="form-control" disabled="disabled" id="mobile" name="mobile" placeholder="" value="★★" required>
+
+                       <?php } elseif (isset($_SESSION['join']['rating']) && $_SESSION['join']['rating'] == 3) {?>
+                         <input type="text" class="form-control" disabled="disabled" id="mobile" name="mobile" placeholder="" value="★★★" required>
+
+                       <?php } elseif (isset($_SESSION['join']['rating']) && $_SESSION['join']['rating'] == 4) {?>
+                         <input type="text" class="form-control" disabled="disabled" id="mobile" name="mobile" placeholder="" value="★★★★" required>
+
+                       <?php } elseif (isset($_SESSION['join']['rating']) && $_SESSION['join']['rating'] == 5) {?>
+                         <input type="text" class="form-control" disabled="disabled" id="mobile" name="mobile" placeholder="" value="★★★★★" required>
+                       <?php }?>
+
                      </div>
                     </div>
 
@@ -88,9 +74,6 @@
 
                 <div class="item active">
                     <div class="row">
-
-
-                     
 
                       <div class="col-md-3"><img src="/tabilog/webroot/images/<?php echo htmlspecialchars($_SESSION['join']['picture_path1'], ENT_QUOTES,'UTF-8'); ?>" alt="Image" style="max-width:100% max-height:100%;" data-toggle="modal" data-target="#image_Modal1" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail aligncenter size-full wp-image-425"></a></div>
 

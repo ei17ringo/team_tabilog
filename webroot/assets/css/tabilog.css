@@ -21,10 +21,6 @@
 	margin-top: 40px;
 }
 
-/*.edit{
-	margin-top: 20px;
-}*/
-
 .carousel-control.right {
 	right: -12px;
 }
@@ -56,8 +52,4 @@ background: #428bca;
 .modal-img_footer { //表示予定のテキストとボタンを中央揃え
     padding: .5em;
     text-align: center;
-}
-
-button.own-hover:hover {
-	background-color: #D3D3D3 !important;
 }

@@ -2,8 +2,6 @@
   session_start();
 
   date_default_timezone_set('Asia/Manila');
-
-  session_start();
       // サニタイジング
   if (isset($_POST)) {
 

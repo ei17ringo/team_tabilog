@@ -8,6 +8,18 @@ session_start();
     $controller = new UsersController();
     //$controller->index();
     //アクション名によって、呼び出すメソッドを変える
+
+          // サニタイジング
+  if (isset($_POST)) {
+
+foreach ($_POST as $key => $value) {
+        $_POST[$key]=htmlspecialchars($value);
+}
+  }
+  if (isset($id)) {
+      $id=htmlspecialchars($id);
+  }
+    
     switch ($action) {
       case 'signup':
         $controller->signup($_POST);

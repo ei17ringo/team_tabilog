@@ -195,21 +195,21 @@
           <li>
             <!-- ログインしていないときの表示 -->
             <?php if (!isset($_SESSION['id'])): ?>
-              <a href="../users/signup">新規作成</a>
+              <a href="<?php echo $adjust_string ?>../users/signup">新規作成</a>
             <?php endif ?>
             <!-- ログインしているとき -->
             <?php if (isset($_SESSION['id'])): ?>
-            <a href="add">新規作成</a>
+            <a href="<?php echo $adjust_string ?>add">新規作成</a>
             <?php endif ?>
           </li>
           <li>
             <!-- ログインしていないときの表示 -->
             <?php if (!isset($_SESSION['id'])): ?>
-            <a href="../users/signup">投稿一覧</a>
+            <a href="<?php echo $adjust_string ?>../users/signup">投稿一覧</a>
             <?php endif ?>     
             <!-- ログインしているとき -->
             <?php if (isset($_SESSION['id'])): ?>     
-            <a href="mypage">投稿一覧</a>
+            <a href="<?php echo $adjust_string ?>mypage">投稿一覧</a>
             <?php endif ?>
 
           </li>

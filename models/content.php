@@ -326,7 +326,7 @@
 			// $login_data['password']
 
 			mysqli_real_escape_string($this->dbconnect, $login_data['email']),
-			mysqli_real_escape_string($this->dbconnect, $login_data['password'])	
+			mysqli_real_escape_string($this->dbconnect, sha1($login_data['password']))	
 			);
 
 

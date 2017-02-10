@@ -184,7 +184,7 @@ foreach ($_POST as $key => $value) {
 
 
       function mypage($id) {
-
+          if (isset($_SESSION['id'])&&$_SESSION['id']==$id) {
           //モデルを呼び出す
           $content = new Content();
           //モデルのmypageメソッドを実行する（モデルのmypageメソッドは、select文を実行してidで指定したブログデータを取得する）
@@ -197,6 +197,10 @@ foreach ($_POST as $key => $value) {
            // var_dump($viewOptions);
           require('views/layout/application.php');
       }
+      else{
+        header('location:/tabilog/contents/index');
+      }
+    }
 
       function show($id) {
 
@@ -228,6 +232,7 @@ foreach ($_POST as $key => $value) {
 
       function add($post_data){
 
+        if (isset($_SESSION['id'])) {
           //国名
           $content = new Content();
           //モデルのcreateメソッドを実行する
@@ -408,6 +413,10 @@ foreach ($_POST as $key => $value) {
             $action = 'add';
             require('views/layout/application.php');
          }
+        else{
+          header('location:/tabilog/contents/index');
+        }
+       }
 
       // function changeCountry($post_data){
       //   $_SESSION['select_post'] = $post_data['country'];
@@ -466,7 +475,10 @@ foreach ($_POST as $key => $value) {
       function delete($id){
 
 
-        if (isset($_SESSION)) {
+
+      function index_delete($id){
+          if (isset($_SESSION['id'])) {
+
            $content = new Content();
            // モデルのdeleteメソッドを実行する(モデルのdeleteメソッドはupdate文を実行してdelete_flagを1に更新する)
            $deletes = $content->delete($id);

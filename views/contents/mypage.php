@@ -54,7 +54,7 @@ function disp(){
 </nav>
 
 
-    <div class="container pagination">
+   <!--  <div class="container pagination">
 		<div class="row">
 			
 			<ul class="pagination">
@@ -71,7 +71,7 @@ function disp(){
 			
 			</ul>
 		</div>
-	</div>
+	</div> -->
 	
 	<div class="container">
   		<div class="row" width="1500">
@@ -231,7 +231,7 @@ function disp(){
    
 <br>
 <br>
-<div class="container pagination">
+<!-- <div class="container pagination">
 	<div class="row">
 		<ul class="pagination">
 		    <li><a href="#">«</a></li>
@@ -244,7 +244,7 @@ function disp(){
 		</ul>
 	</div>
 </div>
-
+ -->
 
 
 

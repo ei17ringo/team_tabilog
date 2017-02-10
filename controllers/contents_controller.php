@@ -24,7 +24,7 @@
         $controller->create($_POST);
         break;
       case 'edit':
-        $controller->edit($id);
+        $controller->edit($id,$_POST);
         break;
       case 'check':
         $controller->check($id);
@@ -94,9 +94,18 @@
 
 
       function update($id,$post_data){
-         $content = new Content();
+        if (isset($_SESSION['id'])) {
+                   $content = new Content();
         $return = $content->update($id,$post_data);
+
         header('Location: /tabilog/contents/mypage');
+        }
+        //  $content = new Content();
+        // $return = $content->update($id,$post_data);
+        else{
+        header('Location: /tabilog/contents/index');
+        }
+
 
       }
 

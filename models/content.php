@@ -85,8 +85,8 @@
 
 	function update($id,$post_data){
 			
-			$sql = sprintf("UPDATE `contents` SET `title`=%s,`content`=%s,`rating`=%d,`country_name`= %s,`city_name`= %s,`place_name`= %s,
-				`picture_path1`= NULL,`picture_path2`= NULL,`picture_path3`= NULL,`picture_path4`= NULL,`picture_path5`= NULL,`picture_path6`= NULL,`picture_path7`= NULL,`picture_path8`= NULL,`picture_path9`=NULL
+			$sql = sprintf("UPDATE `contents` SET `title`='%s',`content`='%s',`rating`=%d,`country_name`='%s',`city_name`='%s',`place_name`='%s',
+				`picture_path1`= '%s',`picture_path2`= '%s',`picture_path3`= '%s',`picture_path4`= '%s',`picture_path5`= '%s',`picture_path6`= '%s',`picture_path7`= '%s',`picture_path8`= '%s',`picture_path9`='%s'
 				WHERE `c_delete_flag` = 0 AND `content_id`=%d",
 				$post_data['title'],
 				$post_data['content'],
@@ -103,7 +103,8 @@
 				$post_data['picture_path7'],
 				$post_data['picture_path8'],
 				$post_data['picture_path9']
-				,$id,$post_data);	
+				// ,$id,$post_data);	
+				,$id);	
 
 
 			//SQLの実行

@@ -1,6 +1,7 @@
 <div class="container">
  <div class="col-md-offset-2 col-md-8">
     <div class="form-area">
+
       <form  method="post" action="/tabilog/contents/update/<?php echo $return['contents']['content_id']; ?>" class="form-horizontal" role="form">
         <br style="clear:both">
                     <h3 style="margin-bottom: 25px; text-align: center;">投稿編集</h3>
@@ -8,6 +9,7 @@
                     <div class="form-group">
                         <input type="text" class="form-control" id="mobile" name="title" placeholder="タイトル：" value="<?php echo $return['contents']['title']; ?>"required>
                   
+
                     </div>
 
                     <div class="form-group">
@@ -16,12 +18,7 @@
      　　　　　　　　　　　<div class="form-inline">
 
                         <!-- セレクトボックス -->
-                         <!--  <select name="list" class="form-control">
-                           <option value="item1" selected>国名</option>
-                           <option value="item2">日本</option>
-                           <option value="item3">ベトナム</option>
-                           <option value="item4">フィリピン</option>
-                          </select> -->
+
 
                           <select name="country_name" class="form-control">
                            <option value="item1" selected>国名</option>
@@ -39,15 +36,6 @@
                             
                            </select>
 
-
-                          <!-- セレクトボックス -->
-                          <!-- <select name="list" class="form-control">
-
-                           <option value="item1" selected>都市</option>
-                           <option value="item2">日本</option>
-                           <option value="item3">ベトナム</option>
-                           <option value="item4">フィリピン</option>
-                          </select> -->
 
                           <select name="city_name" class="form-control">
                            <option value="item1" selected>都市</option>
@@ -116,6 +104,7 @@
                          
                        </select>
 
+
                        </div>
                       </div>
      　　　　　　　　　　　
@@ -132,22 +121,27 @@
 
                     <div class="form-group">
                         <!-- <div class="row lead"> -->
+
                        <!--  <span id="stars" class="starrr">オススメ度：</span>
                        <span id="count">0</span> star(s) -->
+
                     	<!-- </div> -->
                     </div>
 
                 <div class="form-group">
+
                  <textarea class="form-control" id="mobile" name="content" rows="15" placeholder="内容：" required><?php echo $return['contents']['content']; ?></textarea>
                 </div>
              <!--  </form> -->
 
                <!-- <div class="form-group">
+
 		         <label for="InputFile">写真</label>
 		          <input type="file" id="InputFile">
 		          <h6>*最大９枚までアップロードができます</h6>
 		          <p class="help-block"></p>
 	          </div>
+
             <br> -->
 
              <div class="form-group">
@@ -230,6 +224,7 @@
        </div>
 
 
+
                      <!-- 画像の表示 モーダル -->
 <div class="container">
     <div class="row" style="width: 1100px;">
@@ -249,6 +244,7 @@
                     <div class="row">
 
 
+
                       <div class="relative col-md-3"><img src="/tabilog/webroot/images/<?php echo $return['picture_path1']; ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal1" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"><img src="../webroot/tabilog_moc/images/batsu.jpeg"  class="absolute_modal"></a></div>
 
 
@@ -258,11 +254,13 @@
 
                       <div class="relative col-md-3"><img src="/tabilog/webroot/images/<?php echo $return['picture_path4']; ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal3" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"><img src="../webroot/tabilog_moc/images/batsu.jpeg" class="absolute_modal"></a></div>
 
+
                     </div><!--.row-->
                 </div><!--.item-->
 
                 <div class="item">
                     <div class="row">
+
                       <div class="relative col-md-3"><img src="/tabilog/webroot/images/<?php echo $return['picture_path5']; ?>" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal5" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425">
                       <img src="../webroot/tabilog_moc/images/batsu.jpeg" class="absolute_modal">
                       </a></div>
@@ -276,11 +274,13 @@
 
 
 
+
                     </div><!--.row-->
                 </div><!--.item-->
 
                 <div class="item">
                     <div class="row">
+
                        <div class="relative col-md-3"><img src="images/1.jpeg" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal9" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425" width="250" height="250"><img src="../webroot/tabilog_moc/images/batsu.jpeg" class="absolute_modal"></a></div>
 
 
@@ -289,6 +289,7 @@
                       <div class="relative col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal11" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"><img src="../webroot/tabilog_moc/images/batsu.jpeg" class="absolute_modal"></a></div>
 
                       <div class="relative col-md-3"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" data-toggle="modal" data-target="#image_Modal12" style="cursor:pointer" class="img-responsive img-thumbnail thumbnail　aligncenter size-full wp-image-425"><img src="../webroot/tabilog_moc/images/batsu.jpeg" class="absolute_modal"></a></div>
+
 
                     </div><!--.row-->
                 </div><!--.item-->
@@ -309,7 +310,9 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
+
                         <img src="/tabilog/webroot/images/<?php echo $return['picture_path1']; ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -330,7 +333,9 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
+
                         <img src="/tabilog/webroot/images/<?php echo $return['picture_path2']; ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -351,7 +356,9 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
+
                         <img src="/tabilog/webroot/images/<?php echo $return['picture_path3']; ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -372,7 +379,9 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
+
                         <img src="/tabilog/webroot/images/<?php echo $return['picture_path4']; ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -394,7 +403,9 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
+
                         <img src="/tabilog/webroot/images/<?php echo $return['picture_path5']; ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -415,7 +426,9 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
+
                         <img src="/tabilog/webroot/images/<?php echo $return['picture_path6']; ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -436,7 +449,9 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
+
                         <img src="/tabilog/webroot/images/<?php echo $return['picture_path7']; ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -457,7 +472,9 @@
                          --><div class="modal-content">
 
                         <div class="modal-body">
+
                         <img src="/tabilog/webroot/images/<?php echo $return['picture_path8']; ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -479,6 +496,7 @@
 
                         <div class="modal-body">
                         <img src="/tabilog/webroot/images/<?php echo $return['picture_path9']; ?>" alt="baby-1151351_1920" width="720" height="540" class="aligncenter size-full wp-image-425 center-block" alt="baby-1151351_1920" />
+
                         </div>
                         <div class="modal-img_footer center-text">
                         <p>モーダル商品</p> <!-- //テキスト表示 -->
@@ -552,12 +570,15 @@
 	 <div class="row"></div>
 　　　　<div class="row">
 	      	<div class="col-md-offset-5">
+
 	          <input type="submit" class="btn btn-default" value="編集内容を確認する">
+
           </div>
 
        </div>　
 　　　 </div>
   </div>
+
 </div>
  </form>
 
@@ -595,4 +616,3 @@
 })
 
  </script>
-Contact GitHub API Training Shop Blog About

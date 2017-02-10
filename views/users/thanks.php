@@ -10,7 +10,7 @@
                                              </div>
                                              <div class="col-md-4">
 
-                                                   <a href="/tabilog/users/index" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">一覧に戻る</a>
+                                                   <a href="/tabilog/contents/index" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">一覧に戻る</a>
                                                             <br><br> <br><br>  <br><br> <br><br> 
                                             </div>
                                                     

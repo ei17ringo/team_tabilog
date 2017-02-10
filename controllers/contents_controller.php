@@ -453,20 +453,15 @@ foreach ($_POST as $key => $value) {
 
       function delete($id){
 
-        $blog=new Blog();
-         // モデルのdeleteメソッドを実行する(モデルのdeleteメソッドはupdate文を実行してdelete_flagを1に更新する)
-        $return=$blog->delete($id);
+        if (isset($_SESSION)) {
+           $content = new Content();
+           // モデルのdeleteメソッドを実行する(モデルのdeleteメソッドはupdate文を実行してdelete_flagを1に更新する)
+           $deletes = $content->delete($id);
+          }
+         
         header('Location: /tabilog/contents/mypage');
       }
 
-
-      function index_delete($id){
-          if (isset($_SESSION)) {
-           $content = new Content();
-           $deletes = $content->delete($id);
-          }
-           header('Location:/tabilog/contents/index');
-      }
       function login($login_data){
 
     // 自動ログインの実装

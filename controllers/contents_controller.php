@@ -42,7 +42,7 @@ foreach ($_POST as $key => $value) {
         $controller->create($_POST);
         break;
       case 'edit':
-        $controller->edit($id);
+        $controller->edit($id,$_POST);
         break;
       case 'check':
         $controller->check($_POST);
@@ -65,6 +65,7 @@ foreach ($_POST as $key => $value) {
    	}
 
 	class ContentsController {
+
 
 
     // すべてのページでログイン機能実現
@@ -181,6 +182,7 @@ foreach ($_POST as $key => $value) {
       }
 
 
+
       function mypage($id) {
 
           //モデルを呼び出す
@@ -197,6 +199,7 @@ foreach ($_POST as $key => $value) {
       }
 
       function show($id) {
+
 
           if (empty(($id))) {
             header('Location:/tabilog/contents/index');
@@ -410,7 +413,6 @@ foreach ($_POST as $key => $value) {
       //   $_SESSION['select_post'] = $post_data['country'];
       // }
 
-
       function create($post_data){
         //モデルを呼び出す
         $content = new Content();
@@ -425,14 +427,12 @@ foreach ($_POST as $key => $value) {
 
       }
 
-      // function mypage(){
-      //   unset($_SESSION['join']);
-      // }
-
       function edit($id){
-          $resource = 'contents';
 
-          $action = 'edit';
+        $content = new Content();
+        $return = $content->edit($id);
+          $resource = 'contents';
+     	    $action = 'edit';
 
           require('views/layout/application.php');
           
@@ -448,10 +448,23 @@ foreach ($_POST as $key => $value) {
 
 
       function update($id,$post_data){
+        if (isset($_SESSION['id'])) {
+                   $content = new Content();
+        $return = $content->update($id,$post_data);
+
+        header('Location: /tabilog/contents/mypage');
+        }
+        //  $content = new Content();
+        // $return = $content->update($id,$post_data);
+        else{
+        header('Location: /tabilog/contents/index');
+        }
+
 
       }
 
       function delete($id){
+
 
         if (isset($_SESSION)) {
            $content = new Content();
@@ -460,6 +473,7 @@ foreach ($_POST as $key => $value) {
           }
          
         header('Location: /tabilog/contents/mypage');
+
       }
 
       function login($login_data){

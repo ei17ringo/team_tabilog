@@ -1,6 +1,10 @@
 
+<!-- <?php
 
+// var_dump($viewOptions);
 
+?>
+ -->
 
 
 
@@ -35,14 +39,16 @@ function disp(){
 
 <body>
 
- <nav class="navbar navbar-default">
-  <div class="container-fluid">
+<nav class="navbar navbar-default">
+ <div class="container-fluid">
     <div class="navbar-header" style="padding-left: 10px">
       <!-- <button type="button" class="btn btn-default navbar-btn pull-left">
         <span class="glyphicon glyphicon-chevron-left"></span>
       </button> -->
-      <div class="navbar-text navbar-brand-centered"><h3><?php echo $users['user_name']; ?>さんの投稿一覧</h3></div>
-      <h4></h4>
+      <div class="navbar-text navbar-brand-centered">
+                  <?php $firt_content=current($viewOptions); ?>
+      <h3><a href="../users"><?php echo $firt_content['user_name']; ?>さんの投稿一覧</a></h3>
+      </div>      			
     </div>
   </div>
 </nav>

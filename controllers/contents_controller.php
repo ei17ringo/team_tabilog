@@ -472,7 +472,7 @@ foreach ($_POST as $key => $value) {
 
       }
 
-      function delete($id){
+      
 
 
 

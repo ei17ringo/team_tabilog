@@ -209,7 +209,7 @@
             <?php endif ?>     
             <!-- ログインしているとき -->
             <?php if (isset($_SESSION['id'])): ?>     
-            <a href="<?php echo $adjust_string ?>mypage">投稿一覧</a>
+            <a href="<?php echo $adjust_string ?>mypage/<?php echo $_SESSION['id'] ?>">投稿一覧</a>
             <?php endif ?>
 
           </li>

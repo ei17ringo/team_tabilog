@@ -161,6 +161,34 @@
 		}
 
 
+		function login($login_data){
+		$sql='SELECT * FROM `users`';
+
+		// $sql=sprintf('SELECT * FROM `users` WHERE `u_delete_flag`=0 AND `email` = "%s" AND `password` = "%s"',
+		// 	// $login_data['email'],
+		// 	// $login_data['password']
+
+		// 	mysqli_real_escape_string($this->dbconnect, $login_data['email']),
+		// 	sha1(mysqli_real_escape_string($this->dbconnect, sha1($login_data['password'])))
+				
+		// 	);
+
+
+			//SQLの実行
+			$results = mysqli_query($this->dbconnect, $sql) or die(mysqli_error($this->dbconnect));
+
+			 //実行結果を取得し、配列に格納
+			 // $blogs = mysqli_fetch_assoc($result);
+
+			 $loginviews  = mysqli_fetch_assoc($results);
+
+
+			//取得結果を残す
+			 return $loginviews;
+
+	}
+
+
 
 		
 

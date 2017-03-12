@@ -182,7 +182,7 @@ foreach ($_POST as $key => $value) {
 
 
       function mypage($id) {
-          if (isset($_SESSION['id'])&&$_SESSION['id']==$id) {
+          if ((isset($_SESSION['id'])&&$_SESSION['id']==$id) || (isset($_SESSION['id'])&&$id==0)) {
           //モデルを呼び出す
           $content = new Content();
           //モデルのmypageメソッドを実行する（モデルのmypageメソッドは、select文を実行してidで指定したブログデータを取得する）

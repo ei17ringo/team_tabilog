@@ -2,7 +2,10 @@
 
 
 
-
+<?php 
+$users=current($viewOptions);
+// echo $users['user_name'];
+ ?>
 
 
 
@@ -14,7 +17,7 @@ function disp(){
 	// 「OK」時の処理開始 ＋ 確認ダイアログの表示
 	if(window.confirm('本当に削除しますか？ 削除すると内容を戻すことができなくなります。')){
 
-		location.href = "mypage.html"; // mypage.html へジャンプ
+		location.href = "./mypage"; // mypage.html へジャンプ
 
 	}
 	// 「OK」時の処理終了

@@ -1,3 +1,7 @@
+
+<!-- <?php 
+    echo $_SERVER['DOCUMENT_ROOT'];
+ ?> -->
         <!-- 必須のため、消さない -->
         <!-- 初期値 -->
         <?php 
@@ -1171,7 +1175,7 @@
 
   var opts = {
     zoom: 15,
-    center: new google.maps.LatLng(<?php echo $googlemap['latitude'] ?>, <?php echo $googlemap['longtitude'] ?>)
+    center: new google.maps.LatLng(<?php echo $firstcontent['latitude'] ?>, <?php echo $firstcontent['longtitude'] ?>)
   };
   var map = new google.maps.Map(document.getElementById("map"), opts);
 
@@ -1194,7 +1198,7 @@
             　//マーカークリック時に動作する情報ウィンドウ 
             google.maps.event.addListener(marker, "click", function() {
             var infowindow = new google.maps.InfoWindow({
-            content: '場所：'+'<?php echo $googlemap['place_name_jp'] ?>'+"<br />"+'おすすめ度：'+'<?php for ($i=0; $i < round($ave_rating) ; $i++) { 
+            content: '場所：'+'<?php echo $firstcontent['place_name_jp'] ?>'+"<br />"+'おすすめ度：'+'<?php for ($i=0; $i < round($ave_rating) ; $i++) { 
             echo "★";
         } ?><?php for ($i=0; $i < 5-round($ave_rating) ; $i++) { 
             echo "☆";

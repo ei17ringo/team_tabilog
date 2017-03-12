@@ -59,14 +59,15 @@ foreach ($_POST as $key => $value) {
               // 必要ならプロパティ
 
           //コンストラクタ
-    function __construct($logininfo){
+          // ユーザー新規作成でも同じパラメーターを使用しているため、ログインできなくなる
+    // function __construct($logininfo){
         // モーダルログイン
-        if (isset($logininfo['email'])&&isset($logininfo['password'])) {
-        $this->login($_POST);
-        }
+    //     if (isset($logininfo['email'])&&isset($logininfo['password'])) {
+    //     $this->login($_POST);
+    //     }
 
 
-    }
+    // }
 
 
 
